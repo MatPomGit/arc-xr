@@ -1,27 +1,26 @@
-1. Multimodalna ocena obciążenia poznawczego w czasie rzeczywistym na potrzeby dynamicznej redukcji szumu informacyjnego w interfejsach AR
-   Nacisk badawczy: Połączenie analizy danych okulometrycznych (pupilometria, mikrosakady, wzorce fiksacji) oraz mikroekspresji twarzy z wykorzystaniem lekkich modeli wizyjnych (Edge-AI) do estymacji poziomu przeciążenia informacyjnego operatora.
-   Cel i wdrożenie: Opracowanie algorytmu dynamicznie dopasowującego poziom szczegółowości (LoD – Level of Detail) wyświetlanych modeli 3D oraz elementów HUD, aby uniknąć zjawiska "zjawy poznawczej" (tunnel vision) w sytuacjach stresowych.
+# ARC-XR — badania nad inteligentną rozszerzoną rzeczywistością
 
-3. Detekcja frustracji i dekoncentracji w procedurach manualnych z wykorzystaniem spersonalizowanych modeli afektywnych w przestrzeni AR
-   Nacisk badawczy: Zastosowanie uczenia ciągłego (continual learning) oraz architektów sekwencyjnych do profilowania stanu afektywnego użytkownika podczas wykonywania powtarzalnych zadań precyzyjnych.
-   Cel i wdrożenie: System AR wyrywa spadek precyzji lub wzrost frustracji, wprowadzając mikro-interwencje wspierające – np. podświetlenie właściwego elementu, zmianę kontrastu sceny lub zmianę tonu komunikatów głosowych.
+ARC-XR jest repozytorium planowanych badań nad adaptacyjnymi interfejsami AR, multimodalnym wnioskowaniem o stanie użytkownika, modelami Vision–Language (VLM), weryfikacją czynności manualnych i komunikacją człowiek–agent. Dokumenty na obecnym etapie są **prospektywnymi projektami**, a nie wynikami badań.
 
-3. Ocena wpływu okluzji i asynchronii renderowania na zmęczenie wzrokowo-poznawcze (Visual Fatigue) w długotrwałych sesjach HMD AR
-    Nacisk badawczy: Empiryczne badanie powiązań między błędami pasowania geometrycznego (misalignment) i opóźnieniami renderowania obiektów w AR a wskaźnikami neurofizjologicznymi (analiza fiksacji wzroku, mrugania i stabilności punktu skupienia).
-    Cel i wdrożenie: Stworzenie ilościowego modelu oceny jakości doświadczenia (QoE) użytkownika gogli AR, pozwalającego na prognozowanie zmęczenia wzrokowego zanim wystąpią widoczne objawy obniżenia wydajności pracy.
+## Portfolio publikacji
 
-4. Wzmocniony grounding przestrzenny 3D dla modeli Vision-Language w zadaniach precyzyjnej manipulacji w środowiskach AR
-    Nacisk badawczy: Integracja modeli VLM z danymi z chmury punktów/sensorów głębi w celu precyzyjnego rzutowania komend językowych (np. "wskaż śrubę z lewej strony obudowy") na dokładne współrzędne przestrzenne 3D w polu widzenia użytkownika.
-    Cel i wdrożenie: Stworzenie warstwy pośredniczącej (middleware), która tłumaczy niejednoznaczne naturalne instrukcje słowne na jednoznaczne, dynamiczne obiekty graficzne (wskaźniki, strzałki, podświetlenia) zakotwiczone w świecie fizycznym.
+| ID | Temat | Stan |
+| --- | --- | --- |
+| [P01](publications/P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
+| [P02](publications/P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
+| [P03](publications/P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
+| [P04](publications/P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
+| [P05](publications/P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
+| [P06](publications/P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
 
-5. Autonomiczny asystent AR weryfikujący poprawność wykonywania procedur manualnych w czasie rzeczywistym z wykorzystaniem modeli grafowych i VLM
-    Nacisk badawczy: Połączenie reprezentacji wiedzy w postaci tymczasowych grafów wiedzy (Temporal Knowledge Graphs) z analizą strumienia wideo z pierwszej osoby (egocentric vision) do śledzenia postępu prac i detekcji błędów (np. pominięcie kroku montażowego).
-    Cel i wdrożenie: System w czasie rzeczywistym porównuje stan sceny ze stanem oczekiwanym. W przypadku wykrycia pomyłki, wirtualny agent nakłada w AR wizualne sprostowanie bezpośrednio na błędnie zmontowany element.
+W pierwotnym opisie występowało sześć merytorycznie określonych propozycji, ale numeracja była niespójna (dwie pozycje 3 oraz pusta pozycja 8). Nadano im identyfikatory P01–P06 bez dodawania nieopisanych artykułów.
 
-6. Multimodalna konwersacyjna pętla zwrotna człowiek-agent w AR z wykorzystaniem syntezy przestrzennej i gestów ucieleśnionego awatara
-    Nacisk badawczy: Badanie optymalnych form ekspresji ucieleśnionego agenta AI w przestrzeni AR (wirtualny awatar vs. przestrzenny kursor kontekstowy) pod kątem zaufania użytkownika, czułości na wskazówki i czasu reakcji.
-    Cel i wdrożenie: Porównanie efektywności dwukierunkowej komunikacji (gesty, mowa, wskaźniki AR) w scenariuszach wymagających współdzielenia uwagi (shared attention) między człowiekiem a sztuczną inteligencją.
-   
+## Organizacja repozytorium
 
+Każda publikacja w `publications/PXX/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [publications/README.md](publications/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
-8.    
+## Zasady
+
+Nie należy traktować propozycji metod ani testów statystycznych jako prerejestracji. Każdy eksperyment z uczestnikami wymaga oceny etycznej i świadomej zgody według właściwych przepisów i procedur instytucji. Rejestrować pochodzenie danych, wersje sprzętu i oprogramowania, kryteria wykluczenia, podziały danych oraz odrębność zbioru testowego. Wyników i cytowań nie wolno uzupełniać bez źródeł i rzeczywistego materiału empirycznego.
+
+Licencja znajduje się w pliku [LICENSE](LICENSE). Jej zakres nie zastępuje zgody na rozpowszechnianie cudzych zbiorów danych ani wizerunku i nagrań uczestników.
