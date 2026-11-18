@@ -6,18 +6,24 @@ ARC-XR jest repozytorium planowanych badań nad adaptacyjnymi interfejsami AR, m
 
 | ID | Temat | Stan |
 | --- | --- | --- |
-| [P01](publications/P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
-| [P02](publications/P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
-| [P03](publications/P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
-| [P04](publications/P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
-| [P05](publications/P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
-| [P06](publications/P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
+| [P01](manuscripts/P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
+| [P02](manuscripts/P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
+| [P03](manuscripts/P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
+| [P04](manuscripts/P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
+| [P05](manuscripts/P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
+| [P06](manuscripts/P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
 
 W pierwotnym opisie występowało sześć merytorycznie określonych propozycji, ale numeracja była niespójna (dwie pozycje 3 oraz pusta pozycja 8). Nadano im identyfikatory P01–P06 bez dodawania nieopisanych artykułów.
 
 ## Organizacja repozytorium
 
-Każda publikacja w `publications/PXX/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [publications/README.md](publications/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+Każda publikacja w `manuscripts/PXX/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [manuscripts/README.md](manuscripts/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+
+## Zarządzanie badaniami
+
+[AGENTS.md](AGENTS.md) określa zasady pracy agentów i przeglądu PR, [RESEARCH.md](RESEARCH.md) reguły metodologiczne i redakcyjne, [PROJECT_STATE.yaml](PROJECT_STATE.yaml) aktualny stan naukowy, a [AUTOPILOT_PLAN.md](AUTOPILOT_PLAN.md) kolejność prac i bramki. [REPRODUCIBILITY.md](REPRODUCIBILITY.md) zawiera wymagania dotyczące danych i replikacji.
+
+Repozytorium korzysta z zasad zarządzania Research Autopilot, ale samo istnienie dokumentów nie oznacza rejestracji ani aktywnego wykonywania zadań w kontrolerze.
 
 ## Zasady
 
