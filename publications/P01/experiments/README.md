@@ -6,7 +6,7 @@
 
 1. Zdefiniować etykiety obciążenia niezależne od sygnałów użytych do predykcji.
 2. Zaprojektować manipulację gęstością HUD i mechanizm bezpiecznej zmiany LoD.
-3. Zmierzć opóźnienie całego toru akwizycja–inferencja–renderowanie.
+3. Zmierzyć opóźnienie całego toru akwizycja–inferencja–renderowanie.
 4. Przygotować test międzyosobniczy oraz zrównoważony eksperyment z użytkownikami.
 
 ## Proponowana konfiguracja
