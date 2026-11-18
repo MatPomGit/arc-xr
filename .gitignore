@@ -1,13 +1,15 @@
-# Lokalna konfiguracja i poufne dane
+# Lokalna konfiguracja, sekrety i poufne dane w dowolnym katalogu
 .env
 .env.*
 !.env.example
-data/raw/
-data/private/
-data/participants/
-reports/private/
-results/private/
-# Artefakty tymczasowe i środowiska
+**/data/raw/
+**/data/private/
+**/data/participants/
+**/results/private/
+**/experiments/private/
+**/reports/private/
+
+# Lokalne artefakty i środowiska
 .venv/
 __pycache__/
 *.pyc
