@@ -1,0 +1,37 @@
+version: 1
+updated: "2026-11-18"
+purpose: "Stan naukowy ARC-XR; bez przypisywania niezweryfikowanych wyników."
+repository:
+  full_name: MatPomGit/arc-xr
+  canonical_branch: main
+  base_revision_at_governance_introduction: "af191b9413e7222a7d14a70ef44e5fbbfe271c62"
+  manuscript_root: manuscripts
+  research_programme: RESEARCH.md
+  agent_policy: AGENTS.md
+  plan: AUTOPILOT_PLAN.md
+  reproducibility: REPRODUCIBILITY.md
+research_phase: concept_and_protocol_drafting
+controller_integration: not_verified
+publication_portfolio:
+  planned_core_count: 6
+  planned_ids: [P01, P02, P03, P04, P05, P06]
+  status: manuscripts_planned_not_submitted
+  evidence:
+    P01: protocol_draft_no_empirical_results
+    P02: protocol_draft_no_empirical_results
+    P03: protocol_draft_no_empirical_results
+    P04: protocol_draft_no_empirical_results
+    P05: protocol_draft_no_empirical_results
+    P06: protocol_draft_no_empirical_results
+research_gates:
+  scientific_protocol_frozen: false
+  ethics_review_or_documented_exemption: not_verified
+  preregistration: not_verified
+  participant_recruitment: not_started
+  empirical_data_collected: not_verified
+  independent_manuscript_review: not_done
+  author_submission_approval: not_given
+verification:
+  execution_tests: NOT_APPLICABLE
+  substantive_scientific_validation: NOT_RUN
+  claim_basis: prospective_design_only

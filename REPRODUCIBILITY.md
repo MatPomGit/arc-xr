@@ -23,4 +23,4 @@ Wszystkie P01–P06 są na etapie planowania. Projekty metodologiczne nie stanow
 
 ## Minimalne potwierdzenie wyniku
 
-W `results/README.md` dokumentować nazwę i definicję wyniku, zbiór i jego pochodzenie, liczbę uczestników/sesji/prób, skrypt i hash wersji, przedziały ufności, wykluczenia, ograniczenia oraz oznaczenie **observed** albo **planned**. Nie generować syntetycznych liczb jako „wyników badań”.
+W rejestrze odpowiedniej pracy, `manuscripts/PXX/results/README.md` (gdzie `PXX` oznacza identyfikator od P01 do P06), dokumentować nazwę i definicję wyniku, zbiór i jego pochodzenie, liczbę uczestników/sesji/prób, skrypt i hash wersji, przedziały ufności, wykluczenia, ograniczenia oraz oznaczenie **observed** albo **planned**. Nie generować syntetycznych liczb jako „wyników badań”.
