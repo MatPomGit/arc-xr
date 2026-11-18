@@ -2,9 +2,9 @@
 
 ## Zakres
 
-Projekt obejmuje sześć planowanych manuskryptów [P01–P06](manuscripts/README.md) z zakresu adaptacyjnej AR, okulometrii, stanów afektywnych, wizji przestrzennej, analizy procedur manualnych i interakcji człowiek–agent.
+Projekt obejmuje sześć planowanych manuskryptów [P01 do P06](manuscripts/README.md) z zakresu adaptacyjnej AR, okulometrii, stanów afektywnych, wizji przestrzennej, analizy procedur manualnych i interakcji człowieka z agentem.
 
-Dziś wszystkie dokumenty są projektami badań. Nie ma potwierdzonych danych, wyników, zaakceptowanej prerejestracji ani zgody etycznej. Status każdego manuskryptu jest podany w [PROJECT_STATE.yaml](PROJECT_STATE.yaml).
+Stan naukowy każdego manuskryptu, w tym obecność danych, wyników, prerejestracji i zgód etycznych, należy każdorazowo ustalać na podstawie aktualnego [PROJECT_STATE.yaml](PROJECT_STATE.yaml). Opisy planowanych badań nie potwierdzają ich przeprowadzenia.
 
 ## Poprawność naukowa
 
@@ -24,4 +24,4 @@ Agent **nie może sam** wysłać artykułu, skontaktować się z redakcją, zaci
 
 ## Unikanie duplikacji
 
-Wyniki wspólnych badań wykorzystane w kilku publikacjach muszą mieć jawnie wskazane nakładanie się próbek, aparatury, kodu i zbiorów danych. Odrębność wkładu P01–P06 i zgodność z wymaganiami czasopisma należy każdorazowo uzasadnić.
+Wyniki wspólnych badań wykorzystane w kilku publikacjach muszą mieć jawnie wskazane nakładanie się próbek, aparatury, kodu i zbiorów danych. Odrębność wkładu P01 do P06 i zgodność z wymaganiami czasopisma należy każdorazowo uzasadnić.
