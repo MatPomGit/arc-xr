@@ -25,7 +25,7 @@ Pełne metadane zawiera [bibliografia](references.bib).
 
 Nie deklarować, że P01 jest „pierwszym fizjologicznie adaptacyjnym systemem AR”; literatura z 2025 r. już obejmuje adaptacyjne przerwy na podstawie SCR. Rozważany **węższy i weryfikowalny wkład** to zamknięta pętla kontroli gęstości informacji HUD, w której:
 1. Z góry zdefiniowany, multimodalny estymator obciążenia jest testowany na osobach wykluczonych z treningu, względem równoważnego jednomodalnego baseline'u.
-2. Adaptacja UI ma niezależny test przyczynowego wpływu na *z góry wybrany jeden* główny wynik zachowania (np. odsetek poprawnych prób albo czas poprawnego wykonania); porównania z HUD statycznym i adaptacją jednomodalną muszą być uczciwe pod względem opóźnienia oraz budżetu obliczeniowego.
+2. Adaptacja UI ma niezależny test przyczynowego wpływu na *z góry wybrany jeden* główny wynik zachowania (kandydat: odsetek błędnych prób zadaniowych, wymagający zatwierdzenia przed badaniem); porównania z HUD statycznym i adaptacją jednomodalną muszą być uczciwe pod względem opóźnienia oraz budżetu obliczeniowego.
 3. System rejestruje fałszywe aktywacje, opóźnienie adaptacji, liczbę zmian UI, koszt obliczeniowy oraz możliwość abstencji lub ograniczenia aktualizacji.
 4. Eksperyment kontroluje luminancję, trudność zadania, kolejność warunków, zmęczenie i jakość eye trackera; nie wyprowadza diagnostycznych wniosków o stanie psychicznym z pojedynczego sygnału.
 5. Plan odróżnia jakość predykcji od efektu interwencji; brak statystycznie istotnej poprawy jest prawidłowym wynikiem.

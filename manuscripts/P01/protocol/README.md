@@ -20,7 +20,7 @@ Manipulacja / porównania: Typ interfejsu, trudność zadania i gęstość infor
 
 ## Pomiar
 
-- **Kandydat na punkt końcowy główny:** Odsetek błędów zadaniowych oraz/lub czas poprawnego wykonania (ostateczny jeden wynik główny do zamrożenia).
+- **Kandydat na punkt końcowy główny:** odsetek błędnych prób zadaniowych. Definicja błędu, mianownik i postępowanie z próbami nieukończonymi wymagają zatwierdzenia; czas poprawnego wykonania pozostaje proponowanym wynikiem dodatkowym.
 - **Punkty końcowe dodatkowe:** NASA-TLX, dokładność estymacji obciążenia na zewnętrznych etykietach, opóźnienie adaptacji, FPS, zużycie energii, wskaźniki okoruchowe.
 - **Kontrola zakłóceń:** Oświetlenie i luminancja (pupilometria), kalibracja eye trackera, akomodacja, okulary, zmęczenie, efekt uczenia; mikroekspresje nie stanowią zweryfikowanej samodzielnej miary obciążenia.
 

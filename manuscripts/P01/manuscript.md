@@ -37,7 +37,7 @@ Sample and setting: Dorośli użytkownicy wykonywający standaryzowane zadania w
 
 Manipulated factors or comparators: Typ interfejsu, trudność zadania i gęstość informacji; rzeczywiste manipulacje należy skalibrować przed badaniem.
 
-Primary endpoint candidate: Odsetek błędów zadaniowych oraz/lub czas poprawnego wykonania (ostateczny jeden wynik główny do zamrożenia).
+Primary endpoint candidate: Odsetek błędnych prób zadaniowych; ostateczna definicja błędu, mianownik i estymand wymagają zatwierdzenia przed rekrutacją. Czas poprawnego wykonania pozostaje proponowanym wynikiem dodatkowym.
 
 Secondary outcomes: NASA-TLX, dokładność estymacji obciążenia na zewnętrznych etykietach, opóźnienie adaptacji, FPS, zużycie energii, wskaźniki okoruchowe.
 
@@ -71,4 +71,4 @@ To be written only after the observations support a bounded conclusion.
 
 ## References
 
-Bibliographic entries will be curated in [references.bib](references.bib).
+Six reference records have been added to [references.bib](references.bib) for the selective literature review. These citations do not represent a completed systematic search or empirical results from P01.

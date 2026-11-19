@@ -6,7 +6,7 @@
 
 Czy multimodalna estymacja obciążenia poznawczego poprawia adaptację interfejsu AR względem interfejsu statycznego i adaptacji opartej na jednej modalności?
 
-Kandydat na punkt końcowy główny: Odsetek błędów zadaniowych oraz/lub czas poprawnego wykonania (ostateczny jeden wynik główny do zamrożenia).
+Kandydat na punkt końcowy główny: odsetek błędnych prób zadaniowych, z definicją błędu i mianownikiem do zatwierdzenia przed badaniem. Czas poprawnego wykonania pozostaje wynikiem dodatkowym.
 
 Pozostałe miary: NASA-TLX, dokładność estymacji obciążenia na zewnętrznych etykietach, opóźnienie adaptacji, FPS, zużycie energii, wskaźniki okoruchowe.
 
