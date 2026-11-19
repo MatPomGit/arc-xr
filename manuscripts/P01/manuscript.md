@@ -14,7 +14,13 @@ Research question: Czy multimodalna estymacja obciążenia poznawczego poprawia 
 
 ## 2. Related work
 
-A structured comparison of primary literature, available benchmarks and the specific research gap is required. All citations must be verified against original publications; `references.bib` has intentionally not been populated with invented entries.
+Research has already examined the physiological adaptation of AR. Sun and Liao (2025) used a cumulative skin conductance metric to trigger rest breaks and reported reduced subsequent physiological load without demonstrating improved task performance ([DOI](https://doi.org/10.1017/dsj.2025.10040)). P01 therefore does not claim to be the first physiologically adaptive AR system.
+
+Gonnermann-Müller et al. (2024) studied visual guidance and eye-tracking in industrial AR ([ICIS](https://aisel.aisnet.org/icis2024/humtechinter/humtechinter/18/)). Chiossi et al. (2024) analysed ERP and eye-tracking correlates of visual search in mixed reality ([DOI](https://doi.org/10.1109/TVCG.2024.3456172)). These studies motivate control of visual attention and task complexity; they do not establish the causal efficacy of the proposed three-way HUD-density comparison.
+
+The review by Suzuki, Wild and Scanlon (2024; [DOI](https://doi.org/10.1111/jcal.12882)) documents heterogeneity in physiological cognitive-load assessment in AR. Pupillary responses are sensitive to luminance and other non-cognitive influences (Mathôt, 2018; [DOI](https://doi.org/10.5334/joc.18)). NASA-TLX is a complementary subjective instrument, not a continuous moment-to-moment ground truth (Hart and Staveland, 1988; [DOI](https://doi.org/10.1016/S0166-4115(08)62386-9)).
+
+The proposed contribution is a controlled comparison of static, unimodally adapted and multimodally adapted AR HUD information density. Generalization of the load estimator must be assessed independently from the causal effect of adaptation on a prespecified behavioural endpoint. The [literature matrix](related_work.md) documents existing evidence, its limitations and the proposed research gap. Bibliographic identifiers appear in [references.bib](references.bib). No P01 results are reported.
 
 ## 3. Research questions and hypotheses
 

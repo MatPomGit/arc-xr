@@ -32,6 +32,18 @@ Zarejestrować czas próby, identyfikator sesji, parametry urządzenia, synchron
 
 Ocena etyczna i świadoma zgoda wymagają rozstrzygnięcia przed badaniem z ludźmi. Minimalizować zbieranie danych biometrycznych; rozdzielić identyfikatory od zapisów pomiarowych. Zapewnić możliwość przerwania sesji AR w razie dyskomfortu i kontrolę nad działaniami asystenta.
 
+## Proponowane decyzje metodologiczne M2 (niezatwierdzone)
+
+Na podstawie przeglądu M1 proponuje się poniższe definicje. Nie stanowią zamrożonego protokołu, prerejestracji ani uprawnienia do rozpoczęcia pomiarów.
+
+- **Kandydat na pojedynczy wynik główny:** odsetek błędnych prób zadaniowych w każdym warunku. Kryterium błędu, mianownik i los prób nieukończonych wymagają wcześniejszego ustalenia. Czas poprawnego wykonania pozostaje wynikiem dodatkowym.
+- **Kandydat na estymand:** średnia różnica prawdopodobieństwa błędu między adaptacją multimodalną a statycznym HUD w docelowej populacji dorosłych osób. Definicja rozkładu trudności i sposobu standaryzacji wymaga decyzji.
+- **Jednostka niezależna:** uczestnik. Próby i sesje są pomiarami zagnieżdżonymi. Drugorzędne porównania obejmują adaptację jedno- i multimodalną oraz jednomodalną i statyczną; wymagają uprzedniej kontroli wielokrotnych testów.
+- **Walidacja predykcji:** podział po tożsamości osoby (np. LOSO), bez przecieku klatek i sesji. Dobór hiperparametrów i kalibrację prowadzić w obrębie danych treningowych.
+- **Kontrola pomiarowa:** rejestrować luminancję sceny i HUD, jakość kalibracji eye trackera, brakujące próbki, okulary, zmęczenie i kolejność warunków. Średnica źrenicy nie stanowi swoistej etykiety obciążenia.
+- **Regulator i bezpieczeństwo:** z góry określić maksymalną liczbę przełączeń HUD, opóźnienie adaptacji i reguły abstencji; oddzielnie oszacować koszt obliczeniowy modeli.
+- **Otwarte bramki:** analiza mocy, liczebność, decyzja etyczna lub udokumentowane zwolnienie, świadoma zgoda oraz retencja danych.
+
 ## Rejestr decyzji (do wypełnienia)
 
 | Decyzja | Stan |
