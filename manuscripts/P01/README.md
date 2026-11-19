@@ -21,6 +21,7 @@ Główna grupa badana: Dorośli użytkownicy wykonywający standaryzowane zadani
 ## Struktura
 
 - [Szkic manuskryptu](manuscript.md)
+- [Przegląd literatury i granice nowości](related_work.md)
 - [Hipotezy i zmienne](hypotheses/README.md)
 - [Protokół badania](protocol/README.md)
 - [Eksperymenty i pomiary](experiments/README.md)

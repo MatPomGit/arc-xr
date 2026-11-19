@@ -4,7 +4,7 @@
 
 ## H1 (robocza)
 
-Adaptacyjny interfejs wykorzystujący multimodalną estymację obciążenia ogranicza błędy zadaniowe lub subiektywne przeciążenie względem interfejsu statycznego w porównywalnych warunkach.
+Proponowana adaptacja multimodalna zmniejsza odsetek błędnych prób zadaniowych względem statycznego HUD w porównywalnych warunkach. Subiektywne obciążenie należy analizować jako wynik dodatkowy.
 
 ## H2 (robocza)
 
@@ -14,7 +14,7 @@ Model multimodalny charakteryzuje się lepszą zdolnością generalizacji międz
 
 Czy multimodalna estymacja obciążenia poznawczego poprawia adaptację interfejsu AR względem interfejsu statycznego i adaptacji opartej na jednej modalności?
 
-Planowany główny punkt końcowy: Odsetek błędów zadaniowych oraz/lub czas poprawnego wykonania (ostateczny jeden wynik główny do zamrożenia).
+Kandydat na pojedynczy główny punkt końcowy: odsetek błędnych prób zadaniowych, z definicją błędu, mianownikiem i sposobem postępowania z próbami nieukończonymi do zatwierdzenia przed rekrutacją. Czas poprawnego wykonania pozostaje wynikiem dodatkowym.
 
 Dodatkowe punkty końcowe: NASA-TLX, dokładność estymacji obciążenia na zewnętrznych etykietach, opóźnienie adaptacji, FPS, zużycie energii, wskaźniki okoruchowe.
 

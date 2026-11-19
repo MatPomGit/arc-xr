@@ -6,7 +6,7 @@
 
 Czy multimodalna estymacja obciążenia poznawczego poprawia adaptację interfejsu AR względem interfejsu statycznego i adaptacji opartej na jednej modalności?
 
-Kandydat na punkt końcowy główny: Odsetek błędów zadaniowych oraz/lub czas poprawnego wykonania (ostateczny jeden wynik główny do zamrożenia).
+Kandydat na punkt końcowy główny: odsetek błędnych prób zadaniowych, z definicją błędu i mianownikiem do zatwierdzenia przed badaniem. Czas poprawnego wykonania pozostaje wynikiem dodatkowym.
 
 Pozostałe miary: NASA-TLX, dokładność estymacji obciążenia na zewnętrznych etykietach, opóźnienie adaptacji, FPS, zużycie energii, wskaźniki okoruchowe.
 
@@ -15,6 +15,14 @@ Pozostałe miary: NASA-TLX, dokładność estymacji obciążenia na zewnętrznyc
 Hierarchiczny model dla efektu warunku z uczestnikiem jako efektem losowym; osobno walidacja międzyosobnicza modelu i analiza interwencji. Raportować przedziały ufności i rozkłady błędów.
 
 Kontrasty, poziom istotności, korekta wielokrotnych porównań, reguły braków danych i miary niepewności wymagają wcześniejszego ustalenia. Zweryfikować założenia modelu oraz skuteczną liczebność niezależnych jednostek. Nie traktować wielu klatek tej samej sesji jako niezależnych uczestników.
+
+## Rozdzielenie walidacji modelu i efektu interwencji
+
+**A. Predykcja obciążenia.** Ocenić model na osobach nieuwzględnionych w treningu. Wszystkie klatki, próby i sesje jednej osoby muszą pozostawać w tej samej partycji. Należy ustalić niezależne etykiety odniesienia, ich jakość i synchronizację, metryki oraz uczciwy koszt obliczeniowy modeli jedno- i multimodalnych.
+
+**B. Efekt interwencji.** Kandydatem na jeden główny wynik jest odsetek błędnych prób. Przy odpowiednim sposobie losowania można rozważyć hierarchiczny model logistyczny z efektem uczestnika i korektą trudności, kolejności oraz ekspozycji. Główny kontrast dotyczy adaptacji multimodalnej względem statycznego HUD; raportować efekt, przedział ufności, niepewność i jednostkę analizy.
+
+Dobra predykcja nie dowodzi skuteczności interwencji. Estymand, metryki, reguły braków danych, próg istotności, porównania dodatkowe i analiza mocy wymagają zatwierdzenia przed rozpoczęciem badań. Nie wolno po obejrzeniu wyników wybierać korzystniejszego z błędów i czasu wykonania.
 
 ## Kontrole i odporność
 
