@@ -12,6 +12,12 @@ Mapowanie instrukcji języka naturalnego na obiekty i współrzędne 3D na podst
 
 Czy integracja VLM z geometrią 3D ogranicza błędy wskazania obiektu referencyjnego i pozycjonowania wskazówek AR względem podejścia wyłącznie obrazowego?
 
+## Wariant minimalny (19.11.2026)
+
+Benchmark: ten sam VLM na obrazie 2D i z jawną geometrią 3D. Wynik: poprawność wskazań obiektów na niewidzianych scenach. Korzystać ze skalibrowanej referencji bez zakładania surowej mapy głębi Quest 3.
+
+Jest to propozycja pilotażu, a nie zatwierdzona zmiana protokołu, prerejestracja czy wynik badania. [Plan minimalny](../mvp_plan.md).
+
 ## Projekt metodologiczny
 
 Benchmark scen z kontrolowaną geometrią i zestawem niejednoznacznych instrukcji; bazowe VLM 2D, VLM + głębia oraz model z mechanizmem abstencji.

@@ -11,6 +11,10 @@
 | [P05](P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych |
 | [P06](P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR |
 
+## Minimalne badania
+
+Uzgodniono dwie wspólne platformy i sześć małych pilotaży. Szczegóły: [plan minimalny](mvp_plan.md). Zmiana zakresu pilotaży nie zatwierdza hipotez ani wyników.
+
 ## Pytania badawcze
 
 ### P01

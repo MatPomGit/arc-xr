@@ -12,6 +12,12 @@ Połączenie temporalnego grafu wiedzy o sekwencji czynności z egocentrycznym V
 
 Czy rozumowanie oparte na temporalnym grafie procedury zmniejsza liczbę pominiętych błędów i fałszywych alarmów względem analizy samego strumienia wideo?
 
+## Wariant minimalny (19.11.2026)
+
+Benchmark: jedna prosta, bezpieczna procedura montażowa. Porównać analizę bez pamięci i ze stanem kroków. Wynik: czułość wykrywania pominięć przy ustalonym limicie fałszywych alarmów. Grafy i automatyczne interwencje odłożyć.
+
+Jest to propozycja pilotażu, a nie zatwierdzona zmiana protokołu, prerejestracja czy wynik badania. [Plan minimalny](../mvp_plan.md).
+
 ## Projekt metodologiczny
 
 Zbiór referencyjnych przebiegów prawidłowych i nieprawidłowych procedur z anotacją kroków i czasu; offline benchmark detekcji, następnie kontrolowane badanie interwencji.

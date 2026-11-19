@@ -2,6 +2,10 @@
 
 ARC-XR jest repozytorium planowanych badań nad adaptacyjnymi interfejsami AR, multimodalnym wnioskowaniem o stanie użytkownika, modelami Vision–Language (VLM), weryfikacją czynności manualnych i komunikacją człowiek–agent. Dokumenty na obecnym etapie są **prospektywnymi projektami**, a nie wynikami badań.
 
+## Wariant minimalny
+
+Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast sześciu nowych systemów. Szczegółowe porównania, pomiary i ograniczenia aparatury: [plan minimalny](manuscripts/mvp_plan.md). Pilotaże nie zastępują badań potwierdzających.
+
 ## Portfolio publikacji
 
 | ID | Temat | Stan |

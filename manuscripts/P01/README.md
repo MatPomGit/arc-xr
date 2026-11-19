@@ -12,6 +12,12 @@ Okulometria (średnica źrenicy, fiksacje, sakkady), opcjonalnie sygnały mimicz
 
 Czy multimodalna estymacja obciążenia poznawczego poprawia adaptację interfejsu AR względem interfejsu statycznego i adaptacji opartej na jednej modalności?
 
+## Wariant minimalny (19.11.2026)
+
+Pilotaż: statyczny HUD kontra HUD sterowany prostą regułą zachowania. Wynik: odsetek błędnych prób. To nie test hipotez multimodalnych H1/H2, które wymagają osobnego badania. Standardowy Quest 3 nie śledzi wzroku; Tobii Eye Tracker 5 mierzy przy monitorze, a nie w Quest 3.
+
+Jest to propozycja pilotażu, a nie zatwierdzona zmiana protokołu, prerejestracja czy wynik badania. [Plan minimalny](../mvp_plan.md).
+
 ## Projekt metodologiczny
 
 Kontrolowane badanie z powtarzanymi pomiarami: HUD statyczny, adaptacja jednomodalna, adaptacja multimodalna; kolejność warunków zrównoważona. Oddzielna walidacja algorytmu i ocena wpływu interwencji na zachowanie.

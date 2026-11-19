@@ -12,6 +12,12 @@ Spersonalizowane modele sekwencyjne i uczenie ciągłe do estymacji frustracji i
 
 Czy personalizacja i uczenie ciągłe poprawiają rozpoznawanie deklarowanej frustracji oraz skuteczność wspierających mikrointerwencji AR?
 
+## Wariant minimalny (19.11.2026)
+
+Pilotaż: model globalny kontra prosta kalibracja indywidualna na kolejnych sesjach. Wynik: macro-F1 wobec niezależnych samoopisów frustracji. Uczenie ciągłe i automatyczne mikrointerwencje odłożyć, nie traktować predykcji jako diagnozy.
+
+Jest to propozycja pilotażu, a nie zatwierdzona zmiana protokołu, prerejestracja czy wynik badania. [Plan minimalny](../mvp_plan.md).
+
 ## Projekt metodologiczny
 
 Badanie wielosesyjne: bazowy model globalny, model spersonalizowany, model aktualizowany ciągle; w osobnym etapie porównanie interwencji z warunkiem kontrolnym.
