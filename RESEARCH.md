@@ -14,6 +14,10 @@ Rozróżniać jakość predykcji od wpływu interwencji. Nie utożsamiać pupilo
 
 Każdą pozycję w `references.bib` weryfikować z oryginalną pracą. Zachować pochodzenie kodu i danych, prawa do użycia i retencji oraz ślad decyzji analitycznych. Zasady szczegółowe: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
+## Uproszczenie badań
+
+Najpierw realizować najmniejszy interpretowalny eksperyment: zwykle dwa warunki i jeden główny wynik. Nie traktować pilotaży jako potwierdzenia szerszych hipotez. Nie dodawać niepotrzebnych modeli, sprzętu ani interwencji. Zobacz [plan minimalny](manuscripts/mvp_plan.md).
+
 ## Polityka redakcyjna
 
 Priorytetem jest ukończony, naukowo obroniony artykuł i próba wysłania do odpowiedniego czasopisma po decyzji autora, a nie bezterminowe doskonalenie. Można rozważyć czasopismo o umiarkowanej punktacji, w tym 20 punktów w aktualnym polskim wykazie, ale punktację, indeksowanie, zakres i opłaty należy zweryfikować w chwili wyboru.

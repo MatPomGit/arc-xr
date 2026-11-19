@@ -1,5 +1,5 @@
 version: 1
-updated: "2026-11-18"
+updated: "2026-11-19"
 purpose: "Stan naukowy ARC-XR; bez przypisywania niezweryfikowanych wyników."
 repository:
   full_name: MatPomGit/arc-xr
@@ -11,6 +11,9 @@ repository:
   plan: AUTOPILOT_PLAN.md
   reproducibility: REPRODUCIBILITY.md
 research_phase: concept_and_protocol_drafting
+study_design_strategy: staged_minimal_pilots_proposed
+study_design_plan: manuscripts/mvp_plan.md
+study_design_status: direction_accepted_protocols_not_frozen
 controller_integration: not_verified
 publication_portfolio:
   planned_core_count: 6

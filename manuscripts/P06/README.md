@@ -12,6 +12,12 @@ Porównanie ucieleśnionego awatara i przestrzennego kursora kontekstowego w kom
 
 Jak forma reprezentacji i modalność komunikatów agenta AR wpływają na współdzielenie uwagi, sprawność zadaniową i zaufanie użytkownika?
 
+## Wariant minimalny (19.11.2026)
+
+Badanie: prosty kursor 3D kontra prosty awatar, wskazujące te same obiekty. Wynik: czas poprawnego ustalenia wspólnego obiektu. Kontrolować treść i opóźnienie komunikatu. Pełnego agenta, mowy i gestów na razie nie budować.
+
+Jest to propozycja pilotażu, a nie zatwierdzona zmiana protokołu, prerejestracja czy wynik badania. [Plan minimalny](../mvp_plan.md).
+
 ## Projekt metodologiczny
 
 Zrównoważone badanie z powtarzanymi pomiarami: awatar lub kursor × wariant gest/mowa/wskaźnik; kontrola identycznej treści komunikatów i opóźnienia.

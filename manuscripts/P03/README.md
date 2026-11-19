@@ -12,6 +12,12 @@ Pomiar związku błędów okluzji, rozbieżności geometrycznych i opóźnienia 
 
 Jak kontrolowane błędy okluzji i asynchronii wpływają na komfort, jakość doświadczenia i wydajność użytkowników podczas długich sesji HMD AR?
 
+## Wariant minimalny (19.11.2026)
+
+Pilotaż: referencyjne renderowanie kontra jeden kontrolowany, zmierzony poziom opóźnienia. Wynik: zmiana wcześniej wybranej skali dyskomfortu wzrokowego. Okluzję odłożyć, przestrzegać bezpiecznej długości ekspozycji i zasad przerwania.
+
+Jest to propozycja pilotażu, a nie zatwierdzona zmiana protokołu, prerejestracja czy wynik badania. [Plan minimalny](../mvp_plan.md).
+
 ## Projekt metodologiczny
 
 Zrównoważony, kontrolowany układ czynnikowy okluzja × asynchronia, z pomiarem na początku, w trakcie i po sesji oraz warunkiem odniesienia.
