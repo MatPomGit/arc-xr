@@ -1,6 +1,6 @@
 # Multimodal Cognitive-Load Estimation for Adaptive Information Density in Augmented Reality
 
-> Draft v0.1.0 — prospective structure only; NOT SUBMITTED. No empirical results are reported.
+> Draft v0.2.0. Prospective research design only. NOT SUBMITTED. No empirical results are reported.
 
 ## Abstract
 
@@ -8,9 +8,9 @@
 
 ## 1. Introduction
 
-Okulometria (średnica źrenicy, fiksacje, sakkady), opcjonalnie sygnały mimiczne i lekkie modele Edge AI do sterowania zagęszczeniem HUD oraz poziomem szczegółowości obiektów 3D.
+Eye-tracking measures, including pupil diameter, fixations and saccades, may inform resource-constrained models that adjust the density of information in an augmented reality (AR) head-up display (HUD) and the level of three-dimensional detail. Facial signals remain optional and exploratory; no single physiological measure is treated as a diagnostic indicator of cognitive workload.
 
-Research question: Czy multimodalna estymacja obciążenia poznawczego poprawia adaptację interfejsu AR względem interfejsu statycznego i adaptacji opartej na jednej modalności?
+Research question: Does AR adaptation guided by multimodal cognitive-workload estimation reduce task errors compared with a static interface, and how does it compare with adaptation based on one modality?
 
 ## 2. Related work
 
@@ -24,28 +24,28 @@ The proposed contribution is a controlled comparison of static, unimodally adapt
 
 ## 3. Research questions and hypotheses
 
-- H1 (proposed): Adaptacyjny interfejs wykorzystujący multimodalną estymację obciążenia ogranicza błędy zadaniowe lub subiektywne przeciążenie względem interfejsu statycznego w porównywalnych warunkach.
-- H2 (proposed): Model multimodalny charakteryzuje się lepszą zdolnością generalizacji międzyosobniczej niż porównywalny model jednokanałowy przy z góry ustalonym budżecie obliczeniowym.
+- H1 (proposed): Multimodally adapted HUD information density reduces the proportion of task trials with errors compared with a static HUD under comparable conditions. Subjective workload is a secondary outcome and cannot substitute for the proposed primary endpoint.
+- H2 (proposed): Given a prespecified and comparable computational budget, the multimodal cognitive-workload estimator generalises better to participants excluded from model training than a single-modality estimator.
 
 These hypotheses must be operationalized and preregistered, if applicable, prior to confirmatory data collection.
 
 ## 4. Materials and methods
 
-Proposed design: Kontrolowane badanie z powtarzanymi pomiarami: HUD statyczny, adaptacja jednomodalna, adaptacja multimodalna; kolejność warunków zrównoważona. Oddzielna walidacja algorytmu i ocena wpływu interwencji na zachowanie.
+Proposed design: A counterbalanced, within-participant comparison of a static HUD, single-modality adaptive HUD and multimodally adaptive HUD. Generalisation of the predictive model and the causal effect of the interface intervention will be evaluated separately.
 
-Sample and setting: Dorośli użytkownicy wykonywający standaryzowane zadania wymagające selekcji informacji w AR; kryteria i liczebność do uzasadnienia analizą mocy.
+Sample and setting: Adult participants performing standardised information-selection tasks in AR. Eligibility criteria and sample size require prospective justification through a power or precision analysis.
 
-Manipulated factors or comparators: Typ interfejsu, trudność zadania i gęstość informacji; rzeczywiste manipulacje należy skalibrować przed badaniem.
+Manipulated factors and comparators: Interface condition, task difficulty and information density. The exact manipulations, calibration and balancing procedures remain to be defined.
 
-Primary endpoint candidate: Odsetek błędnych prób zadaniowych; ostateczna definicja błędu, mianownik i estymand wymagają zatwierdzenia przed rekrutacją. Czas poprawnego wykonania pozostaje proponowanym wynikiem dodatkowym.
+Primary endpoint candidate: The proportion of task trials with errors. Error coding, the denominator, handling of incomplete trials and the estimand require approval before recruitment. Time to correct completion remains a proposed secondary endpoint.
 
-Secondary outcomes: NASA-TLX, dokładność estymacji obciążenia na zewnętrznych etykietach, opóźnienie adaptacji, FPS, zużycie energii, wskaźniki okoruchowe.
+Secondary outcomes: NASA-TLX ratings, workload-estimation performance against independent reference labels, adaptation latency, frame rate, energy consumption and oculomotor measures.
 
 For acquisition settings, ethics, missing data, exclusions and sample-size justification, see [protocol](protocol/README.md).
 
 ## 5. Analysis plan
 
-Hierarchiczny model dla efektu warunku z uczestnikiem jako efektem losowym; osobno walidacja międzyosobnicza modelu i analiza interwencji. Raportować przedziały ufności i rozkłady błędów.
+A hierarchical model with participant-level clustering is proposed for the effect of interface condition. Prediction will be evaluated using participant-disjoint partitions. Effect sizes, uncertainty intervals and error distributions will be reported; confirmatory specifications remain subject to approval.
 
 See [analyses](analyses/README.md) for the proposed estimand, validation partitions and reporting requirements.
 
@@ -59,7 +59,7 @@ To be completed after results. Discuss alternative explanations, generalizabilit
 
 ## 8. Limitations
 
-Oświetlenie i luminancja (pupilometria), kalibracja eye trackera, akomodacja, okulary, zmęczenie, efekt uczenia; mikroekspresje nie stanowią zweryfikowanej samodzielnej miary obciążenia.
+Pupil diameter is sensitive to illumination, accommodation, eyewear, fatigue and eye-tracker calibration. Within-participant learning effects may affect task performance. Facial microexpressions are not validated standalone indicators of cognitive workload.
 
 ## 9. Ethics, data and code availability
 
