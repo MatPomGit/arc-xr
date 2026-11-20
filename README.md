@@ -6,6 +6,10 @@ ARC-XR jest repozytorium planowanych badań nad adaptacyjnymi interfejsami AR, m
 
 Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast sześciu nowych systemów. Szczegółowe porównania, pomiary i ograniczenia aparatury: [plan minimalny](manuscripts/mvp_plan.md). Pilotaże nie zastępują badań potwierdzających.
 
+## Dodatkowe propozycje naukowe
+
+[MSC-AR-P26: moment prezentacji wskazówki AR względem fazy ruchu dłoni](docs/research-proposals-2026.md) jest koncepcją do audytu nowości, **poza zatwierdzonym zakresem P01–P06**. Nie zmienia bieżącego planu minimalnych badań ani liczby manuskryptów.
+
 ## Portfolio publikacji
 
 | ID | Temat | Stan |
