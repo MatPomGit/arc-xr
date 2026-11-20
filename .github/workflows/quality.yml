@@ -1,0 +1,33 @@
+name: ARC-XR offline research contract
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Validate policy, Pages and planned research structure
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check Python syntax
+        run: python3 -m compileall -q scripts tests
+      - name: Validate ARC-XR research structure
+        run: python3 scripts/validate_repository.py
+      - name: Check documentation budgets
+        run: python3 scripts/validate_documentation.py
+      - name: Validate public Pages source
+        run: python3 scripts/validate_pages.py
+      - name: Run all offline regression tests
+        run: python3 -m unittest discover -s tests -v
+
+# No Pages deployment, publishing credentials, private data or privileged runner.
