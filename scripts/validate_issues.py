@@ -11,6 +11,85 @@ EXPECTED = {"01-task.yml": None, "02-bug.yml": "[fix]",
 MANDATORY = {"acceptance", "verification", "gates", "next_step"}
 
 
+
+# Contract source: research-autopilot/docs/autonomy/agent-work-classification.md.
+# This checker guards shape and authorization invariants only. The central
+# catalogue, not this source, remains authoritative for labels and task intents.
+META_KEYS = (
+    "work_types", "execution_mode", "human_approval_required",
+    "human_approval_reasons", "resource_requirements",
+    "autonomous_scope", "human_required_scope",
+)
+MODES = {"autonomous", "autonomous_with_runtime", "mixed", "human_required"}
+START_MARKER = "<!-- agent-work-classification:v1 -->"
+END_MARKER = "<!-- /agent-work-classification -->"
+
+
+def check_classification(text: str) -> list[str]:
+    """Validate one bounded v1 block from an Issue body, without execution."""
+    problems: list[str] = []
+    if text.count(START_MARKER) != 1 or text.count(END_MARKER) != 1:
+        return ["CLASSIFICATION: requires exactly one complete v1 block"]
+    start = text.find(START_MARKER) + len(START_MARKER)
+    end = text.find(END_MARKER)
+    if end <= start:
+        return ["CLASSIFICATION: invalid marker order"]
+    body = text[start:end].strip()
+    values: dict[str, str] = {}
+    for line in body.splitlines():
+        matched = re.fullmatch(r"([a-z][a-z_]*):[ \t]+(.+)", line)
+        if not matched:
+            problems.append("CLASSIFICATION: malformed field")
+            continue
+        key, value = matched.groups()
+        if key not in META_KEYS or key in values:
+            problems.append("CLASSIFICATION: unknown or duplicate field " + key)
+        values[key] = value.strip()
+    if set(values) != set(META_KEYS):
+        problems.append("CLASSIFICATION: missing or extra fields")
+        return sorted(set(problems))
+    mode = values["execution_mode"]
+    if mode not in MODES:
+        problems.append("CLASSIFICATION: unknown execution_mode")
+    approval = values["human_approval_required"]
+    if approval not in ("true", "false"):
+        problems.append("CLASSIFICATION: approval must be boolean")
+    def parse_array(key: str) -> list[str] | None:
+        value = values[key]
+        if not (value.startswith("[") and value.endswith("]")):
+            problems.append("CLASSIFICATION: invalid array " + key)
+            return None
+        tokens = [z.strip() for z in value[1:-1].split(",")]
+        if len(tokens) == 1 and tokens[0] == "":
+            return []
+        if any(not re.fullmatch(r"[a-z][a-z_]*", z) for z in tokens) or len(set(tokens)) != len(tokens):
+            problems.append("CLASSIFICATION: invalid tokens " + key)
+            return None
+        return tokens
+    types = parse_array("work_types")
+    reasons = parse_array("human_approval_reasons")
+    resources = parse_array("resource_requirements")
+    if types is not None and not types:
+        problems.append("CLASSIFICATION: work_types must not be empty")
+    if resources is not None and not resources:
+        problems.append("CLASSIFICATION: resource_requirements must not be empty")
+    if reasons is not None:
+        if approval == "true" and not reasons:
+            problems.append("CLASSIFICATION: human approval needs a reason")
+        if approval == "false" and reasons:
+            problems.append("CLASSIFICATION: approval reason contradicts false")
+    if mode in {"mixed", "human_required"} and approval != "true":
+        problems.append("CLASSIFICATION: human gate required by execution_mode")
+    if any(not (values[key].startswith('"') and values[key].endswith('"')) for key in ("autonomous_scope", "human_required_scope")):
+        problems.append("CLASSIFICATION: scopes must be quoted strings")
+    human_scope = values["human_required_scope"]
+    if approval == "true" and human_scope in ('"none"', '""'):
+        problems.append("CLASSIFICATION: human scope missing")
+    if approval == "false" and human_scope != '"none"':
+        problems.append("CLASSIFICATION: unsupported human scope without approval")
+    return sorted(set(problems))
+
+
 def check_issues(root: Path = ROOT) -> list[str]:
     root = Path(root).resolve()
     findings = []
@@ -24,6 +103,19 @@ def check_issues(root: Path = ROOT) -> list[str]:
         findings.append("ISSUES POLICY: labels and dispatch must stay disabled")
     if data.get("classification_marker") != "agent-work-classification:v1":
         findings.append("ISSUES POLICY: classification marker mismatch")
+    if data.get("require_verified_native_relationships") is not False:
+        findings.append("ISSUES POLICY: cannot claim unverified native relations")
+    if data.get("security_policy") != "SECURITY.md":
+        findings.append("ISSUES POLICY: incorrect security contract")
+    source = "MatPomGit/research-autopilot/"
+    for key, target in (
+        ("source_of_truth", "docs/architecture/GITHUB_WORK_MANAGEMENT.md"),
+        ("classification_contract", "docs/autonomy/agent-work-classification.md"),
+        ("task_intents", "docs/autonomy/TASK_TYPES.md"),
+        ("labels_taxonomy", "docs/LABEL_TAXONOMY.md"),
+    ):
+        if data.get(key) != source + target:
+            findings.append("ISSUES POLICY: central contract drift " + key)
     templates = data.get("templates")
     if (not isinstance(templates, list) or len(templates) != len(EXPECTED)
             or not all(isinstance(item, dict) for item in templates)

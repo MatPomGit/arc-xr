@@ -1,6 +1,6 @@
 # Standard GitHub Issues w ARC-XR
 
-**Wersja lokalnego kontraktu:** 1.0.0. **Źródło kanoniczne** to [zarządzanie Issues](https://github.com/MatPomGit/research-autopilot/blob/main/docs/architecture/GITHUB_WORK_MANAGEMENT.md), [klasyfikacja pracy agentów](https://github.com/MatPomGit/research-autopilot/blob/main/docs/autonomy/agent-work-classification.md), [28 typów zadań](https://github.com/MatPomGit/research-autopilot/blob/main/docs/autonomy/TASK_TYPES.md), [taksonomia etykiet](https://github.com/MatPomGit/research-autopilot/blob/main/docs/LABEL_TAXONOMY.md) i [relacje GitHub](https://github.com/MatPomGit/research-autopilot/blob/main/docs/governance/GITHUB_ISSUE_LABELS_AND_RELATIONS.md). Repo nie tworzy kopii tych słowników.
+**Wersja lokalnego kontraktu:** 1.0.1. **Źródło kanoniczne** to [zarządzanie Issues](https://github.com/MatPomGit/research-autopilot/blob/main/docs/architecture/GITHUB_WORK_MANAGEMENT.md), [klasyfikacja pracy agentów](https://github.com/MatPomGit/research-autopilot/blob/main/docs/autonomy/agent-work-classification.md), [28 typów zadań](https://github.com/MatPomGit/research-autopilot/blob/main/docs/autonomy/TASK_TYPES.md), [taksonomia etykiet](https://github.com/MatPomGit/research-autopilot/blob/main/docs/LABEL_TAXONOMY.md) i [relacje GitHub](https://github.com/MatPomGit/research-autopilot/blob/main/docs/governance/GITHUB_ISSUE_LABELS_AND_RELATIONS.md). Repo nie tworzy kopii tych słowników.
 
 ## Zasada jednego sprawdzalnego rezultatu
 
@@ -45,3 +45,8 @@ GitHub Projects stanowi widok planistyczny tych samych Issues, nie oddzielną ko
 W PR/Issue odnotuj base i finalny HEAD SHA, rzeczywiste wyniki testów `PASS/FAIL/NOT_RUN/UNAVAILABLE`, zakres recenzji, wymagane zgody, dokładny wynik merge i ewentualnego wdrożenia. Weryfikacja struktury nie jest dowodem naukowym. Zamknij Issue dopiero, gdy wszystkie jego kryteria są faktycznie spełnione; zielony CI lub scalony PR może pozostawić niezweryfikowane bramki eksperymentalne.
 
 Starsze Issues `#8` i `#10` zachowują własne kryteria i historię. Ich klasyfikacja wymaga odrębnego triage, bez automatycznego podnoszenia statusu naukowego lub kasowania zawartości.
+
+
+## Audyt poprawności klasyfikacji
+
+`scripts/validate_issues.py` waliduje formularze oraz strukturę `agent-work-classification:v1` w próbkach offline: pojedynczy blok, siedem pól, zgodność `execution_mode` z bramkami i brak sprzeczności w uprawnieniach. Sprawdzenie pojedynczego tekstu **nie potwierdza uprawnienia do wykonania** ani aktualnego stanu zdalnego Issue. Bieżące klasyfikacje i relacje GitHub należy odczytać oddzielnie przed triage.

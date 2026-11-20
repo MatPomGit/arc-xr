@@ -98,5 +98,70 @@ class IssuesTests(unittest.TestCase):
         self.assertIn("<!-- agent-work-classification:v1 -->", (ROOT / "docs/issues.md").read_text())
 
 
+    def sample(self) -> str:
+        return (
+            "<!-- agent-work-classification:v1 -->\n"
+            "work_types: [research, documentation]\n"
+            "execution_mode: mixed\n"
+            "human_approval_required: true\n"
+            "human_approval_reasons: [personal_decision, legal_or_compliance]\n"
+            "resource_requirements: [standard_compute, github]\n"
+            'autonomous_scope: "Przeglad offline i testy."\n'
+            'human_required_scope: "Zatwierdzenie protokolu."\n'
+            "<!-- /agent-work-classification -->"
+        )
+
+    def test_valid_mixed_classification(self):
+        self.assertEqual([], validator.check_classification(self.sample()))
+
+    def test_double_classification_marker_rejected(self):
+        self.assertIn("CLASSIFICATION: requires exactly one complete v1 block",
+                      validator.check_classification(self.sample() + self.sample()))
+
+    def test_approval_without_reason_rejected(self):
+        sample = self.sample().replace(
+            "human_approval_reasons: [personal_decision, legal_or_compliance]",
+            "human_approval_reasons: []")
+        self.assertIn("CLASSIFICATION: human approval needs a reason",
+                      validator.check_classification(sample))
+
+    def test_mixed_without_human_gate_rejected(self):
+        sample = self.sample().replace(
+            "human_approval_required: true", "human_approval_required: false")
+        self.assertIn("CLASSIFICATION: human gate required by execution_mode",
+                      validator.check_classification(sample))
+
+    def test_unrecognized_execution_mode_rejected(self):
+        sample = self.sample().replace("execution_mode: mixed", "execution_mode: fast")
+        self.assertIn("CLASSIFICATION: unknown execution_mode",
+                      validator.check_classification(sample))
+
+    def test_rogue_classification_field_rejected(self):
+        sample = self.sample().replace(
+            "execution_mode: mixed", "execution_mode: mixed\nowner_override: true")
+        self.assertIn("CLASSIFICATION: unknown or duplicate field owner_override",
+                      validator.check_classification(sample))
+
+    def test_local_policy_cannot_claim_native_relations(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.fixture(tmp)
+            path = root / "config/issues-policy.json"
+            data = json.loads(path.read_text())
+            data["require_verified_native_relationships"] = True
+            path.write_text(json.dumps(data))
+            self.assertIn("ISSUES POLICY: cannot claim unverified native relations",
+                          validator.check_issues(root))
+
+    def test_central_contract_source_cannot_be_silently_retargeted(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.fixture(tmp)
+            path = root / "config/issues-policy.json"
+            data = json.loads(path.read_text())
+            data["classification_contract"] = "unknown/manual.md"
+            path.write_text(json.dumps(data))
+            self.assertIn("ISSUES POLICY: central contract drift classification_contract",
+                          validator.check_issues(root))
+
+
 if __name__ == "__main__":
     unittest.main()
