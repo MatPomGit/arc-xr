@@ -1,6 +1,6 @@
 # Standard dokumentacji ARC-XR
 
-Kanoniczne źródła: [AGENTS](../AGENTS.md) (współpraca i ryzyko), [RESEARCH](../RESEARCH.md) (metodologia), [PROJECT_STATE](../PROJECT_STATE.yaml) (stan), [REPRODUCIBILITY](../REPRODUCIBILITY.md) (dowody), [ARCHITECTURE](../ARCHITECTURE.md) (granice komponentów), [ADR](adr/README.md) (decyzje techniczne), [SECURITY](../SECURITY.md) (ochrona danych) i [GOVERNANCE](../GOVERNANCE.md) (kompetencje). Nie duplikuj rejestru prac i dowodów w dokumentach opisowych.
+Kanoniczne źródła: [Issues](issues.md) określają intake i relacje zadań, a [AGENTS](../AGENTS.md) (współpraca i ryzyko), [RESEARCH](../RESEARCH.md) (metodologia), [PROJECT_STATE](../PROJECT_STATE.yaml) (stan), [REPRODUCIBILITY](../REPRODUCIBILITY.md) (dowody), [ARCHITECTURE](../ARCHITECTURE.md) (granice komponentów), [ADR](adr/README.md) (decyzje techniczne), [SECURITY](../SECURITY.md) (ochrona danych) i [GOVERNANCE](../GOVERNANCE.md) (kompetencje). Nie duplikuj rejestru prac i dowodów w dokumentach opisowych.
 
 ## Limity znaków
 
@@ -15,6 +15,7 @@ Kanoniczne źródła: [AGENTS](../AGENTS.md) (współpraca i ryzyko), [RESEARCH]
 | Pojedynczy ADR | 6 500 |
 | Rozdział architektury lub bezpieczeństwa | 8 500 |
 | Publiczna strona | 6 000 |
+| `docs/issues.md` | 9 000 |
 | Szczegółowe istniejące notatki aparatury | 24 000 |
 | Istniejący szkic mobile gaze | 16 000 |
 

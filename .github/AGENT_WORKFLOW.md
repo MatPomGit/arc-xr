@@ -23,3 +23,10 @@ GitHub Pages może pochodzić jedynie z jawnie zatwierdzonego `pages/`, po przeg
 ## DoD i kontynuacja
 
 Potwierdź kryteria na aktualnym SHA, aktualizację właściwych dokumentów, komplet dowodów i wynik recenzji. Zapisz ewentualne blokady i punkt wznowienia w istniejącym Issue/PR, bez mnożenia redundantnych raportów.
+
+
+## Intake i triage Issues
+
+Obowiązuje [docs/issues.md](../docs/issues.md), w szczególności klasyfikacja `agent-work-classification:v1`. Najpierw sprawdź istniejące Issue, PR, etykiety, parent, zależności i rzeczywistą gotowość. Wpisz jeden weryfikowalny wynik, aktualny base SHA, kryteria odbioru, plan testów, dozwolone działania i jeden bezpieczny krok. Podziel pracę na JUMPs tylko wtedy, gdy etapy ułatwiają wykonanie bez nowego backlogu.
+
+Przed wykonaniem uzupełnij kanoniczne `work_types`, `execution_mode`, `human_approval_required`, `human_approval_reasons`, `resource_requirements`, `autonomous_scope`, `human_required_scope`. Nie traktuj klasyfikacji jako upoważnienia. Etykiety i natywne relacje zmieniaj wyłącznie po odczycie i w granicach uprawnień; nie przekształcaj samych tekstowych linków w pozorne relacje GitHub. Przeprowadzaj `python scripts/validate_issues.py` przed recenzją PR.

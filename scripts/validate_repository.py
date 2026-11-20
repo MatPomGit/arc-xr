@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from validate_documentation import check_documentation
 from validate_pages import check_pages
+from validate_issues import check_issues
 
 REQUIRED = (
     "AGENTS.md", ".github/AGENT_WORKFLOW.md",
@@ -23,7 +24,12 @@ REQUIRED = (
     "manuscripts/README.md", "manuscripts/mvp_plan.md",
     "config/documentation-policy.json", "config/pages-policy.json",
     "scripts/validate_repository.py", "scripts/validate_documentation.py",
-    "scripts/validate_pages.py",
+    "scripts/validate_pages.py", "scripts/validate_issues.py",
+    "config/issues-policy.json", "docs/issues.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/01-task.yml", ".github/ISSUE_TEMPLATE/02-bug.yml",
+    ".github/ISSUE_TEMPLATE/03-experiment.yml", ".github/ISSUE_TEMPLATE/04-manuscript.yml",
+    "tests/test_issues_policy.py",
     "docs/index.md", "docs/documentation.md", "docs/pages.md",
     "docs/architecture/README.md", "docs/architecture/components.md",
     "docs/architecture/data-flow.md",
@@ -88,6 +94,7 @@ def check_repository(root: Path = ROOT) -> list[str]:
                     problems.append(f"ARC MANUSCRIPT: missing {identifier}/{name}")
     problems.extend(check_documentation(root))
     problems.extend(check_pages(root))
+    problems.extend(check_issues(root))
     return sorted(set(problems))
 
 

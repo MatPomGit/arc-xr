@@ -45,3 +45,10 @@ Pisz poprawną polszczyzną, pełnymi zdaniami i zwięźle. Zachowuj anglojęzyc
 Stosuj szczegółową [procedurę](.github/AGENT_WORKFLOW.md). `COMMENTED/ACCEPT` nie jest formalnym GitHub `APPROVED`; własna recenzja nie jest niezależna.
 
 **Dostępność materiałów:** `docs/` i `manuscripts/` są dokumentacją projektu, a `pages/` jedynym źródłem publicznej witryny. Żadnych instrukcji dla agentów, treści edytorskich, porad o współtworzeniu repozytorium, prywatnych danych ani surowych pomiarów w Pages. Zobacz [politykę](docs/pages.md). Nie twórz `CONTRIBUTING.md`.
+
+
+## GitHub Issues: nowy kontrakt
+
+Stosuj [docs/issues.md](docs/issues.md) oraz formularze `.github/ISSUE_TEMPLATE/`. Przed otwarciem Issue sprawdź istniejące Issues i PR. Jeden rezultat = jedno zadanie, a JUMP jest krokiem wewnątrz zadania, nie nową kolejką. Używaj jednego poprawnego tagu typu zadania, np. `[docs]`, `[fix]`, `[paper]`, `[experiment]`, `[test]`, bez tworzenia własnych synonimów.
+
+Agent podczas triage uzupełnia blok `agent-work-classification:v1`. Metadata, formularz, `status:ready-for-agent` i etykiety nie uruchamiają wykonania. Natywne Parent/Sub-issues i Blocked by potwierdzaj przez GitHub; przy samych odnośnikach tekstowych zapisz `NATIVE_RELATIONS_NOT_APPLIED`. Nie dodawaj automatycznych etykiet ani nie osłabiaj bramek `human_approval_required`. Research Autopilot jest jedynym upoważnionym kontrolerem.
