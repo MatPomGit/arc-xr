@@ -29,6 +29,12 @@ Każda publikacja w `manuscripts/PXX/` ma własny opis zakresu, szkic manuskrypt
 
 Repozytorium korzysta z zasad zarządzania Research Autopilot, ale samo istnienie dokumentów nie oznacza rejestracji ani aktywnego wykonywania zadań w kontrolerze.
 
+## Architektura, bezpieczeństwo i strona publiczna
+
+[ARCHITECTURE.md](ARCHITECTURE.md) wyjaśnia granice programu, planowanych aplikacji i bibliotek. Szczegóły są w [docs/architecture](docs/architecture/README.md), uzasadnienia decyzji w [ADR](docs/adr/README.md), a [SECURITY.md](SECURITY.md), [GOVERNANCE.md](GOVERNANCE.md) i [model zagrożeń](docs/security/threat-model.md) opisują ochronę danych oraz odpowiedzialność. [Standard dokumentacji](docs/documentation.md) ogranicza długość plików administracyjnych, ale nie manuskryptów.
+
+Publiczny opis programu znajduje się tylko w [pages/index.md](pages/index.md). Repozytorium nie zawiera workflow automatycznie publikującego Pages. Szczegóły: [polityka publikacji](docs/pages.md).
+
 ## Zasady
 
 Nie należy traktować propozycji metod ani testów statystycznych jako prerejestracji. Każdy eksperyment z uczestnikami wymaga oceny etycznej i świadomej zgody według właściwych przepisów i procedur instytucji. Rejestrować pochodzenie danych, wersje sprzętu i oprogramowania, kryteria wykluczenia, podziały danych oraz odrębność zbioru testowego. Wyników i cytowań nie wolno uzupełniać bez źródeł i rzeczywistego materiału empirycznego.

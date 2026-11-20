@@ -1,0 +1,6 @@
+# Public site. Internal documentation is never a Pages source.
+site_name: ARC-XR
+docs_dir: pages
+site_dir: site
+nav:
+  - Program badawczy: index.md

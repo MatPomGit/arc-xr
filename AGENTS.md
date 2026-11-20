@@ -30,3 +30,18 @@ Zakres obejmuje wszystkie pliki repozytorium. Obowiązują przepisy, uprawnienia
 ## Redakcja i autorstwo
 
 Pisz poprawną polszczyzną, pełnymi zdaniami i zwięźle. Zachowuj anglojęzyczne nazwy techniczne, gdy są standardem danej dyscypliny. Wysyłka do redakcji, kontakt z wydawcą, opłaty i publikowanie danych wymagają wyraźnej zgody autora. Przestrzegaj [RESEARCH.md](RESEARCH.md).
+
+## Uzupełnienie: definicje ryzyka i gotowości
+
+**DoR:** cel i kryteria odbioru, właściciel, dokładny base SHA, powiązany Issue/PR, wpływ na badania i użytkownika, klasa R0–R3, uprawnienia, testy i rollback. **DoD:** zweryfikowane kryteria na exact HEAD SHA, zmieniona dokumentacja, niezależny review, poprawne bramki i potwierdzenie uprawnionego merge. Publikacja i pomiary to odrębne etapy.
+
+| Klasa | Zakres i minimalny dowód |
+| --- | --- |
+| **R0** | Korekta redakcyjna bez zmiany znaczenia: aktualny diff, linki i SHA |
+| **R1** | Drobna zmiana bez wpływu na API, CI, bezpieczeństwo i protokół: adekwatny test |
+| **R2** | Polityka agentów, CI, struktura, kontrakty, kod: testy exact SHA, niezależny review |
+| **R3** | Dane uczestników, udostępnianie, publikacja, uprawnienia, zmiana protokołu badania: odrębna zgoda i kontrola wycofania |
+
+Stosuj szczegółową [procedurę](.github/AGENT_WORKFLOW.md). `COMMENTED/ACCEPT` nie jest formalnym GitHub `APPROVED`; własna recenzja nie jest niezależna.
+
+**Dostępność materiałów:** `docs/` i `manuscripts/` są dokumentacją projektu, a `pages/` jedynym źródłem publicznej witryny. Żadnych instrukcji dla agentów, treści edytorskich, porad o współtworzeniu repozytorium, prywatnych danych ani surowych pomiarów w Pages. Zobacz [politykę](docs/pages.md). Nie twórz `CONTRIBUTING.md`.
