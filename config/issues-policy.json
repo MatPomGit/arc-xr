@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "source_of_truth": "MatPomGit/research-autopilot/docs/architecture/GITHUB_WORK_MANAGEMENT.md",
+  "classification_contract": "MatPomGit/research-autopilot/docs/autonomy/agent-work-classification.md",
+  "task_intents": "MatPomGit/research-autopilot/docs/autonomy/TASK_TYPES.md",
+  "labels_taxonomy": "MatPomGit/research-autopilot/docs/LABEL_TAXONOMY.md",
+  "templates": [
+    {
+      "file": "01-task.yml",
+      "intent_tag": null,
+      "required_fields": [
+        "outcome",
+        "scope",
+        "acceptance",
+        "verification",
+        "gates",
+        "next_step"
+      ]
+    },
+    {
+      "file": "02-bug.yml",
+      "intent_tag": "[fix]",
+      "required_fields": [
+        "observed",
+        "expected",
+        "reproduce",
+        "acceptance",
+        "verification",
+        "gates",
+        "next_step"
+      ]
+    },
+    {
+      "file": "03-experiment.yml",
+      "intent_tag": "[experiment]",
+      "required_fields": [
+        "manuscript",
+        "question",
+        "scope",
+        "acceptance",
+        "verification",
+        "gates",
+        "next_step"
+      ]
+    },
+    {
+      "file": "04-manuscript.yml",
+      "intent_tag": "[paper]",
+      "required_fields": [
+        "manuscript",
+        "outcome",
+        "sources",
+        "scope",
+        "acceptance",
+        "verification",
+        "gates",
+        "next_step"
+      ]
+    }
+  ],
+  "classification_marker": "agent-work-classification:v1",
+  "create_labels_automatically": false,
+  "enable_agent_dispatch": false,
+  "require_verified_native_relationships": false,
+  "security_policy": "SECURITY.md"
+}

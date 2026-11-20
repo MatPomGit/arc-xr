@@ -1,0 +1,75 @@
+name: "Badanie / eksperyment XR"
+description: "Plan badania, pilotażu lub walidacji. Nie upoważnia do rekrutacji."
+title: "[experiment] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zanim utworzysz Issue, sprawdź aktualne Issues, PR i istniejące zależności.
+        Zgłoszenie definiuje wynik, nie uruchamia agenta ani nie przyznaje prawa wykonania.
+        Do triage stosuj jeden prawidłowy tag task intent i blok agent-work-classification:v1.
+        Nie publikuj sekretów, identyfikatorów sprzętu, danych uczestników ani prywatnych logów.
+        Podatności zgłaszaj prywatnie zgodnie z SECURITY.md; brak skonfigurowanego kontaktu nie jest zgodą na publiczny Issue.
+  - type: textarea
+    id: manuscript
+    attributes:
+      label: "Kanon pracy P01–P06 i protokół"
+      description: "Wskaż właściwy manuskript, protokół i bieżący stan PROJECT_STATE.yaml."
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: "Pytanie, hipoteza i estymand"
+      description: "Jednostka analizy, kontrast, planowany wynik główny i rozdział pilot / potwierdzenie."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Warunki i granice aparatury"
+      description: "Quest 3 bez eye trackingu; Tobii Eye Tracker 5 przy ekranie. Weryfikuj SDK i kalibrację."
+    validations:
+      required: true
+  - type: textarea
+    id: relations
+    attributes:
+      label: "Parent / Depends on / Blocks / Related"
+      description: "Badania, środowiska i blokady w istniejących Issues; odróżniaj częściowe zależności."
+    validations:
+      required: false
+  - type: textarea
+    id: classification
+    attributes:
+      label: "Klasyfikacja agent-work-classification:v1"
+      description: "Dla zadań z pomiarami lub uczestnikami wymagane są rzeczywiste human gates."
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Kryteria metodologiczne"
+      description: "Hipotezy, prerejestracja (jeśli wymagana), QA, przypadki negatywne, plan wykluczeń."
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: "Walidacja i dowody"
+      description: "Wersje urządzeń i kodu, SHA, testy syntetyczne i wymagany przegląd niezależny."
+    validations:
+      required: true
+  - type: textarea
+    id: gates
+    attributes:
+      label: "Etyka, zgody, bezpieczeństwo i rollback"
+      description: "Nie domniemuj zgód ani możliwości urządzeń; określ decyzje właściciela."
+    validations:
+      required: true
+  - type: textarea
+    id: next_step
+    attributes:
+      label: "Następny bezpieczny krok"
+      description: "Przygotowanie, którego można dokonać bez rekrutacji i eksperymentów."
+    validations:
+      required: true

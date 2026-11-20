@@ -1,0 +1,74 @@
+name: "Zadanie techniczne / JUMP"
+description: "Jeden sprawdzalny rezultat; typ intencji [docs], [develop], [test] itd. wpisz na początku tytułu."
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zanim utworzysz Issue, sprawdź aktualne Issues, PR i istniejące zależności.
+        Zgłoszenie definiuje wynik, nie uruchamia agenta ani nie przyznaje prawa wykonania.
+        Do triage stosuj jeden prawidłowy tag task intent i blok agent-work-classification:v1.
+        Nie publikuj sekretów, identyfikatorów sprzętu, danych uczestników ani prywatnych logów.
+        Podatności zgłaszaj prywatnie zgodnie z SECURITY.md; brak skonfigurowanego kontaktu nie jest zgodą na publiczny Issue.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: "Cel i rezultat"
+      description: "Co dokładnie ma powstać? Jeden weryfikowalny efekt."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Zakres i granice"
+      description: "Repozytorium, ścieżki, komponenty, wykluczenia, działania zabronione."
+    validations:
+      required: true
+  - type: textarea
+    id: relations
+    attributes:
+      label: "Parent, Depends on, Blocks i powiązane PR"
+      description: "Numery Issues/PR. Opis tekstowy nie jest natywną relacją GitHub."
+    validations:
+      required: false
+  - type: textarea
+    id: jumps
+    attributes:
+      label: "Etapy JUMP (opcjonalne)"
+      description: "Tylko gdy potrzebne; etapy w ramach tego Issue, nie nowe zgłoszenia na każdy krok."
+    validations:
+      required: false
+  - type: textarea
+    id: classification
+    attributes:
+      label: "Klasyfikacja agent-work-classification:v1"
+      description: "Agent uzupełnia kanoniczny blok po triage, zanim zadanie trafi do kolejki. Nie oznacza zgody."
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Kryteria akceptacji"
+      description: "Sprawdzalne warunki ukończenia, także przypadki negatywne."
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: "Walidacja, dowody i SHA"
+      description: "Polecenia, środowisko, zakres testów, spodziewane statusy. Nie deklaruj PASS bez wykonania."
+    validations:
+      required: true
+  - type: textarea
+    id: gates
+    attributes:
+      label: "Ryzyko R0–R3, zgody i ograniczenia"
+      description: "Wymagane decyzje człowieka, uprawnienia, prywatność, koszty i rollback."
+    validations:
+      required: true
+  - type: textarea
+    id: next_step
+    attributes:
+      label: "Następny bezpieczny krok"
+      description: "Jedna konkretna dozwolona czynność; co blokuje resztę."
+    validations:
+      required: true
