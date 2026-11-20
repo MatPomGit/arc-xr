@@ -8,7 +8,7 @@ Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast 
 
 ## Dodatkowe propozycje naukowe
 
-[XR-IDEA-20: moment prezentacji wskazówki AR względem fazy ruchu dłoni](docs/research-proposals-2026.md) jest koncepcją do audytu nowości, **poza zatwierdzonym zakresem P01–P06**. Nie zmienia bieżącego planu minimalnych badań ani liczby manuskryptów.
+[ARC-XR-AR-P25: moment prezentacji wskazówki AR względem fazy ruchu dłoni](docs/research-proposals-2026.md) jest koncepcją do audytu nowości, **poza zatwierdzonym zakresem P01–P06**. Nie zmienia bieżącego planu minimalnych badań ani liczby manuskryptów.
 
 ## Portfolio publikacji
 
