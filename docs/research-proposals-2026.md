@@ -1,9 +1,9 @@
 # ARC XR — nowe propozycje badań nad adaptacyjnymi wskazówkami przestrzennymi
 
-**Wersja:** 1.0.0 | **Data:** 2026-11-20 | **Status:** propozycja naukowa, nie zamrożony protokół i nie zgłoszony manuskrypt.  
-**Program:** ARC XR. **Identyfikator:** `XR-IDEA-20`.
+**Wersja:** 1.1.0 | **Data:** 2026-11-20 | **Status:** propozycja naukowa, nie zamrożony protokół i nie zgłoszony manuskrypt.  
+**Program:** ARC XR. **Identyfikator:** `ARC-XR-AR-P25`.
 
-## XR-IDEA-20 — Faza ruchu dłoni a skuteczność instrukcji w AR
+## ARC-XR-AR-P25 — Faza ruchu dłoni a skuteczność instrukcji w AR
 
 **Tytuł roboczy (EN):** *Motor-Phase-Dependent Timing of Augmented Reality Guidance During Manual Tasks*.
 
@@ -23,4 +23,4 @@
 
 ## Status portfolio
 
-`XR-IDEA-20` ma status **IDEA_HOLD**. To pomysł opcjonalny względem aktualnego minimalnego planu P01–P06. Nie zwiększa liczby zatwierdzonych manuskryptów ani zrealizowanych badań. Wspólna scena i kod pozostają częścią istniejącej architektury; nie tworzyć osobnego systemu bez wykazania potrzeby.
+`ARC-XR-AR-P25` ma status **IDEA_HOLD**. To pomysł opcjonalny względem aktualnego minimalnego planu P01–P06. Nie zwiększa liczby zatwierdzonych manuskryptów ani zrealizowanych badań. Wspólna scena i kod pozostają częścią istniejącej architektury; nie tworzyć osobnego systemu bez wykazania potrzeby.
