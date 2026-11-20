@@ -1,0 +1,82 @@
+name: "Manuskrypt / przegląd literatury"
+description: "Jeden planowany lub istniejący manuskrypt, bez fikcyjnych wyników i zgłoszeń."
+title: "[paper] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zanim utworzysz Issue, sprawdź aktualne Issues, PR i istniejące zależności.
+        Zgłoszenie definiuje wynik, nie uruchamia agenta ani nie przyznaje prawa wykonania.
+        Do triage stosuj jeden prawidłowy tag task intent i blok agent-work-classification:v1.
+        Nie publikuj sekretów, identyfikatorów sprzętu, danych uczestników ani prywatnych logów.
+        Podatności zgłaszaj prywatnie zgodnie z SECURITY.md; brak skonfigurowanego kontaktu nie jest zgodą na publiczny Issue.
+  - type: textarea
+    id: manuscript
+    attributes:
+      label: "ID pracy i właściciel kanoniczny"
+      description: "P01–P06 lub jawnie oznaczony kandydat MSC-*, bez automatycznego zatwierdzania nowej publikacji."
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: "Rezultat naukowy"
+      description: "Jeden sprawdzalny etap: literatura, protokół, analiza, sekcja lub załącznik."
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: "Źródła i status dowodów"
+      description: "Pierwotne publikacje, DOI, wersje, pochodzenie danych. Nie wymyślaj cytowań."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Zakres oraz rozdział od innych prac"
+      description: "Zależność między publikacjami, nakładanie się próbek, elementy poza zakresem."
+    validations:
+      required: true
+  - type: textarea
+    id: relations
+    attributes:
+      label: "Parent / Depends on / Blocks / Related"
+      description: "Powiązane protokoły, badania, PR i prace; nie twórz duplikatów."
+    validations:
+      required: false
+  - type: textarea
+    id: classification
+    attributes:
+      label: "Klasyfikacja agent-work-classification:v1"
+      description: "Opis zakresu autonomicznego i decyzji autora; nie oznacza zgody na wysłanie."
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Kryteria merytoryczne i redakcyjne"
+      description: "Poprawność źródeł, nowości, bibliografii, ograniczeń i sprawdzalność artefaktu."
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: "Walidacja i SHA"
+      description: "Kontrole odnośników/BibTeX lub LaTeX (jeśli używany), dokładny commit i recenzja."
+    validations:
+      required: true
+  - type: textarea
+    id: gates
+    attributes:
+      label: "Zgoda autora, etyka, licencje, koszty"
+      description: "Osobne uprawnienia do danych, komunikacji z wydawcą i zgłoszenia artykułu."
+    validations:
+      required: true
+  - type: textarea
+    id: next_step
+    attributes:
+      label: "Następny bezpieczny krok"
+      description: "Najbliższy dopuszczalny etap przed decyzją właściciela."
+    validations:
+      required: true

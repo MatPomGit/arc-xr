@@ -1,0 +1,82 @@
+name: "Błąd / regresja"
+description: "Bezpieczne i odtwarzalne zgłoszenie błędu w ARC-XR."
+title: "[fix] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zanim utworzysz Issue, sprawdź aktualne Issues, PR i istniejące zależności.
+        Zgłoszenie definiuje wynik, nie uruchamia agenta ani nie przyznaje prawa wykonania.
+        Do triage stosuj jeden prawidłowy tag task intent i blok agent-work-classification:v1.
+        Nie publikuj sekretów, identyfikatorów sprzętu, danych uczestników ani prywatnych logów.
+        Podatności zgłaszaj prywatnie zgodnie z SECURITY.md; brak skonfigurowanego kontaktu nie jest zgodą na publiczny Issue.
+  - type: textarea
+    id: observed
+    attributes:
+      label: "Zaobserwowane zachowanie"
+      description: "Faktyczny objaw; rozdziel obserwację od hipotezy."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Oczekiwane zachowanie"
+      description: "Weryfikowalna różnica po poprawce."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "Kroki odtworzenia"
+      description: "Minimalny przykład bez danych uczestników, sekretów i prywatnych logów."
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Środowisko, wersje i SHA"
+      description: "Platforma, SDK, sprzęt, wersja i SHA; brak potwierdzenia oznacz UNAVAILABLE."
+    validations:
+      required: false
+  - type: textarea
+    id: relations
+    attributes:
+      label: "Powiązania Parent / Depends on / Blocks / PR"
+      description: "Odwołania do istniejących prac; nie dubluj znanego zgłoszenia."
+    validations:
+      required: false
+  - type: textarea
+    id: classification
+    attributes:
+      label: "Klasyfikacja agent-work-classification:v1"
+      description: "Uzupełnia agent podczas triage; klasyfikacja nie nadaje prawa wykonania."
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Kryteria akceptacji"
+      description: "Test odtwarzający błąd przed naprawą i regresja po naprawie."
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: "Dowody i plan testów"
+      description: "Exact SHA, komendy, dane syntetyczne i konieczne kontrole."
+    validations:
+      required: true
+  - type: textarea
+    id: gates
+    attributes:
+      label: "Ryzyko, bezpieczeństwo i zgody"
+      description: "Zakres R0–R3, wpływ na uczestników, aparaturę, koszty i publikację."
+    validations:
+      required: true
+  - type: textarea
+    id: next_step
+    attributes:
+      label: "Następny bezpieczny krok"
+      description: "Pierwsza dopuszczalna diagnostyka lub precyzyjna blokada."
+    validations:
+      required: true
