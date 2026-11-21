@@ -20,9 +20,9 @@
 
 \title{Multimodalne obciążenie poznawcze i adaptacja interfejsu AR}
 
-\author{}
+\author{Mateusz Pomianek}
 
-\date{Wersja 0.1.0, 21 listopada 2026}
+\date{Wersja 0.3.0, 21 listopada 2026}
 
 \begin{document}
 
@@ -41,6 +41,40 @@ Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji czło
 \section{Cel pracy i pytanie badawcze}
 
 Czy prosta adaptacja zagęszczenia informacji HUD w AR ogranicza błędy względem stałego interfejsu? W minimalnym wariancie porównuje się jedną jawną regułę adaptacji z warunkiem statycznym, natomiast estymator wielomodalny stanowi odrębne rozszerzenie. Dla wyników o charakterze potwierdzającym konieczne jest zamrożenie protokołu.
+
+\section{Zakres i odrębny wkład naukowy}
+Przyczynowy wpływ prostej, jawnej reguły zagęszczania HUD na błędy wykonywania zadania. Klasyfikator obciążenia i fuzja biometryczna są odłożonym rozszerzeniem, nie częścią pilotażu P01. Dodatkowa wartość to efekt zdefiniowanej i powtarzalnej zmiany HUD, a nie ponowna deklaracja że AR zmniejsza obciążenie.
+
+\section{Hipotezy badawcze}
+\paragraph{H1.} Przy identycznej treści i trudności zadania adaptowany HUD prowadzi do niższego odsetka błędnych prób niż statyczny HUD.
+\paragraph{H2.} Zmiana liczby informacji HUD zmniejsza liczbę niepożądanych przerwań poznawczych bez zwiększenia liczby pominiętych instrukcji.
+\paragraph{H3.} Korzyść nie zanika po uwzględnieniu kolejności warunków i uprzedniego doświadczenia uczestnika z AR.
+
+\section{Projekt badania i plan eksperymentów}
+\subsection{A. Operacjonalizacja i kwalifikacja danych}
+Przyczynowy wpływ prostej, jawnej reguły zagęszczania HUD na błędy wykonywania zadania. Klasyfikator obciążenia i fuzja biometryczna są odłożonym rozszerzeniem, nie częścią pilotażu P01. Jednostka wnioskowania: uczestnik × z góry ustalony scenariusz, z próbami zagnieżdżonymi w uczestniku. Punkt końcowy i sposób oceny będą zamrożone przed próbą potwierdzającą. Należy udokumentować pochodzenie obserwacji, czas akwizycji, identyfikatory sesji, harmonogram oraz legalność użycia materiałów.
+
+\subsection{B. Eksperyment porównawczy}
+Wewnątrzosobowy układ kontrbalansowany: ta sama liczba i jakość wskazówek, dwa poziomy HUD, wspólny czas ekspozycji. Estymand pierwszorzędowy: różnica marginalnego prawdopodobieństwa błędnej próby: adaptowany HUD minus statyczny HUD. Przypisanie warunków, mianowniki i kryteria wyłączeń nie mogą być dobierane po przejrzeniu wyników.
+
+\subsection{C. Kontrole i analiza odporności}
+Rozdzielić błąd zadania od samoopisu obciążenia; rejestrować skokowe zmiany HUD, liczbę informacji i rzeczywisty czas renderowania. Ocenić osoby o różnym doświadczeniu XR oraz proste i bardziej złożone kroki; nie włączać niezweryfikowanej okulometrii HMD. Każdą odmowę systemu, niekompletną próbę i brak sygnału należy raportować osobno, a nie po cichu usuwać z próby.
+
+\subsection{D. Walidacja na niezależnym materiale}
+Ocenę należy wykonać na uprzednio odłożonych scenach, sesjach lub uczestnikach. Hierarchiczny model logistyczny błędu próby z uczestnikiem i sceną jako czynnikami losowymi, przedziały dla różnicy ryzyka. Model i próg zatrzymać przed analizą końcową; rejestrować również brak przewagi i działania niepożądane.
+
+\section{Estymand, analiza statystyczna i decyzje}
+Główny estymand: różnica marginalnego prawdopodobieństwa błędnej próby: adaptowany HUD minus statyczny HUD. Jednostką powtarzalności jest uczestnik × z góry ustalony scenariusz, z próbami zagnieżdżonymi w uczestniku. Hierarchiczny model logistyczny błędu próby z uczestnikiem i sceną jako czynnikami losowymi, przedziały dla różnicy ryzyka. H1 jest kandydatem na hipotezę potwierdzającą. H2 i H3 pozostają eksploracyjne, dopóki protokół nie określi ich hierarchii i kontroli wielokrotnych porównań. Minimalny efekt istotny praktycznie, liczebność prób, margines nie gorszości i progi jakości wyznaczyć na podstawie pilotażu i analizy precyzji, nie zgadywać wartości.
+
+\section{Stan badań i granica nowości}
+\begin{itemize}
+\item Existing adaptive physiological feedback in AR means adapting an interface is not by itself a novel contribution. \cite{xrprior1}.
+\item Average reductions in learning load do not establish gains from the particular adaptive controller in a new scene. \cite{xrprior2}.
+\end{itemize}
+Dodatkowa wartość to efekt zdefiniowanej i powtarzalnej zmiany HUD, a nie ponowna deklaracja że AR zmniejsza obciążenie. Samo zastosowanie VLM, EEG, okulometrii lub adaptacyjnego HUD nie stanowi wystarczającej nowości międzynarodowej.
+
+\section{Warunki bezpieczeństwa, sprzętu i zgodności}
+Opis stanowi prospektywny plan, a nie prerejestrację ani zatwierdzoną procedurę. Przed zbieraniem danych od ludzi niezbędna jest właściwa weryfikacja etyczna i zgoda. Standardowy Quest 3 nie ma wbudowanego eye trackingu, a Tobii Eye Tracker 5 działa na stanowisku ekranowym. Odstępstwa, obciążenia i ograniczenia czujników muszą być ujawnione. Nie publikować surowych danych biometrycznych ani nagrań uczestników.
 
 \section{Materiał i metody}
 
@@ -70,5 +104,9 @@ Nie przypisywać przyczynowego efektu interfejsu samej trafności predykcji obci
 
 Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
 
+\begin{thebibliography}{9}
+\bibitem{xrprior1} Designing adaptive feedback systems for managing cognitive load in augmented reality (2025), Design Science 11, e49. \url{https://doi.org/10.1017/dsj.2025.10040}.
+\bibitem{xrprior2} Can augmented reality technology reduce learners' cognitive load? A meta-analysis (2026), Smart Learning Environments. \url{https://doi.org/10.1186/s40561-025-00429-7}.
+\end{thebibliography}
 \end{document}
 

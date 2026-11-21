@@ -20,9 +20,9 @@
 
 \title{Predykcja subiektywnej niepewności decyzji z mikroruchów dłoni, spojrzenia i EEG}
 
-\author{}
+\author{Mateusz Pomianek}
 
-\date{Wersja 0.1.0, 21 listopada 2026}
+\date{Wersja 0.3.0, 21 listopada 2026}
 
 \begin{document}
 
@@ -42,6 +42,31 @@ Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji czło
 
 Czy ruch dłoni, okulografia i EEG pozwalają prognozować subiektywną pewność decyzji? Projekt wymaga krytycznego przeglądu aktualnego stanu badań oraz zdefiniowania nowości w stosunku do innych tematów portfolio XR.
 
+\section{Zakres i odrębny wkład naukowy}
+Modelowanie jawnie raportowanej pewności decyzji z kinematyki, spojrzenia i EEG; nie klasyfikacja obciążenia poznawczego P01 ani diagnoza psychologiczna. Predykcja ilościowa samoopisu na osobach spoza treningu, nie odczyt myśli ani ten sam konstrukt co obciążenie.
+\section{Hipotezy badawcze}
+\paragraph{H1.} Fuzja kinetyki dłoni, sygnału spojrzenia i EEG zmniejsza błąd predykcji deklarowanej pewności względem najsilniejszego predyktora jednomodalnego.
+\paragraph{H2.} Zysk utrzymuje się przy kontroli poprawności decyzji i trudności zadania, nie tylko przez odgadywanie tego czy odpowiedź jest poprawna.
+\paragraph{H3.} Kalibracja wyjściowego rozkładu pewności zachowuje poprawne pokrycie na niewidzianych uczestnikach i sesjach.
+\section{Projekt badania i plan eksperymentów}
+\subsection{A. Operacjonalizacja i kwalifikacja danych}
+Modelowanie jawnie raportowanej pewności decyzji z kinematyki, spojrzenia i EEG; nie klasyfikacja obciążenia poznawczego P01 ani diagnoza psychologiczna. Jednostka wnioskowania: uczestnik × decyzja z odrębnym zgłoszeniem pewności. Przed badaniem należy określić źródła, wersje urządzeń, czas akwizycji, etykiety i niezależną referencję. Nie liczyć zależnych okien i klatek jako niezależnych prób.
+\subsection{B. Eksperyment porównawczy}
+Na stanowisku ekranowym zsynchronizować sygnał Tobii Eye Tracker 5, kinematykę i EEG; mieć niezależną deklarację pewności oraz stan zadania. Wynik pierwszorzędowy: różnica średniego błędu przewidywania skali pewności między modelem fuzji a najsilniejszym pojedynczym źródłem na niewidzianych osobach. Zamrozić losowanie warunków, progi, mianownik punktu końcowego i kryteria wyłączeń bez dostępu do oceny końcowej.
+\subsection{C. Kontrole i analiza odporności}
+Wykluczyć przeciek etykiet ze zbioru testowego; dokumentować artefakty EEG i braki sygnału, bez twierdzenia o zintegrowanym eye-trackingu Quest 3. Rozdzielać poprawność decyzji od jej subiektywnej pewności oraz przejść przez odrębny przegląd zgód biometrycznych. Utrata sygnału, abstencja, przerwanie zadania i dane brakujące są odrębnymi kategoriami wyniku.
+\subsection{D. Walidacja na niezależnym materiale}
+Walidacja musi zachować podział po uczestniku, sesji, scenie lub zadaniu. Bootstrap uczestnikowy MAE/RMSE w skali pewności i błąd kalibracji przewidywanych przedziałów. Raportować wyniki negatywne i rozbieżności z założeniami.
+\section{Estymand, analiza statystyczna i decyzje}
+różnica średniego błędu przewidywania skali pewności między modelem fuzji a najsilniejszym pojedynczym źródłem na niewidzianych osobach. Jednostka: uczestnik × decyzja z odrębnym zgłoszeniem pewności. Bootstrap uczestnikowy MAE/RMSE w skali pewności i błąd kalibracji przewidywanych przedziałów. H1 jest planowanym kontrastem głównym; H2 i H3 pozostają pomocnicze do zatwierdzenia hierarchii testów oraz kontroli wielokrotności. Wartości marginesów, mocy, minimalnego efektu istotnego praktycznie i liczebności mają wynikać z pilotażu, a nie z post hoc wyboru wyniku.
+\section{Stan badań i granica nowości}
+\begin{itemize}
+\item EEG/VR time alignment and experimental validity must be explicitly documented before any multimodal inference claim. \cite{xrprior1}.
+\item Eye tracking in immersive VR requires explicit validity and construct assumptions; device integration cannot be presumed. \cite{xrprior2}.
+\end{itemize}
+Predykcja ilościowa samoopisu na osobach spoza treningu, nie odczyt myśli ani ten sam konstrukt co obciążenie. Odrębność na tle opublikowanych metod i pozostałych artykułów wymaga osobnego audytu.
+\section{Warunki bezpieczeństwa, sprzętu i zgodności}
+To prospektywna koncepcja, nie zgoda na eksperyment, prerejestracja lub wynik empiryczny. Praca z uczestnikami, interwencje stresowe i pomiar biometryczny wymagają przeglądu etycznego, świadomej zgody i ochrony danych. Quest 3 w wersji standardowej nie posiada eye trackingu, a Tobii Eye Tracker 5 jest urządzeniem ekranowym; nie zastępować jednego stanowiska drugim.
 \section{Materiał i metody}
 
 Zestawione zostaną modele pojedynczych modalności i model łączący EEG, okulografię i kinematykę dłoni, z oceną na niezależnych uczestnikach. Wymagane jest zdefiniowanie jednostki analizy, zasad doboru przypadków, wersji scenariusza i źródeł pomiaru. Rozkład warunków oraz reguły wykluczenia prób należy określić przed pomiarem. W badaniach z udziałem ludzi niezbędna jest uprzednia właściwa ocena etyczna i świadoma zgoda. W testach wyłącznie symulacyjnych należy oddzielić prawdę symulacyjną od obserwacji empirycznej.
@@ -70,5 +95,9 @@ Predykcja pewności nie oznacza odczytu myśli, a sygnały ze stanowiska ekranow
 
 Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
 
+\begin{thebibliography}{9}
+\bibitem{xrprior1} The integration of virtual reality and EEG: A step-by-step guideline (2026), Methods guideline. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC12808493/}.
+\bibitem{xrprior2} Validity of Eye-Tracking Measures in Immersive Virtual Reality: Using Cognitive Theories of Learning (2026), Educational Psychology Review. \url{https://doi.org/10.1007/s10648-026-10186-9}.
+\end{thebibliography}
 \end{document}
 

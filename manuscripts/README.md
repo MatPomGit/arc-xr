@@ -13,7 +13,7 @@
 
 ## Źródła LaTeX i pozostałe tematy publikacyjne
 
-Wszystkie **27 pozycji** posiadają niezależny plik `main.tex`, będący szkicem naukowym w wersji 0.1.0. Sześć manuskryptów podstawowych korzysta z dotychczasowych folderów `P01`–`P06`; materiały `manuscript.md`, protokoły i pliki bibliograficzne pozostają zachowane. Dodatkowe katalogi zawierają **jedną pracę przekrojową i 20 koncepcji**, bez podnoszenia ich statusu do zrealizowanych badań.
+Wszystkie **27 pozycji** posiadają niezależny plik `main.tex`, będący prospektywnym planem naukowym w wersji 0.3.0. Sześć manuskryptów podstawowych korzysta z dotychczasowych folderów `P01`–`P06`; materiały `manuscript.md`, protokoły i pliki bibliograficzne pozostają zachowane. Dodatkowe katalogi zawierają **jedną pracę przekrojową i 20 koncepcji**, bez podnoszenia ich statusu do zrealizowanych badań.
 
 | Identyfikator MSC | Temat | Źródło LaTeX | Etap |
 | --- | --- | --- | --- |
@@ -76,3 +76,7 @@ Jak forma reprezentacji i modalność komunikatów agenta AR wpływają na wspó
 W każdym katalogu `PXX` znajdują się: `README.md` (zakres), `manuscript.md` (szkic artykułu), `references.bib` (zweryfikowane pozycje bibliograficzne), `hypotheses/README.md` (hipotezy), `protocol/README.md` (projekt badania), `experiments/README.md` (reprodukcja eksperymentów), `analyses/README.md` (plan analizy), `results/README.md` (rejestr dowodów) oraz `figures/README.md` (plan ilustracji). Surowych danych uczestników nie umieszcza się w Git.
 
 Identyfikatory P01–P06 są stałe. Nie zmieniać kolejności identyfikatorów przy aktualizacji tytułów. Porównania między publikacjami oraz współdzielone próby należy opisywać jawnie, aby nie przedstawiać zależnych wyników jako niezależnych badań.
+
+## Weryfikacja E4.0 i bibliografia
+
+Wszystkie 27 źródeł `main.tex` zawiera po **trzy hipotezy** i **cztery etapy badań**, główny estymand, kontrolę zależności obserwacji oraz literaturę porównawczą. [Macierz nowości](literature/novelty_matrix.md), [źródła bibliograficzne](literature/prior_art_sources.json) i [manifest właścicieli, statusów oraz commitów](source_manifest.json) rozróżniają projekty podstawowe od koncepcji. Plany nie zmieniają zgód, statusu badań ani wyników.

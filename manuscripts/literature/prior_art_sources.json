@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-21",
+  "scope": "Selective publisher/proceedings citations, not a systematic literature review.",
+  "references": {
+    "adaptiveAR": {
+      "title": "Designing adaptive feedback systems for managing cognitive load in augmented reality",
+      "year": 2025,
+      "venue": "Design Science 11, e49",
+      "url": "https://doi.org/10.1017/dsj.2025.10040",
+      "scope": "Existing adaptive physiological feedback in AR means adapting an interface is not by itself a novel contribution."
+    },
+    "adaptiveVR": {
+      "title": "Towards Intelligent VR Training: A Physiological Adaptation Framework for Cognitive Load and Stress Detection",
+      "year": 2025,
+      "venue": "UMAP 2025",
+      "url": "https://doi.org/10.1145/3699682.3727575",
+      "scope": "Physiology-driven VR adaptation has been demonstrated; independent behavioural gains require direct controlled trials."
+    },
+    "smartAR": {
+      "title": "Adaptive interaction in intelligent augmented reality: design decision considerations and framework",
+      "year": 2026,
+      "venue": "Virtual Reality",
+      "url": "https://doi.org/10.1007/s10055-026-01511-2",
+      "scope": "A recent synthesis already maps adaptation and interaction choices; the proposed new result must specify a narrow causal estimand."
+    },
+    "metaCL": {
+      "title": "Can augmented reality technology reduce learners' cognitive load? A meta-analysis",
+      "year": 2026,
+      "venue": "Smart Learning Environments",
+      "url": "https://doi.org/10.1186/s40561-025-00429-7",
+      "scope": "Average reductions in learning load do not establish gains from the particular adaptive controller in a new scene."
+    },
+    "ground": {
+      "title": "SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding",
+      "year": 2025,
+      "venue": "CVPR 2025",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11094047",
+      "scope": "3D grounding with VLM is prior art; the new study must demonstrate calibrated AR anchor gains, not merely combining 2D and 3D."
+    },
+    "words": {
+      "title": "Words into World: A Task-Adaptive Agent for Language-Guided Spatial Retrieval in AR",
+      "year": 2025,
+      "venue": "arXiv:2512.00294",
+      "url": "https://arxiv.org/abs/2512.00294",
+      "scope": "Task-adaptive spatial language retrieval and meter-accurate anchors are already proposed, narrowing independent novelty."
+    },
+    "assembly": {
+      "title": "Evaluation of augmented reality instructions based on initial and dynamic assembly tolerance allocation schemes in precise manual assembly",
+      "year": 2024,
+      "venue": "Advanced Engineering Informatics",
+      "url": "https://doi.org/10.1016/j.aei.2024.102954",
+      "scope": "AR assistance for precise manual procedures is established; independent sequential error detection requires a different endpoint."
+    },
+    "manual": {
+      "title": "Deep learning-based augmented reality work instruction assistance system for complex manual assembly",
+      "year": 2024,
+      "venue": "CIRP Annals",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0278612524000323",
+      "scope": "AI-generated AR work instructions are prior art; measure the specific temporal error/omission mechanism."
+    },
+    "proactive": {
+      "title": "Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents",
+      "year": 2025,
+      "venue": "UIST 2025",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10224695/",
+      "scope": "Proactive LMM-based AR assistance exists; evaluate the behavioural difference under a fixed number of interventions."
+    },
+    "eye": {
+      "title": "Validity of Eye-Tracking Measures in Immersive Virtual Reality: Using Cognitive Theories of Learning",
+      "year": 2026,
+      "venue": "Educational Psychology Review",
+      "url": "https://doi.org/10.1007/s10648-026-10186-9",
+      "scope": "Eye tracking in immersive VR requires explicit validity and construct assumptions; device integration cannot be presumed."
+    },
+    "eeg": {
+      "title": "The integration of virtual reality and EEG: A step-by-step guideline",
+      "year": 2026,
+      "venue": "Methods guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12808493/",
+      "scope": "EEG/VR time alignment and experimental validity must be explicitly documented before any multimodal inference claim."
+    },
+    "timing": {
+      "title": "The Art of Timing: Effects of AR Guidance Timing on Speed Control",
+      "year": 2024,
+      "venue": "ISMAR 2024",
+      "url": "https://www.krisluyten.net/publications/ceyssens2024/",
+      "scope": "AR guidance timing has already been manipulated experimentally; novelty needs phase-specific step errors, not generic scheduling."
+    },
+    "hands": {
+      "title": "Exploring AR hand augmentations as error feedback mechanisms for enhancing gesture-based tutorials",
+      "year": 2025,
+      "venue": "Frontiers in Virtual Reality",
+      "url": "https://doi.org/10.3389/frvir.2025.1574965",
+      "scope": "Prior hand-gesture AR guidance has tested error feedback; establish a distinct motor-phase or procedural endpoint."
+    },
+    "social": {
+      "title": "Creating a social virtual reality application for psychological research: A tutorial",
+      "year": 2025,
+      "venue": "Behavior Research Methods",
+      "url": "https://doi.org/10.3758/s13428-025-02693-4",
+      "scope": "Multiuser VR research protocols exist, so interaction-format effects must be isolated under controlled social and scene conditions."
+    },
+    "trust": {
+      "title": "An Investigation of Trust and Overreliance on Conversational Instructions in Augmented Reality",
+      "year": 2026,
+      "venue": "CUI 2026",
+      "url": "https://doi.org/10.1145/3816046.3816296",
+      "scope": "Human reliance on AR-provided AI instructions is already studied; measuring trust alone does not establish correct guidance."
+    },
+    "training": {
+      "title": "Can augmented reality technology reduce learners' cognitive load? A meta-analysis",
+      "year": 2026,
+      "venue": "Smart Learning Environments",
+      "url": "https://doi.org/10.1186/s40561-025-00429-7",
+      "scope": "Learning-load effects do not imply delayed knowledge retention or skill transfer."
+    },
+    "VRET": {
+      "title": "Artificial intelligence (AI) for virtual reality exposure therapy (VRET): A systematic review",
+      "year": 2026,
+      "venue": "Translational Psychiatry",
+      "url": "https://www.nature.com/articles/s41398-026-03936-4",
+      "scope": "AI adaptation in exposure contexts already exists; this plan is not a treatment efficacy study and requires dedicated clinical review."
+    },
+    "personal": {
+      "title": "Adapting to the User: A Systematic Review of Personalized Interaction in VR",
+      "year": 2025,
+      "venue": "arXiv:2510.13123",
+      "url": "https://arxiv.org/abs/2510.13123",
+      "scope": "XR personalization methods exist; a claim needs a defined multi-session or transfer contrast."
+    },
+    "perspect": {
+      "title": "Comparison of visual and multisensory augmented reality for precise manual manipulation tasks",
+      "year": 2024,
+      "venue": "Displays",
+      "url": "https://www.sciencedirect.com/science/article/pii/S014193822400132X",
+      "scope": "AR versus other guidance modalities is established; a new effect needs precise task and performance definitions."
+    },
+    "EXAD": {
+      "title": "EXAD: Framework for Designing Explanations in Adaptive User Interfaces",
+      "year": 2025,
+      "venue": "IEEE Conference",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11017085",
+      "scope": "Explanation design in adaptive interfaces is prior art; response to veridical versus spurious explanations needs separate evaluation."
+    }
+  }
+}

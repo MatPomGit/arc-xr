@@ -20,9 +20,9 @@
 
 \title{Współdzielenie uwagi i komunikacja człowiek-agent w AR}
 
-\author{}
+\author{Mateusz Pomianek}
 
-\date{Wersja 0.1.0, 21 listopada 2026}
+\date{Wersja 0.3.0, 21 listopada 2026}
 
 \begin{document}
 
@@ -41,6 +41,40 @@ Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji czło
 \section{Cel pracy i pytanie badawcze}
 
 Czy forma reprezentacji agenta wpływa na czas ustanowienia wspólnego odniesienia przestrzennego? Minimalne porównanie obejmuje prosty kursor i prosty awatar bez wymogu gestów, syntezy mowy ani okulometrii z HMD.
+
+\section{Zakres i odrębny wkład naukowy}
+Przyczynowy wpływ wizualnej reprezentacji agenta AR na moment poprawnego ustanowienia współdzielonego odniesienia do obiektu. Nie jest to test jakości rozpoznawania intencji ani syntezy mowy. Współdzielona referencja jako zachowanie mierzalne, nie ogólne deklaracje społeczne o avatarach.
+
+\section{Hipotezy badawcze}
+\paragraph{H1.} Przy identycznej treści wskazówki czas poprawnego ustanowienia wspólnej referencji różni się między awatarem i kursorem przestrzennym.
+\paragraph{H2.} Wizualna złożoność sceny moderuje efekt formy reprezentacji nawet przy kontrolowanym opóźnieniu sygnału.
+\paragraph{H3.} Bardziej saliencyjna forma wskazania może zwiększać subiektywne zaangażowanie, ale nie musi zmniejszać odsetka błędnych referencji.
+
+\section{Projekt badania i plan eksperymentów}
+\subsection{A. Operacjonalizacja i kwalifikacja danych}
+Przyczynowy wpływ wizualnej reprezentacji agenta AR na moment poprawnego ustanowienia współdzielonego odniesienia do obiektu. Nie jest to test jakości rozpoznawania intencji ani syntezy mowy. Jednostka wnioskowania: uczestnik i próba ustanowienia referencji obiektu. Punkt końcowy i sposób oceny będą zamrożone przed próbą potwierdzającą. Należy udokumentować pochodzenie obserwacji, czas akwizycji, identyfikatory sesji, harmonogram oraz legalność użycia materiałów.
+
+\subsection{B. Eksperyment porównawczy}
+Kontrbalansowana prezentacja kursora i awatara przy tym samym celu, czasie pokazania, sygnale i skali obiektu. Estymand pierwszorzędowy: różnica mediany czasu do pierwszego poprawnego ustanowienia wspólnej referencji: awatar minus kursor. Przypisanie warunków, mianowniki i kryteria wyłączeń nie mogą być dobierane po przejrzeniu wyników.
+
+\subsection{C. Kontrole i analiza odporności}
+Jednakowa latencja i kąt widzenia, obiektywne oznaczanie momentu wskazania; bez fikcyjnego eye-trackingu na standardowym Quest 3. Sceny o różnej liczbie obiektów i podobieństwie przestrzennym oraz indywidualne doświadczenie XR. Każdą odmowę systemu, niekompletną próbę i brak sygnału należy raportować osobno, a nie po cichu usuwać z próby.
+
+\subsection{D. Walidacja na niezależnym materiale}
+Ocenę należy wykonać na uprzednio odłożonych scenach, sesjach lub uczestnikach. Model czasu do zdarzenia z cenzurowaniem nieukończonych prób i losowymi efektami uczestnika; raport błędów odniesienia. Model i próg zatrzymać przed analizą końcową; rejestrować również brak przewagi i działania niepożądane.
+
+\section{Estymand, analiza statystyczna i decyzje}
+Główny estymand: różnica mediany czasu do pierwszego poprawnego ustanowienia wspólnej referencji: awatar minus kursor. Jednostką powtarzalności jest uczestnik i próba ustanowienia referencji obiektu. Model czasu do zdarzenia z cenzurowaniem nieukończonych prób i losowymi efektami uczestnika; raport błędów odniesienia. H1 jest kandydatem na hipotezę potwierdzającą. H2 i H3 pozostają eksploracyjne, dopóki protokół nie określi ich hierarchii i kontroli wielokrotnych porównań. Minimalny efekt istotny praktycznie, liczebność prób, margines nie gorszości i progi jakości wyznaczyć na podstawie pilotażu i analizy precyzji, nie zgadywać wartości.
+
+\section{Stan badań i granica nowości}
+\begin{itemize}
+\item Multiuser VR research protocols exist, so interaction-format effects must be isolated under controlled social and scene conditions. \cite{xrprior1}.
+\item Proactive LMM-based AR assistance exists; evaluate the behavioural difference under a fixed number of interventions. \cite{xrprior2}.
+\end{itemize}
+Współdzielona referencja jako zachowanie mierzalne, nie ogólne deklaracje społeczne o avatarach. Samo zastosowanie VLM, EEG, okulometrii lub adaptacyjnego HUD nie stanowi wystarczającej nowości międzynarodowej.
+
+\section{Warunki bezpieczeństwa, sprzętu i zgodności}
+Opis stanowi prospektywny plan, a nie prerejestrację ani zatwierdzoną procedurę. Przed zbieraniem danych od ludzi niezbędna jest właściwa weryfikacja etyczna i zgoda. Standardowy Quest 3 nie ma wbudowanego eye trackingu, a Tobii Eye Tracker 5 działa na stanowisku ekranowym. Odstępstwa, obciążenia i ograniczenia czujników muszą być ujawnione. Nie publikować surowych danych biometrycznych ani nagrań uczestników.
 
 \section{Materiał i metody}
 
@@ -70,5 +104,9 @@ Animacja i saliencja wizualna awatara mogą zakłócać porównanie; eye-trackin
 
 Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
 
+\begin{thebibliography}{9}
+\bibitem{xrprior1} Creating a social virtual reality application for psychological research: A tutorial (2025), Behavior Research Methods. \url{https://doi.org/10.3758/s13428-025-02693-4}.
+\bibitem{xrprior2} Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents (2025), UIST 2025. \url{https://discovery.ucl.ac.uk/id/eprint/10224695/}.
+\end{thebibliography}
 \end{document}
 

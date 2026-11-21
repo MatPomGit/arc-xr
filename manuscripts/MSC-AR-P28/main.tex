@@ -20,9 +20,9 @@
 
 \title{Wyprzedzające wykrywanie ryzyka błędu manipulacji z kinematyki dłoni i VLM}
 
-\author{}
+\author{Mateusz Pomianek}
 
-\date{Wersja 0.1.0, 21 listopada 2026}
+\date{Wersja 0.3.0, 21 listopada 2026}
 
 \begin{document}
 
@@ -42,6 +42,31 @@ Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji czło
 
 Czy połączenie kinematyki dłoni i VLM wykrywa błędny chwyt przed kontaktem skuteczniej niż same trajektorie ruchu? Projekt wymaga krytycznego przeglądu aktualnego stanu badań oraz zdefiniowania nowości w stosunku do innych tematów portfolio XR.
 
+\section{Zakres i odrębny wkład naukowy}
+Przedkontaktowa predykcja niepoprawnego chwytu na podstawie kinematyki dłoni i opisu relacji obiektów z VLM; nie jest to identyfikacja obiektu 3D (P04) ani wykrywanie brakującego kroku po wykonaniu (P05). Rzeczywista prognoza ryzyka manipulacji przed zdarzeniem, a nie wyjaśnienie błędu po wykonaniu kroku.
+\section{Hipotezy badawcze}
+\paragraph{H1.} Fuzja VLM i kinematyki zwiększa czułość wczesnej predykcji błędnego chwytu przy tym samym budżecie fałszywych alarmów.
+\paragraph{H2.} Korzyść dotyczy chwytów w scenach z niejednoznacznym obiektem i relacją, a nie wyłącznie zadań o jednym celu.
+\paragraph{H3.} Zysk utrzymuje się przy uwzględnieniu pełnego opóźnienia VLM, tak aby alarm rzeczywiście poprzedzał kontakt.
+\section{Projekt badania i plan eksperymentów}
+\subsection{A. Operacjonalizacja i kwalifikacja danych}
+Przedkontaktowa predykcja niepoprawnego chwytu na podstawie kinematyki dłoni i opisu relacji obiektów z VLM; nie jest to identyfikacja obiektu 3D (P04) ani wykrywanie brakującego kroku po wykonaniu (P05). Jednostka wnioskowania: niezależna próba chwytu z oznaczonym pierwszym kontaktem i poprawnością. Przed badaniem należy określić źródła, wersje urządzeń, czas akwizycji, etykiety i niezależną referencję. Nie liczyć zależnych okien i klatek jako niezależnych prób.
+\subsection{B. Eksperyment porównawczy}
+Niezależnie zaetykietować obiekt, trajektorię dłoni, początek kontaktu i błąd chwytu; podać zamrożony model kinematyczny i wariant VLM. Wynik pierwszorzędowy: różnica czułości ostrzeżeń przed kontaktem przy stałej liczbie fałszywych alarmów na minutę próby między VLM+kinematyką a samą kinematyką. Zamrozić losowanie warunków, progi, mianownik punktu końcowego i kryteria wyłączeń bez dostępu do oceny końcowej.
+\subsection{C. Kontrole i analiza odporności}
+Bez dostępu do obrazu po momencie predykcji, z jawnym ograniczeniem opóźnienia obliczeniowego i niepewności głębi. Ocenić fałszywe alarmy, utratę śledzenia dłoni i błąd segmentacji, oraz podział po osobie i obiekcie. Utrata sygnału, abstencja, przerwanie zadania i dane brakujące są odrębnymi kategoriami wyniku.
+\subsection{D. Walidacja na niezależnym materiale}
+Walidacja musi zachować podział po uczestniku, sesji, scenie lub zadaniu. Krzywe czułości i lead time przy stałych false alerts/min z bootstrapem próba/chwyt, analiza opóźnienia end-to-end. Raportować wyniki negatywne i rozbieżności z założeniami.
+\section{Estymand, analiza statystyczna i decyzje}
+różnica czułości ostrzeżeń przed kontaktem przy stałej liczbie fałszywych alarmów na minutę próby między VLM+kinematyką a samą kinematyką. Jednostka: niezależna próba chwytu z oznaczonym pierwszym kontaktem i poprawnością. Krzywe czułości i lead time przy stałych false alerts/min z bootstrapem próba/chwyt, analiza opóźnienia end-to-end. H1 jest planowanym kontrastem głównym; H2 i H3 pozostają pomocnicze do zatwierdzenia hierarchii testów oraz kontroli wielokrotności. Wartości marginesów, mocy, minimalnego efektu istotnego praktycznie i liczebności mają wynikać z pilotażu, a nie z post hoc wyboru wyniku.
+\section{Stan badań i granica nowości}
+\begin{itemize}
+\item 3D grounding with VLM is prior art; the new study must demonstrate calibrated AR anchor gains, not merely combining 2D and 3D. \cite{xrprior1}.
+\item Prior hand-gesture AR guidance has tested error feedback; establish a distinct motor-phase or procedural endpoint. \cite{xrprior2}.
+\end{itemize}
+Rzeczywista prognoza ryzyka manipulacji przed zdarzeniem, a nie wyjaśnienie błędu po wykonaniu kroku. Odrębność na tle opublikowanych metod i pozostałych artykułów wymaga osobnego audytu.
+\section{Warunki bezpieczeństwa, sprzętu i zgodności}
+To prospektywna koncepcja, nie zgoda na eksperyment, prerejestracja lub wynik empiryczny. Praca z uczestnikami, interwencje stresowe i pomiar biometryczny wymagają przeglądu etycznego, świadomej zgody i ochrony danych. Quest 3 w wersji standardowej nie posiada eye trackingu, a Tobii Eye Tracker 5 jest urządzeniem ekranowym; nie zastępować jednego stanowiska drugim.
 \section{Materiał i metody}
 
 Porównane zostaną modele oceniające ryzyko chwytu wyłącznie na podstawie kinematyki oraz modele dodatkowo korzystające z opisu sceny VLM. Wymagane jest zdefiniowanie jednostki analizy, zasad doboru przypadków, wersji scenariusza i źródeł pomiaru. Rozkład warunków oraz reguły wykluczenia prób należy określić przed pomiarem. W badaniach z udziałem ludzi niezbędna jest uprzednia właściwa ocena etyczna i świadoma zgoda. W testach wyłącznie symulacyjnych należy oddzielić prawdę symulacyjną od obserwacji empirycznej.
@@ -70,5 +95,9 @@ Niejednoznaczna segmentacja dłoni oraz opóźnienie VLM mogą przekreślić pra
 
 Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
 
+\begin{thebibliography}{9}
+\bibitem{xrprior1} SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding (2025), CVPR 2025. \url{https://ieeexplore.ieee.org/abstract/document/11094047}.
+\bibitem{xrprior2} Exploring AR hand augmentations as error feedback mechanisms for enhancing gesture-based tutorials (2025), Frontiers in Virtual Reality. \url{https://doi.org/10.3389/frvir.2025.1574965}.
+\end{thebibliography}
 \end{document}
 

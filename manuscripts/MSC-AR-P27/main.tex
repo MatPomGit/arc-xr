@@ -20,9 +20,9 @@
 
 \title{Odporność adaptacyjnego HUD na błędy estymacji obciążenia poznawczego}
 
-\author{}
+\author{Mateusz Pomianek}
 
-\date{Wersja 0.1.0, 21 listopada 2026}
+\date{Wersja 0.3.0, 21 listopada 2026}
 
 \begin{document}
 
@@ -42,6 +42,31 @@ Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji czło
 
 Czy adaptacyjny HUD zachowuje stabilność przy opóźnieniach i utracie sygnału obciążenia? Projekt wymaga krytycznego przeglądu aktualnego stanu badań oraz zdefiniowania nowości w stosunku do innych tematów portfolio XR.
 
+\section{Zakres i odrębny wkład naukowy}
+Robustność dynamicznego HUD względem kontrolowanych błędów estymatora obciążenia i opóźnienia sygnału. Wpływ standardowej adaptacji wobec HUD statycznego to P01. Odporność przy konkretnych awariach wejścia, nie przyczynowy efekt wprowadzenia adaptacji w P01.
+\section{Hipotezy badawcze}
+\paragraph{H1.} Zabezpieczony filtr lub watchdog zmian HUD zmniejsza nadmiarowe błędy przy opóźnionym i brakującym sygnale względem prostego reaktywnego regulatora.
+\paragraph{H2.} Watchdog redukuje liczbę zbędnych zmian HUD na minutę bez niewspółmiernego obniżenia dostępności wymaganej pomocy.
+\paragraph{H3.} Korzyść jest obserwowana na całych niezależnych scenariuszach, a nie jedynie na wielokrotnie zakłóconej tej samej trajektorii.
+\section{Projekt badania i plan eksperymentów}
+\subsection{A. Operacjonalizacja i kwalifikacja danych}
+Robustność dynamicznego HUD względem kontrolowanych błędów estymatora obciążenia i opóźnienia sygnału. Wpływ standardowej adaptacji wobec HUD statycznego to P01. Jednostka wnioskowania: scena/procedura z kontrolowaną trajektorią sygnału oraz odrębny sesyjny test u ludzi, jeśli zyska aprobatę. Przed badaniem należy określić źródła, wersje urządzeń, czas akwizycji, etykiety i niezależną referencję. Nie liczyć zależnych okien i klatek jako niezależnych prób.
+\subsection{B. Eksperyment porównawczy}
+Zamrozić adaptator i generator sygnału, a następnie wstrzykiwać opóźnienie, brak danych, skoki i dryf do jednakowych odtworzonych sesji. Wynik pierwszorzędowy: różnica dodatkowych błędów zadania względem warunku referencyjnego przy określonym profilu opóźnienia lub utraty sygnału. Zamrozić losowanie warunków, progi, mianownik punktu końcowego i kryteria wyłączeń bez dostępu do oceny końcowej.
+\subsection{C. Kontrole i analiza odporności}
+Ustalić referencję bez błędów, policyjny licznik zmian i rzeczywistą opóźnioną reakcję; nie przedstawiać syntetycznych zakłóceń jako pomiaru fizycznego. Z osobna raportować błędy i efekt stabilizacji, przy nieakceptowalnych warunkach system ma wracać do bezpiecznego statycznego HUD. Utrata sygnału, abstencja, przerwanie zadania i dane brakujące są odrębnymi kategoriami wyniku.
+\subsection{D. Walidacja na niezależnym materiale}
+Walidacja musi zachować podział po uczestniku, sesji, scenie lub zadaniu. Model porównań per niezależna scena z kontrastem odporny-regulator minus reaktywny; bootstrap po scenach i profilach zakłócenia. Raportować wyniki negatywne i rozbieżności z założeniami.
+\section{Estymand, analiza statystyczna i decyzje}
+różnica dodatkowych błędów zadania względem warunku referencyjnego przy określonym profilu opóźnienia lub utraty sygnału. Jednostka: scena/procedura z kontrolowaną trajektorią sygnału oraz odrębny sesyjny test u ludzi, jeśli zyska aprobatę. Model porównań per niezależna scena z kontrastem odporny-regulator minus reaktywny; bootstrap po scenach i profilach zakłócenia. H1 jest planowanym kontrastem głównym; H2 i H3 pozostają pomocnicze do zatwierdzenia hierarchii testów oraz kontroli wielokrotności. Wartości marginesów, mocy, minimalnego efektu istotnego praktycznie i liczebności mają wynikać z pilotażu, a nie z post hoc wyboru wyniku.
+\section{Stan badań i granica nowości}
+\begin{itemize}
+\item Existing adaptive physiological feedback in AR means adapting an interface is not by itself a novel contribution. \cite{xrprior1}.
+\item Physiology-driven VR adaptation has been demonstrated; independent behavioural gains require direct controlled trials. \cite{xrprior2}.
+\end{itemize}
+Odporność przy konkretnych awariach wejścia, nie przyczynowy efekt wprowadzenia adaptacji w P01. Odrębność na tle opublikowanych metod i pozostałych artykułów wymaga osobnego audytu.
+\section{Warunki bezpieczeństwa, sprzętu i zgodności}
+To prospektywna koncepcja, nie zgoda na eksperyment, prerejestracja lub wynik empiryczny. Praca z uczestnikami, interwencje stresowe i pomiar biometryczny wymagają przeglądu etycznego, świadomej zgody i ochrony danych. Quest 3 w wersji standardowej nie posiada eye trackingu, a Tobii Eye Tracker 5 jest urządzeniem ekranowym; nie zastępować jednego stanowiska drugim.
 \section{Materiał i metody}
 
 W kontrolowanych zadaniach HUD testowane będą różne poziomy opóźnienia, utraty danych i błędów estymacji obciążenia. Wymagane jest zdefiniowanie jednostki analizy, zasad doboru przypadków, wersji scenariusza i źródeł pomiaru. Rozkład warunków oraz reguły wykluczenia prób należy określić przed pomiarem. W badaniach z udziałem ludzi niezbędna jest uprzednia właściwa ocena etyczna i świadoma zgoda. W testach wyłącznie symulacyjnych należy oddzielić prawdę symulacyjną od obserwacji empirycznej.
@@ -70,5 +95,9 @@ Kontrolowany błąd syntetyczny pozwala testować odporność, ale nie potwierdz
 
 Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
 
+\begin{thebibliography}{9}
+\bibitem{xrprior1} Designing adaptive feedback systems for managing cognitive load in augmented reality (2025), Design Science 11, e49. \url{https://doi.org/10.1017/dsj.2025.10040}.
+\bibitem{xrprior2} Towards Intelligent VR Training: A Physiological Adaptation Framework for Cognitive Load and Stress Detection (2025), UMAP 2025. \url{https://doi.org/10.1145/3699682.3727575}.
+\end{thebibliography}
 \end{document}
 
