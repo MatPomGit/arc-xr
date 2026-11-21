@@ -15,6 +15,10 @@ Program obejmuje sześć powiązanych kierunków:
 | Weryfikacja procedur | Jak wykrywać pominięte kroki czynności manualnych przy ograniczaniu fałszywych alarmów? |
 | Współdzielenie uwagi | Jak forma komunikatu agenta wpływa na wybór wspólnego obiektu i sprawność zadania? |
 
+## Artykuły i koncepcje naukowe
+
+[Przegląd 27 tematów publikacyjnych i ich krótkie omówienia](articles.md) obejmuje planowane manuskrypty oraz nowe kierunki badań w pięciu obszarach.
+
 ## Podejście badawcze
 
 Planowane badania łączą kontrolowane zadania w AR, analizę modeli i eksperymenty ekranowe. Oceniane będą skuteczność interfejsów, błędy, opóźnienia, niepewność predykcji oraz obciążenie użytkownika.

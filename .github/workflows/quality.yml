@@ -31,5 +31,13 @@ jobs:
         run: python3 scripts/validate_issues.py
       - name: Run all offline regression tests
         run: python3 -m unittest discover -s tests -v
+      - name: Build and verify curated GitHub Pages HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m venv "${RUNNER_TEMP}/arc-xr-mkdocs"
+          "${RUNNER_TEMP}/arc-xr-mkdocs/bin/python" -m pip install --disable-pip-version-check mkdocs==1.6.1
+          "${RUNNER_TEMP}/arc-xr-mkdocs/bin/python" -m mkdocs build --strict --clean
+          python3 -B scripts/verify_site_output.py site
 
 # No Pages deployment, publishing credentials, private data or privileged runner.

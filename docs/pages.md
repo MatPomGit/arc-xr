@@ -8,4 +8,4 @@ Publiczna strona nie może zawierać poleceń do agentów, sposobów prowadzenia
 
 **Repozytorium prywatne nie gwarantuje prywatnego Pages.** Przed uruchomieniem witryny skontroluj uprawnienia, domenę, rzeczywistą widoczność, pliki wynikowe HTML, metadane mediów i licencje. W GitHub Pages nie wybieraj `Deploy from a branch` wskazującego `main:/docs` ani root repo. Przegląd statyczny nie wystarcza do uznania publikacji za bezpieczną.
 
-Ten PR nie dodaje automatycznego workflow publikacyjnego. Publikacja z kontrolowanego artefaktu lub dedykowanej gałęzi zawierającej tylko zatwierdzone materiały wymaga odrębnej, jawnej zgody właściciela.
+Publikację obsługuje odrębny workflow `.github/workflows/pages-publish.yml`, dostępny wyłącznie w trybie ręcznym (`workflow_dispatch`) na gałęzi `main` i wymagający jawnej autoryzacji `publication_authorized=true`. Weryfikowany jest SHA, zatwierdzony zakres `pages/` oraz wynikowy HTML w `site/`. Nie ma automatycznej publikacji po scaleniu PR. Do wykonania wdrożenia wymagane są właściwe ustawienia źródła GitHub Pages (`GitHub Actions`) i przegląd właścicielski publikowanych treści.
