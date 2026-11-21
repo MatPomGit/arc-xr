@@ -2,7 +2,7 @@
 
 **Status: projekt kontraktu przedimplementacyjnego.**
 
-`manuscripts/PXX/protocol/` → zatwierdzenie naukowe i etyczne → wersja aplikacji/SDK oraz sprzętu → kalibracja → akwizycja sesji → QA → zatwierdzony plan analiz → wynik i niepewność → `manuscripts/PXX/results/`.
+`manuscripts/MSC-AR-PNN/protocol/` → zatwierdzenie naukowe i etyczne → wersja aplikacji/SDK oraz sprzętu → kalibracja → akwizycja sesji → QA → zatwierdzony plan analiz → wynik i niepewność → `manuscripts/MSC-AR-PNN/results/`.
 
 | Granica | Metadane dopuszczone w publicznym Git | Informacje poza repo |
 | --- | --- | --- |

@@ -1,0 +1,2 @@
+# Frozen ARC v2 JSON Schema checker (isolated CI venv)
+jsonschema==4.25.1

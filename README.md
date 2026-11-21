@@ -14,22 +14,26 @@ Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast 
 
 [Wykaz 27 tematów i ich krótkie omówienia](pages/articles.md) przedstawia siedem planowanych manuskryptów oraz dwadzieścia dodatkowych koncepcji. Publiczna witryna powstaje wyłącznie z wydzielonego katalogu `pages/`.
 
+## Pilotaż migracji do ARC v2
+
+[Mapa i audyt migracji](docs/migrations/arc-v2-pilot.md) dokumentują przeniesienie sześciu starszych katalogów do identyfikatorów MSC, bez zmiany treści źródeł TeX. Kanoniczny rejestr 27 artykułów znajduje się w [portfolio/papers.json](portfolio/papers.json). Jedna pozycja jest pomocniczym szkicem projektu kanonicznego poza ARC-XR. Audyt: `python3 scripts/audit_arc_v2_pilot.py`. Narzędzie nie zapisuje plików, nie zmienia właścicieli i nie uruchamia publikacji.
+
 ## Portfolio publikacji
 
 | ID | Temat | Stan |
 | --- | --- | --- |
-| [P01](manuscripts/P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
-| [P02](manuscripts/P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
-| [P03](manuscripts/P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
-| [P04](manuscripts/P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
-| [P05](manuscripts/P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
-| [P06](manuscripts/P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
+| [P01](manuscripts/MSC-AR-P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
+| [P02](manuscripts/MSC-AR-P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
+| [P03](manuscripts/MSC-AR-P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
+| [P04](manuscripts/MSC-AR-P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
+| [P05](manuscripts/MSC-AR-P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
+| [P06](manuscripts/MSC-AR-P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
 
 W pierwotnym opisie występowało sześć merytorycznie określonych propozycji, ale numeracja była niespójna (dwie pozycje 3 oraz pusta pozycja 8). Nadano im identyfikatory P01–P06 bez dodawania nieopisanych artykułów.
 
 ## Organizacja repozytorium
 
-Każda publikacja w `manuscripts/PXX/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [manuscripts/README.md](manuscripts/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+Każda publikacja podstawowa w `manuscripts/MSC-AR-PNN/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [manuscripts/README.md](manuscripts/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Źródła manuskryptów w LaTeX
 

@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "programme": "arc-xr",
+  "intent": "SOURCE_PATHS_MIGRATED",
+  "source_main_sha": "87c9603f5a18359ae1d3477122b800c0631eb20a",
+  "manifest_source": "migration/provenance/source-manifest-v1.json",
+  "records": [
+    {
+      "id": "MSC-AR-P01",
+      "area": "adaptation",
+      "from": "manuscripts/P01/main.tex",
+      "to": "manuscripts/MSC-AR-P01/main.tex",
+      "blob_sha": "498782d41cc34dc1b768bb0fdd6bb026081d8a93",
+      "ownership": "local",
+      "source_role": "core_research_plan"
+    },
+    {
+      "id": "MSC-AR-P02",
+      "area": "affect",
+      "from": "manuscripts/P02/main.tex",
+      "to": "manuscripts/MSC-AR-P02/main.tex",
+      "blob_sha": "47215d55981fcdcf0d8f02aa0af791001ecbc480",
+      "ownership": "local",
+      "source_role": "core_research_plan"
+    },
+    {
+      "id": "MSC-AR-P03",
+      "area": "perception",
+      "from": "manuscripts/P03/main.tex",
+      "to": "manuscripts/MSC-AR-P03/main.tex",
+      "blob_sha": "d846e7c891cdd6c42c0f7f42cdad4002a0c19231",
+      "ownership": "local",
+      "source_role": "core_research_plan"
+    },
+    {
+      "id": "MSC-AR-P04",
+      "area": "perception",
+      "from": "manuscripts/P04/main.tex",
+      "to": "manuscripts/MSC-AR-P04/main.tex",
+      "blob_sha": "9cc7d14c07df09affcdaa74b159b03f520594b76",
+      "ownership": "local",
+      "source_role": "core_research_plan"
+    },
+    {
+      "id": "MSC-AR-P05",
+      "area": "procedures",
+      "from": "manuscripts/P05/main.tex",
+      "to": "manuscripts/MSC-AR-P05/main.tex",
+      "blob_sha": "0f686a9a733b3336273a3acd5a3bc1ec9359634e",
+      "ownership": "local",
+      "source_role": "core_research_plan"
+    },
+    {
+      "id": "MSC-AR-P06",
+      "area": "collaboration",
+      "from": "manuscripts/P06/main.tex",
+      "to": "manuscripts/MSC-AR-P06/main.tex",
+      "blob_sha": "07d2018e413d4c75cfaa48c93594f97a26276411",
+      "ownership": "local",
+      "source_role": "core_research_plan"
+    },
+    {
+      "id": "MSC-AAL-P07",
+      "area": "procedures",
+      "from": "manuscripts/MSC-AAL-P07/main.tex",
+      "to": "manuscripts/MSC-AAL-P07/main.tex",
+      "blob_sha": "e891d90912001244cf3c8c7877681b428f2aa257",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-ADHD-P04",
+      "area": "affect",
+      "from": "manuscripts/MSC-ADHD-P04/main.tex",
+      "to": "manuscripts/MSC-ADHD-P04/main.tex",
+      "blob_sha": "9d14f3196a4c1d882d0e0793943116f46a9cb3e4",
+      "ownership": "external_companion",
+      "source_role": "cross_program_companion_plan"
+    },
+    {
+      "id": "MSC-AR-P07",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P07/main.tex",
+      "to": "manuscripts/MSC-AR-P07/main.tex",
+      "blob_sha": "58909cb4dc0882354111f4183603571711fe5789",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P08",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P08/main.tex",
+      "to": "manuscripts/MSC-AR-P08/main.tex",
+      "blob_sha": "10104a7811a5c7a7dc0970474f44870f5444ba44",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P09",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P09/main.tex",
+      "to": "manuscripts/MSC-AR-P09/main.tex",
+      "blob_sha": "eba9224c78d35b12797e1a5287ddf6b273e7d4c5",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P10",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P10/main.tex",
+      "to": "manuscripts/MSC-AR-P10/main.tex",
+      "blob_sha": "e42a16e690bcc1e136e1e886754dfe20da5e88ea",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P11",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P11/main.tex",
+      "to": "manuscripts/MSC-AR-P11/main.tex",
+      "blob_sha": "b49cc76a90ac1b4aaddb5fd2af78a8b071e3b244",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P12",
+      "area": "affect",
+      "from": "manuscripts/MSC-AR-P12/main.tex",
+      "to": "manuscripts/MSC-AR-P12/main.tex",
+      "blob_sha": "8c8ab210c03755abd7c101e2fe7ce5a8cdae56aa",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P13",
+      "area": "affect",
+      "from": "manuscripts/MSC-AR-P13/main.tex",
+      "to": "manuscripts/MSC-AR-P13/main.tex",
+      "blob_sha": "229f16241067ebf0d4b31d3996ad7cf822158c0f",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P14",
+      "area": "affect",
+      "from": "manuscripts/MSC-AR-P14/main.tex",
+      "to": "manuscripts/MSC-AR-P14/main.tex",
+      "blob_sha": "c877eb65e3977af449b1e048665d64f43cab2b2d",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P15",
+      "area": "affect",
+      "from": "manuscripts/MSC-AR-P15/main.tex",
+      "to": "manuscripts/MSC-AR-P15/main.tex",
+      "blob_sha": "5d2af09264bc057198fc59541c7cfd4e47fd0bf7",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P17",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P17/main.tex",
+      "to": "manuscripts/MSC-AR-P17/main.tex",
+      "blob_sha": "891503c350e9e80f05ce7aa9d21d71e6e2921972",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P18",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P18/main.tex",
+      "to": "manuscripts/MSC-AR-P18/main.tex",
+      "blob_sha": "677df2dfe587ed5ca032341d69ffc30b14969d6d",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P21",
+      "area": "collaboration",
+      "from": "manuscripts/MSC-AR-P21/main.tex",
+      "to": "manuscripts/MSC-AR-P21/main.tex",
+      "blob_sha": "7b3768561ee7d0c2cb5d5dc4f92f083ac00ac1be",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P22",
+      "area": "collaboration",
+      "from": "manuscripts/MSC-AR-P22/main.tex",
+      "to": "manuscripts/MSC-AR-P22/main.tex",
+      "blob_sha": "32ee50d43439514503544c76b88cddd51ebe032b",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P23",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P23/main.tex",
+      "to": "manuscripts/MSC-AR-P23/main.tex",
+      "blob_sha": "3b51022ed4316cf46be44904d921da74141800d0",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P25",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P25/main.tex",
+      "to": "manuscripts/MSC-AR-P25/main.tex",
+      "blob_sha": "2745cd06c57b0c3ec4627027424a970eff54d28d",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P26",
+      "area": "procedures",
+      "from": "manuscripts/MSC-AR-P26/main.tex",
+      "to": "manuscripts/MSC-AR-P26/main.tex",
+      "blob_sha": "12d8a6c0c2960d736eac99c96d13875b542d02a7",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P27",
+      "area": "adaptation",
+      "from": "manuscripts/MSC-AR-P27/main.tex",
+      "to": "manuscripts/MSC-AR-P27/main.tex",
+      "blob_sha": "cfc447907fcb7503f056696d4d21d0bf395b317f",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P28",
+      "area": "perception",
+      "from": "manuscripts/MSC-AR-P28/main.tex",
+      "to": "manuscripts/MSC-AR-P28/main.tex",
+      "blob_sha": "683076530c58c7b53447d85d7dd609d6ed4b586a",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    },
+    {
+      "id": "MSC-AR-P29",
+      "area": "perception",
+      "from": "manuscripts/MSC-AR-P29/main.tex",
+      "to": "manuscripts/MSC-AR-P29/main.tex",
+      "blob_sha": "94781b9e4fe3150bb27d297ad298fda7a3a358d3",
+      "ownership": "local",
+      "source_role": "unapproved_concept_plan"
+    }
+  ]
+}

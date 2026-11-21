@@ -13,4 +13,4 @@
 
 W rzeczywistym wdrożeniu aplikacja powinna być właścicielem UI, sceny i uruchomienia; biblioteka tylko wielokrotnie wykorzystywanego algorytmu/sterownika. Nie tworzyć `app-*` lub `lib-*` przez samo zapisanie planu. Sprzęt i SDK dokumentuje się w autoryzowanych źródłach, bez powielania w publicznej stronie.
 
-Protokół i szkic manuskryptu nadal należą do właściwego `manuscripts/PXX/`, a plan minimalny do [mvp_plan.md](../../manuscripts/mvp_plan.md).
+Protokół i szkic manuskryptu nadal należą do właściwego `manuscripts/MSC-AR-PNN/`, a plan minimalny do [mvp_plan.md](../../manuscripts/mvp_plan.md).

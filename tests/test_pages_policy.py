@@ -54,7 +54,7 @@ class PagesPolicyTests(unittest.TestCase):
     def test_public_internal_link_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/index.md").write_text("[protokół](../manuscripts/P01/README.md)", encoding="utf-8")
+            (root / "pages/index.md").write_text("[protokół](../manuscripts/MSC-AR-P01/README.md)", encoding="utf-8")
             self.assertIn("PAGES INTERNAL REFERENCE: index.md", validator.check_pages(root))
 
     def test_contributing_disallowed(self):

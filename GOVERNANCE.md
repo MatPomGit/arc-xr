@@ -4,7 +4,7 @@ ARC-XR utrzymuje program sześciu badań P01–P06. **Właściciel naukowy** odp
 
 ## Kanoniczne źródła
 
-`PROJECT_STATE.yaml` określa fazę badawczą, bramki i statusy; `RESEARCH.md` reguły naukowe; `manuscripts/PXX/` protokoły i manuskrypty; `AUTOPILOT_PLAN.md` plan (nie działający scheduler); `REPRODUCIBILITY.md` dowody. `ARCHITECTURE.md` opisuje granice rozwiązań, a [ADR](docs/adr/README.md) uzasadnienia techniczne. Dokumenty nie powinny powielać równoległego rejestru manuskryptów.
+`PROJECT_STATE.yaml` określa fazę badawczą, bramki i statusy; `RESEARCH.md` reguły naukowe; `manuscripts/MSC-AR-PNN/` protokoły i manuskrypty; `AUTOPILOT_PLAN.md` plan (nie działający scheduler); `REPRODUCIBILITY.md` dowody. `ARCHITECTURE.md` opisuje granice rozwiązań, a [ADR](docs/adr/README.md) uzasadnienia techniczne. Dokumenty nie powinny powielać równoległego rejestru manuskryptów.
 
 W przyszłym portfelu `MSC-*` obowiązuje jedna kanoniczna własność każdego manuskryptu. Rozważane nowe prace, w tym pozycje z otwartych draft PR, **nie stają się siódmym zatwierdzonym badaniem** bez decyzji naukowej i zmiany `PROJECT_STATE.yaml`.
 
