@@ -108,8 +108,27 @@ def audit(root: Path = ROOT) -> list[str]:
             rename+=1
     all_tex={p.relative_to(root).as_posix() for p in
              (root/"manuscripts").glob("*/main.tex")}
-    if not target_paths.issubset(all_tex) or seen!=set(byid):
-        issues.append("PILOT: missing historical migration sources or IDs")
+    # Migration map covers 27 historical files. Newly registered local concept
+    # manuscripts may coexist, but unknown extra LaTeX sources remain forbidden.
+    try:
+        registry=json.loads((root/"portfolio/papers.json").read_text())["papers"]
+    except (OSError,ValueError,KeyError,TypeError):
+        registry=[]
+        issues.append("PILOT: unreadable local manuscript registry")
+    additional=set()
+    for paper in registry:
+        if not isinstance(paper,dict) or paper.get("id") in seen:
+            continue
+        owner=paper.get("owner")
+        manuscript=paper.get("manuscript")
+        if (isinstance(owner,dict) and owner.get("mode")=="local"
+                and isinstance(manuscript,dict)
+                and manuscript.get("path")=="manuscripts/"+str(paper.get("id"))+"/main.tex"
+                and paper.get("publication_stage")=="concept"
+                and paper.get("public_listing") is False):
+            additional.add(manuscript["path"])
+    if all_tex != target_paths | additional or seen!=set(byid):
+        issues.append("PILOT: incomplete local sources or IDs")
     if len(public)!=27 or companion!=1 or rename!=6:
         issues.append("PILOT: counts drifted")
     return sorted(set(issues))
