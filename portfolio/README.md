@@ -7,3 +7,6 @@
 `PROJECT_STATE.yaml` jest istniejącym szczegółowym stanem naukowym sześciu podstawowych prac. Jego zachowane skróty P01–P06 nie stanowią drugiego rejestru manuskryptów. Stary manifest źródeł znajduje się w `migration/provenance/` jako nieredagowana bieżąco migawka historyczna. Nie dodawaj osobnych `manuscript_register.md` ani `publication_register.md`.
 
 Walidacja: `python3 scripts/validate_arc_v2_registry.py`, procedura migracji: [opis techniczny](../docs/migrations/arc-v2-pilot.md). Katalog publiczny `pages/` nie jest automatycznym eksportem pełnych danych rejestru.
+
+
+Nowa kandydatura `MSC-SUV-P01` jest niezależnym wpisem lokalnym, poza historyczną migracją 27 pozycji. Walidacja migrowanych rekordów i ich SHA pozostaje niezmieniona.

@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+% Portfolio: MSC-SUV-P01; source: prospective ST-08 research programme.
+\title{Wierna rekonstrukcja naturalnych zachowań społecznych na awatarach o różnym stopniu realizmu}
+\author{Mateusz Pomianek}
+\date{Wersja 0.1.0, 21 listopada 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Przenoszenie rzeczywistych wzorców komunikacyjnych na syntetyczne awatary może umożliwić niezależną manipulację wyglądem postaci i dynamiką jej zachowania. Nie wiadomo jednak, czy retargeting zachowuje momenty ekspresji, gestów i reakcji podczas dużych zmian geometrii twarzy oraz ciała. W pracy projektujemy techniczną walidację rekonstrukcji i przenoszenia ruchu z archiwalnych nagrań na modele robotyczne, pośrednie i fotorealistyczne. Głównym punktem końcowym jest błąd czasowy odtworzenia anotowanych zdarzeń społecznych. Tekst przedstawia koncepcję metodyczną, bez wyników eksperymentalnych.
+\end{abstract}
+\section{Wprowadzenie}
+Systematyczne badanie wpływu wyglądu i zachowania na reakcje społeczne wymaga niezależnego sterowania obiema grupami bodźców. Obserwowanie różnych osób lub rozmaitych robotów w odmiennych kontekstach nie gwarantuje tej niezależności. Wymiana tekstury awatara bez kontroli jego układu kostnego może powodować przesunięcia mimiki, gestów i kontaktu wzrokowego; wówczas obserwator ocenia artefakt animacji zamiast właściwego wzorca zachowania.
+
+Stanowisko ST-08 ma zapewnić powtarzalny generator bodźców na podstawie archiwalnych nagrań. Wideo służy jako źródło behawioralnego przebiegu zdarzeń, natomiast twarz i ciało docelowe są generowane syntetycznie. Punktem odniesienia dla realistycznej postaci jest MetaHuman w Unreal Engine, a warianty mechaniczne i pośrednie można przygotować w Blenderze. Korzystanie z określonego silnika nie zwalnia z walidacji narzędzi, licencji ani dokładności rekonstrukcji.
+\section{Cel pracy i pytania badawcze}
+Czy jednolita reprezentacja wielokanałowego zachowania społecznego umożliwia odtwarzanie tej samej sekwencji na awatarach o różnym wyglądzie bez istotnej deformacji struktury czasowej i percepcyjnej? Jak błędy zależą od widoczności źródłowej osoby, szczegółowości riga, ruchu głowy, dłoni i geometrii twarzy?
+\section{Hipotezy badawcze}
+\paragraph{H1.} Retargeting wykorzystujący wspólną reprezentację zdarzeń ogranicza błąd czasu reakcji względem bazowego transferu animacji bez kontroli zgodności czasowej.
+\paragraph{H2.} Różnica jakości odtworzenia między wariantami robotycznym, pośrednim i fotorealistycznym pozostaje w granicach wcześniej zdefiniowanego marginesu po poprawnej walidacji riga i kamer.
+\paragraph{H3.} Niska widoczność dłoni lub twarzy i błędy estymacji głębi pogarszają odtwarzanie określonych kanałów komunikacji bardziej niż innych.
+Hipotezy są wstępne. Margines akceptowalnej deformacji, kryteria jakości i hierarchia porównań wymagają ustalenia przed badaniem potwierdzającym.
+\section{Materiał i metody}
+\subsection{Źródła danych}
+W pierwszym etapie należy przeanalizować prawnie dostępne nagrania interakcji z zachowanym kontekstem wypowiedzi partnera. UDIVA i RECOLA są kandydatami do kwalifikacji technicznej, a korpusy komunikacji neuroróżnorodnej wymagają odrębnej oceny uprawnień i dostępności wiarygodnego opisu źródłowych osób. Publiczne odtwarzanie filmu nie oznacza automatycznie prawa do rozpowszechniania animacji pochodnych.
+\subsection{Ekstrakcja wielokanałowa}
+Dla każdej sekwencji należy wyznaczyć oś czasu wypowiedzi, położenie głowy, gesty dłoni i ciała, parametry mimiki oraz szacowane kierunki spojrzenia. Dane niedostępne z wideo pozostaną jawnie nieoznaczone; nie wolno udawać, że ocena spojrzenia z niekalibrowanej kamery jest pomiarem okulograficznym. Nie rekonstruuje się EEG ani wewnętrznych stanów emocjonalnych osoby z samych ruchów.
+\subsection{Wspólna reprezentacja animacji}
+Przewiduje się parametryczny rig z kontraktem mapowania gestów i ekspresji niezależnym od wizualnego materiału postaci. Będzie on sterować przynajmniej trzema wariantami wyglądu w tym samym kadrze, z kontrolowanym oświetleniem i czasem trwania filmu. Dla wersji robotycznej należy wyraźnie oznaczyć ruchy fizycznie niewykonalne przez realny sprzęt; niniejszy eksperyment nie potwierdza transferu na robota fizycznego.
+\subsection{Walidacja techniczna}
+Porównane zostaną anotowane referencyjne zdarzenia, rekonstrukcja źródłowa i odtworzenie na docelowym rigu. Pierwszorzędowy błąd synchronizacji będzie wyrażony w jednostkach czasu. Dodatkowymi miarami są odległości kinematyczne, zgodność dynamiki mimiki i niezależna ocena wierności ekspresji. Przewiduje się pilotaż macierzy trzy warianty wyglądu razy trzy warianty dynamiki na wspólnej sekwencji.
+\section{Plan analizy}
+Jednostką analizy jest anotowane zdarzenie w sekwencji wideo, z uwzględnieniem osoby źródłowej, klipu i kanału ruchu. Modele hierarchiczne powinny oddzielać zmienność między źródłowymi nagraniami od różnic między wariantami riga. Zbiór testowy musi obejmować inne osoby i konteksty niż materiał służący do kalibracji. Należy oceniać rozkłady błędów, a nie tylko średnią, ponieważ duże opóźnienia pojedynczych gestów mogą być szczególnie widoczne.
+Zamrożenie estymandu, marginesu równoważności, sposobu obliczania niepewności i listy wyłączeń nastąpi po technicznym pilotażu i przed oceną konfirmacyjną. Wynik należy porównać z prostym baseline niezależnego retargetingu oraz statycznym transferem mimiki. Żaden wskaźnik nie powinien zostać uznany za percepcyjnie istotny bez niezależnego potwierdzenia przez obserwatorów technicznych.
+\section{Wyniki}
+Brak danych z przeprowadzonej walidacji. Nie uzyskano dotąd błędów czasowych, ocen zgodności ani statystyk pozwalających stwierdzić przewagę metody. Dokument ten opisuje zamierzoną procedurę badawczą, nie dowód jej skuteczności.
+\section{Ograniczenia badania}
+Retargeting z wideo 2D jest podatny na zasłonięcia, brak skali 3D, deformacje twarzy i niezgodność rigs. Skala psychologicznej naturalności ruchu nie musi być liniową funkcją matematycznych parametrów. Legalność źródłowego filmu i licencja środowiska 3D muszą być potwierdzone przed dystrybucją renderowanych bodźców. Brak etykiet klinicznych nie jest podstawą do przypisywania diagnozy na podstawie widocznego zachowania.
+\section{Dyskusja}
+Wierność transferu jest niezbędną, lecz niewystarczającą przesłanką do eksperymentów nad doliną niesamowitości. Samo podobieństwo położenia głowy lub gestu nie gwarantuje podobnego pierwszego wrażenia. Odrębny wkład metodyczny tej pracy polega na możliwości ilościowego testowania, czy różne wyglądy postaci realizują tę samą sekwencję komunikacji. Wpływ na niesamowitość i niechęć jest przedmiotem późniejszych prac MSC-SUV-P02 do P04, nie wynikiem tego artykułu.
+\section{Wnioski}
+Opracowano prospektywny projekt walidacji generatora bodźców. Dalsze działania wymagają praw do nagrań i modeli, wyboru sekwencji, zdefiniowania metryk i niezależnego benchmarku. Nie przedstawiono wyników empirycznych ani fikcyjnych odniesień bibliograficznych.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

@@ -26,16 +26,17 @@ OTHER = (
   "MSC-AR-P26",
   "MSC-AR-P27",
   "MSC-AR-P28",
-  "MSC-AR-P29"
-,)
+  "MSC-AR-P29",
+  "MSC-SUV-P01",
+)
 
 class TeXManuscriptTests(unittest.TestCase):
     def test_exact_manuscript_coverage(self):
         expected = dict(CORE)
         expected.update({identifier: identifier for identifier in OTHER})
-        self.assertEqual(len(expected), 27)
+        self.assertEqual(len(expected), 28)
         real = sorted((ROOT / "manuscripts").glob("*/main.tex"))
-        self.assertEqual(len(real), 27)
+        self.assertEqual(len(real), 28)
         self.assertEqual({f.parent.name for f in real}, set(expected.values()))
         seen_titles = set()
         for identifier, directory in expected.items():

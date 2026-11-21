@@ -13,7 +13,7 @@
 
 ## Źródła LaTeX i pozostałe tematy publikacyjne
 
-Wszystkie **27 pozycji** posiadają niezależny plik `main.tex`, będący prospektywnym planem naukowym w wersji 0.3.0. Sześć podstawowych manuskryptów znajduje się w jednolicie nazwanych folderach `MSC-AR-P01`–`MSC-AR-P06`; materiały `manuscript.md`, protokoły i pliki bibliograficzne pozostają zachowane. Dodatkowe katalogi zawierają **jedną pracę przekrojową i 20 koncepcji**, bez podnoszenia ich statusu do zrealizowanych badań.
+Wszystkie **27 historycznych pozycji** posiadają niezależny plik `main.tex`, będący prospektywnym planem naukowym w wersji 0.3.0. Sześć podstawowych manuskryptów znajduje się w jednolicie nazwanych folderach `MSC-AR-P01`–`MSC-AR-P06`; materiały `manuscript.md`, protokoły i pliki bibliograficzne pozostają zachowane. Dodatkowe katalogi zawierają **jedną pracę przekrojową i 20 koncepcji**, bez podnoszenia ich statusu do zrealizowanych badań.
 
 | Identyfikator MSC | Temat | Źródło LaTeX | Etap |
 | --- | --- | --- | --- |
@@ -79,4 +79,9 @@ Identyfikatory P01–P06 są stałe. Nie zmieniać kolejności identyfikatorów 
 
 ## Weryfikacja E4.0 i bibliografia
 
-Wszystkie 27 źródeł `main.tex` zawiera po **trzy hipotezy** i **cztery etapy badań**, główny estymand, kontrolę zależności obserwacji oraz literaturę porównawczą. [Macierz nowości](literature/novelty_matrix.md), [źródła bibliograficzne](literature/prior_art_sources.json) i [archiwalna migawka pochodzenia źródeł](../migration/provenance/source-manifest-v1.json) rozróżniają projekty podstawowe od koncepcji. Plany nie zmieniają zgód, statusu badań ani wyników.
+Historyczne 27 źródeł `main.tex` zawiera po **trzy hipotezy** i **cztery etapy badań**, główny estymand, kontrolę zależności obserwacji oraz literaturę porównawczą. [Macierz nowości](literature/novelty_matrix.md), [źródła bibliograficzne](literature/prior_art_sources.json) i [archiwalna migawka pochodzenia źródeł](../migration/provenance/source-manifest-v1.json) rozróżniają projekty podstawowe od koncepcji. Plany nie zmieniają zgód, statusu badań ani wyników.
+
+
+## Nowa seria ST-08: Social Uncanny Valley
+
+[MSC-SUV-P01 — retargeting naturalnych zachowań na awatary](MSC-SUV-P01/README.md) ([main.tex](MSC-SUV-P01/main.tex)) jest dodatkowym szkicem koncepcyjnym po historycznej migracji 27 pozycji.
