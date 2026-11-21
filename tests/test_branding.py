@@ -52,7 +52,7 @@ class BrandingTests(unittest.TestCase):
         image.write_bytes(b"not-reviewed")
         with self.assertRaisesRegex(ValueError, "Unapproved"):
             expected_config(self.root)
-        self.assertTrue(any("PAGES LOGO:" in error for error in check_pages(self.root))
+        self.assertTrue(any("PAGES LOGO:" in error for error in check_pages(self.root)))
 
 
 if __name__ == "__main__":
