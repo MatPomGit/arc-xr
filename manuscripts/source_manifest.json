@@ -8,7 +8,7 @@
     "sha": "84fd9acb0a9ec36d1585da0471f1516eb61339f9"
   },
   "source_snapshot_sha": "480a108b811bcc2d0590105c3eaf8ef7e73caa98",
-  "notes": "Prospective local ARC XR drafts are not proof of experimental approval. Registry statuses are copied from a pinned central portfolio. A source snapshot does not represent the current E4 HEAD.",
+  "notes": "Prospective local ARC XR drafts are not proof of experimental approval. Registry statuses are copied from a pinned central portfolio. A source snapshot does not represent the current E4 HEAD. External companion ownership is tracked without exposing private canonical repository metadata in this public source manifest.",
   "papers": [
     {
       "id": "MSC-AR-P01",
@@ -121,11 +121,11 @@
       "title": "Transfer regulacji do ucieleśnionej interakcji i AR",
       "category": "MANUSCRIPT",
       "scientific_status": "ACTIVE",
-      "owner_programme": "arc-xr",
-      "source_repository": "MatPomGit/arc-adhd-game",
-      "source_path": "manuscripts/04-embodied-ar/README.md",
-      "source_sha": "a97ce83d4f33a10e73be2a66412aa173af3f6089",
-      "source_url": "https://github.com/MatPomGit/arc-adhd-game/blob/a97ce83d4f33a10e73be2a66412aa173af3f6089/manuscripts/04-embodied-ar/README.md",
+      "owner_programme": "external",
+      "source_repository": null,
+      "source_path": null,
+      "source_sha": null,
+      "source_url": null,
       "local_draft": "manuscripts/MSC-ADHD-P04/main.tex",
       "local_draft_role": "cross_program_companion_plan",
       "local_draft_version": "0.3.0"

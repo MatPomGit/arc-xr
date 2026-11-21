@@ -45,16 +45,22 @@ class XRResearchProtocolTest(unittest.TestCase):
     def test_pinned_scientific_source_and_nonpromotion(self):
         for p in PAPERS:
             with self.subTest(id=p["id"]):
-                self.assertEqual(p["owner_programme"],"arc-xr")
-                self.assertRegex(p["source_sha"],r"^[0-9a-f]{40}$")
-                url=f"https://github.com/{p['source_repository']}/blob/{p['source_sha']}/{p['source_path']}"
-                self.assertEqual(p["source_url"],url)
+                if p["local_draft_role"]=="cross_program_companion_plan":
+                    self.assertEqual(p["owner_programme"],"external")
+                    for key in ("source_repository","source_path","source_sha","source_url"):
+                        self.assertIsNone(p[key])
+                else:
+                    self.assertEqual(p["owner_programme"],"arc-xr")
+                    self.assertRegex(p["source_sha"],r"^[0-9a-f]{40}$")
+                    url=f"https://github.com/{p['source_repository']}/blob/{p['source_sha']}/{p['source_path']}"
+                    self.assertEqual(p["source_url"],url)
                 self.assertEqual(p["local_draft"],f"manuscripts/{p['folder']}/main.tex")
                 self.assertTrue((ROOT/p["local_draft"]).is_file())
                 self.assertIn(p["local_draft_role"],("core_research_plan","unapproved_concept_plan","cross_program_companion_plan"))
                 self.assertNotEqual(p["scientific_status"],"PUBLISHED")
         cross=next(p for p in PAPERS if p["id"]=="MSC-ADHD-P04")
-        self.assertEqual(cross["source_repository"],"MatPomGit/arc-adhd-game")
+        self.assertEqual(cross["owner_programme"],"external")
+        self.assertIsNone(cross["source_repository"])
         self.assertEqual(cross["local_draft_role"],"cross_program_companion_plan")
 
     def test_prior_art_matrix_complete(self):
