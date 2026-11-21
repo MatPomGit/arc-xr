@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "lines": [
+    {
+      "id": "adaptation",
+      "title": "Adaptacja, uwaga i uczenie"
+    },
+    {
+      "id": "affect",
+      "title": "Afekt i regulacja"
+    },
+    {
+      "id": "perception",
+      "title": "Percepcja przestrzenna i pomiar"
+    },
+    {
+      "id": "procedures",
+      "title": "Procedury i wskazówki AR"
+    },
+    {
+      "id": "collaboration",
+      "title": "Agenci i współpraca XR"
+    }
+  ]
+}

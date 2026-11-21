@@ -1,0 +1,704 @@
+{
+  "schema_version": 2,
+  "papers": [
+    {
+      "id": "MSC-AAL-P07",
+      "title": "Pomoc przestrzenna AR wobec interfejsu 2D w wykonywaniu bezpiecznych czynności domowych",
+      "area": "procedures",
+      "research_state": "deferred",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AAL-P07/main.tex",
+        "format": "latex",
+        "blob_sha": "e891d90912001244cf3c8c7877681b428f2aa257"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-ADHD-P04",
+      "title": "Transfer regulacji do ucieleśnionej interakcji i AR",
+      "area": "affect",
+      "research_state": "active",
+      "publication_stage": "draft",
+      "relation": "related",
+      "owner": {
+        "mode": "external",
+        "repository": null,
+        "project_id": null,
+        "redacted": true
+      },
+      "manuscript": null,
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P01",
+      "title": "Multimodalne obciążenie poznawcze i adaptacja interfejsu AR",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "draft",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P01/main.tex",
+        "format": "latex",
+        "blob_sha": "498782d41cc34dc1b768bb0fdd6bb026081d8a93"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P02",
+      "title": "Frustracja i dekoncentracja w procedurach manualnych AR",
+      "area": "affect",
+      "research_state": "planned",
+      "publication_stage": "draft",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P02/main.tex",
+        "format": "latex",
+        "blob_sha": "47215d55981fcdcf0d8f02aa0af791001ecbc480"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P03",
+      "title": "Okluzja i asynchronia renderowania AR a zmęczenie",
+      "area": "perception",
+      "research_state": "planned",
+      "publication_stage": "draft",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P03/main.tex",
+        "format": "latex",
+        "blob_sha": "d846e7c891cdd6c42c0f7f42cdad4002a0c19231"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P04",
+      "title": "Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM",
+      "area": "perception",
+      "research_state": "planned",
+      "publication_stage": "draft",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P04/main.tex",
+        "format": "latex",
+        "blob_sha": "9cc7d14c07df09affcdaa74b159b03f520594b76"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P05",
+      "title": "Weryfikacja poprawności sekwencji manualnej w AR na podstawie dowodów wizualnych",
+      "area": "procedures",
+      "research_state": "planned",
+      "publication_stage": "draft",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P05/main.tex",
+        "format": "latex",
+        "blob_sha": "0f686a9a733b3336273a3acd5a3bc1ec9359634e"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P06",
+      "title": "Współdzielenie uwagi i komunikacja człowiek-agent w AR",
+      "area": "collaboration",
+      "research_state": "planned",
+      "publication_stage": "draft",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P06/main.tex",
+        "format": "latex",
+        "blob_sha": "07d2018e413d4c75cfaa48c93594f97a26276411"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P07",
+      "title": "Wyprzedzająca predykcja przeciążenia poznawczego przed błędem w zadaniu AR",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P07/main.tex",
+        "format": "latex",
+        "blob_sha": "58909cb4dc0882354111f4183603571711fe5789"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P08",
+      "title": "Adaptacja poziomu wyzwania XR a transfer poprawnego wykonania zadań",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P08/main.tex",
+        "format": "latex",
+        "blob_sha": "10104a7811a5c7a7dc0970474f44870f5444ba44"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P09",
+      "title": "Wykrywanie błądzenia myślami i odzyskiwanie uwagi z EEG i okulografii",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P09/main.tex",
+        "format": "latex",
+        "blob_sha": "eba9224c78d35b12797e1a5287ddf6b273e7d4c5"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P10",
+      "title": "Adaptacyjne uczenie w VR i odroczona retencja pamięciowa",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P10/main.tex",
+        "format": "latex",
+        "blob_sha": "e42a16e690bcc1e136e1e886754dfe20da5e88ea"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P11",
+      "title": "Metapoznanie w XR: informacja zwrotna o szacowanym obciążeniu",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P11/main.tex",
+        "format": "latex",
+        "blob_sha": "b49cc76a90ac1b4aaddb5fd2af78a8b071e3b244"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P12",
+      "title": "Emocjonalne lustro XR wizualizujące oszacowany stan afektywny",
+      "area": "affect",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P12/main.tex",
+        "format": "latex",
+        "blob_sha": "8c8ab210c03755abd7c101e2fe7ce5a8cdae56aa"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P13",
+      "title": "Generatywna Neuroadaptive Art Therapy w środowisku XR",
+      "area": "affect",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P13/main.tex",
+        "format": "latex",
+        "blob_sha": "229f16241067ebf0d4b31d3996ad7cf822158c0f"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P14",
+      "title": "Empatyczny awatar AI adaptujący komunikację do pobudzenia użytkownika",
+      "area": "affect",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P14/main.tex",
+        "format": "latex",
+        "blob_sha": "c877eb65e3977af449b1e048665d64f43cab2b2d"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P15",
+      "title": "Adaptacyjna ekspozycja na stresory w XR",
+      "area": "affect",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P15/main.tex",
+        "format": "latex",
+        "blob_sha": "5d2af09264bc057198fc59541c7cfd4e47fd0bf7"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P17",
+      "title": "Kalibracja niepewności rozpoznania stanu użytkownika a selektywna abstencja adaptatora XR",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P17/main.tex",
+        "format": "latex",
+        "blob_sha": "891503c350e9e80f05ce7aa9d21d71e6e2921972"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P18",
+      "title": "Wyjaśnialna neuroadaptacja XR a zaufanie i immersja",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P18/main.tex",
+        "format": "latex",
+        "blob_sha": "677df2dfe587ed5ca032341d69ffc30b14969d6d"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P21",
+      "title": "Agent XR uczący się preferencji użytkownika w czasie",
+      "area": "collaboration",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P21/main.tex",
+        "format": "latex",
+        "blob_sha": "7b3768561ee7d0c2cb5d5dc4f92f083ac00ac1be"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P22",
+      "title": "Neuroadaptive Social XR z odrębną personalizacją uczestników współpracy",
+      "area": "collaboration",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P22/main.tex",
+        "format": "latex",
+        "blob_sha": "32ee50d43439514503544c76b88cddd51ebe032b"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P23",
+      "title": "Adaptacja poziomu wyzwania XR a dynamika subiektywnego doświadczenia flow",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P23/main.tex",
+        "format": "latex",
+        "blob_sha": "3b51022ed4316cf46be44904d921da74141800d0"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P25",
+      "title": "Behawioralny koszt wstrzymania adaptacji XR wobec adaptacji statycznej i reaktywnej",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P25/main.tex",
+        "format": "latex",
+        "blob_sha": "2745cd06c57b0c3ec4627027424a970eff54d28d"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P26",
+      "title": "Faza ruchu dłoni a optymalny moment wyświetlania instrukcji w AR",
+      "area": "procedures",
+      "research_state": "deferred",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P26/main.tex",
+        "format": "latex",
+        "blob_sha": "12d8a6c0c2960d736eac99c96d13875b542d02a7"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P27",
+      "title": "Odporność adaptacyjnego HUD na błędy estymacji obciążenia poznawczego",
+      "area": "adaptation",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P27/main.tex",
+        "format": "latex",
+        "blob_sha": "cfc447907fcb7503f056696d4d21d0bf395b317f"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P28",
+      "title": "Wyprzedzające wykrywanie ryzyka błędu manipulacji z kinematyki dłoni i VLM",
+      "area": "perception",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P28/main.tex",
+        "format": "latex",
+        "blob_sha": "683076530c58c7b53447d85d7dd609d6ed4b586a"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    },
+    {
+      "id": "MSC-AR-P29",
+      "title": "Predykcja subiektywnej niepewności decyzji z mikroruchów dłoni, spojrzenia i EEG",
+      "area": "perception",
+      "research_state": "planned",
+      "publication_stage": "concept",
+      "relation": "primary",
+      "owner": {
+        "mode": "local",
+        "repository": "MatPomGit/arc-xr",
+        "project_id": null
+      },
+      "manuscript": {
+        "path": "manuscripts/MSC-AR-P29/main.tex",
+        "format": "latex",
+        "blob_sha": "94781b9e4fe3150bb27d297ad298fda7a3a358d3"
+      },
+      "study_plan": null,
+      "public_listing": false,
+      "public_summary": null,
+      "doi": null,
+      "preprint_url": null,
+      "preregistration_url": null,
+      "publication_url": null,
+      "stage_evidence": null
+    }
+  ]
+}
