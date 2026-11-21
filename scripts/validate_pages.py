@@ -5,6 +5,7 @@ Does not publish content, inspect remote Pages settings or certify privacy.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from pathlib import Path, PurePosixPath
@@ -13,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_EXT = {".md", ".html", ".css", ".js", ".svg", ".png", ".jpg",
                ".jpeg", ".webp", ".avif", ".ico"}
 TEXT_EXT = {".md", ".html", ".css", ".js", ".svg"}
+IMAGE_EXT = {".png", ".jpg", ".jpeg", ".webp", ".avif", ".ico"}
 UNSAFE_SEGMENTS = {"docs", "research", "manuscripts", "software",
                    "portfolio", "areas", "data", "results", "equipment",
                    "secrets", "credentials", "private", "raw", "students",
@@ -50,32 +52,42 @@ def safe_relative(value: object) -> bool:
 
 
 def parse_mkdocs(text: str) -> tuple[dict[str, str], list[str], list[str]]:
-    """Allow only a small, transparent subset of MkDocs YAML; reject plugins/hooks."""
+    """Only approved nav, theme and local logo; no executable MkDocs extensions."""
     keys: dict[str, str] = {}
     navigation: list[str] = []
     errors: list[str] = []
-    in_nav = False
+    theme: dict[str, str] = {}
+    mode = ""
     for line in text.splitlines():
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         top = re.fullmatch(r"([a-z_]+):\s*(.*?)\s*", line)
         if top:
-            key, val = top.groups()
-            if key not in {"site_name", "docs_dir", "site_dir", "nav"} or key in keys:
+            key, value = top.groups()
+            if key not in {"site_name", "docs_dir", "site_dir", "nav", "theme"} or key in keys:
                 errors.append("PAGES CONFIG: unreviewed or duplicate config key")
             else:
-                keys[key] = val.strip("\"'")
-            in_nav = key == "nav"
+                keys[key] = value.strip("\"'")
+            mode = key if key in {"nav", "theme"} else ""
             continue
-        item = re.fullmatch(r"  - [^:]+:\s*([A-Za-z0-9_./-]+\.md)\s*", line)
-        if in_nav and item:
-            navigation.append(item.group(1))
-            continue
+        if mode == "nav":
+            item = re.fullmatch(r"  - [^:]+:\s*([A-Za-z0-9_./-]+\.md)\s*", line)
+            if item:
+                navigation.append(item.group(1))
+                continue
+        if mode == "theme":
+            item = re.fullmatch(r"  (name|highlightjs|logo):\s*([A-Za-z0-9_./-]+)\s*", line)
+            if item and item.group(1) not in theme:
+                theme[item.group(1)] = item.group(2)
+                continue
         errors.append("PAGES CONFIG: unreviewed YAML content")
     if keys.get("docs_dir") != "pages" or keys.get("site_dir") != "site":
         errors.append("PAGES CONFIG: isolated docs_dir/pages and site_dir/site required")
     if not keys.get("site_name") or "nav" not in keys or not navigation:
         errors.append("PAGES CONFIG: site name or navigation missing")
+    if keys.get("theme") != "" or {k:v for k,v in theme.items() if k != "logo"} != {
+            "name": "mkdocs", "highlightjs": "false"}:
+        errors.append("PAGES CONFIG: approved offline theme required")
     return keys, navigation, errors
 
 
@@ -96,12 +108,39 @@ def check_pages(root: Path = ROOT) -> list[str]:
         return sorted(set(errors + ["PAGES POLICY: unsafe public file allowlist"]))
     if len(allowed) != len(set(allowed)) or "index.md" not in allowed :
         errors.append("PAGES POLICY: duplicate or missing index")
+    approved_images = data.get("approved_image_sha256")
+    if (not isinstance(approved_images, dict) or
+            any(not isinstance(k, str) or k not in allowed or
+                PurePosixPath(k).suffix.lower() not in IMAGE_EXT or
+                not isinstance(v, str) or not re.fullmatch(r"[0-9a-f]{64}", v)
+                for k, v in approved_images.items())):
+        errors.append("PAGES POLICY: unapproved image hash map")
+        approved_images = {}
     try:
         config = (root / "mkdocs.yml").read_text(encoding="utf-8")
     except (OSError, UnicodeError):
         return sorted(set(errors + ["PAGES CONFIG: missing or unreadable mkdocs.yml"]))
     _, nav, config_errors = parse_mkdocs(config)
     errors.extend(config_errors)
+    logo_candidates = [
+        "assets/brand/logo" + ext for ext in (".png", ".webp", ".jpg", ".jpeg")
+        if (root / "pages" / ("assets/brand/logo" + ext)).exists()
+        or (root / "pages" / ("assets/brand/logo" + ext)).is_symlink()
+    ]
+    if len(logo_candidates) > 1:
+        errors.append("PAGES LOGO: multiple programme logo formats")
+    expected_logo = logo_candidates[0] if len(logo_candidates) == 1 else None
+    if expected_logo:
+        logo_file = root / "pages" / expected_logo
+        if (logo_file.is_symlink() or not logo_file.is_file() or
+                expected_logo not in allowed or
+                hashlib.sha256(logo_file.read_bytes()).hexdigest() !=
+                approved_images.get(expected_logo)):
+            errors.append("PAGES LOGO: missing approval or incorrect SHA")
+    configured_logo = re.search(r"(?m)^  logo:\s*([^\n]+)\s*$", config)
+    actual_logo = configured_logo.group(1).strip() if configured_logo else None
+    if actual_logo != expected_logo:
+        errors.append("PAGES LOGO: MkDocs header must match approved local logo")
     if not nav or "index.md" not in nav or any(x not in allowed for x in nav):
         errors.append("PAGES CONFIG: navigation contains unapproved source")
 
@@ -128,6 +167,14 @@ def check_pages(root: Path = ROOT) -> list[str]:
             if file.stat().st_size > 2_000_000:
                 errors.append("PAGES TOO LARGE: " + rel)
                 continue
+            if file.suffix.lower() in IMAGE_EXT:
+                body = file.read_bytes()
+                if hashlib.sha256(body).hexdigest() != approved_images.get(rel):
+                    errors.append("PAGES IMAGE HASH UNAPPROVED: " + rel)
+                if any(mark in body for mark in
+                       (b"Exif\x00\x00", b"eXIf", b"XMP_", b"<x:xmpmeta",
+                        b"tEXt", b"iTXt", b"zTXt")):
+                    errors.append("PAGES IMAGE METADATA: " + rel)
             if file.suffix.lower() in TEXT_EXT:
                 content = file.read_text(encoding="utf-8")
                 if any(regex.search(content) for regex in BANNED):
