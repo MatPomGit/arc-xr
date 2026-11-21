@@ -84,4 +84,4 @@ Historyczne 27 źródeł `main.tex` zawiera po **trzy hipotezy** i **cztery etap
 
 ## Nowa seria ST-08: Social Uncanny Valley
 
-[MSC-SUV-P01 — retargeting naturalnych zachowań na awatary](MSC-SUV-P01/README.md) ([main.tex](MSC-SUV-P01/main.tex)) jest dodatkowym szkicem koncepcyjnym po historycznej migracji 27 pozycji.
+[MSC-ZAH-P01 — retargeting naturalnych zachowań na awatary](MSC-ZAH-P01/README.md) ([main.tex](MSC-ZAH-P01/main.tex)) jest dodatkowym szkicem koncepcyjnym po historycznej migracji 27 pozycji.

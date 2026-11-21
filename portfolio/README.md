@@ -9,4 +9,4 @@
 Walidacja: `python3 scripts/validate_arc_v2_registry.py`, procedura migracji: [opis techniczny](../docs/migrations/arc-v2-pilot.md). Katalog publiczny `pages/` nie jest automatycznym eksportem pełnych danych rejestru.
 
 
-Nowa kandydatura `MSC-SUV-P01` jest niezależnym wpisem lokalnym, poza historyczną migracją 27 pozycji. Walidacja migrowanych rekordów i ich SHA pozostaje niezmieniona.
+Nowa kandydatura `MSC-ZAH-P01` jest niezależnym wpisem lokalnym, poza historyczną migracją 27 pozycji. Walidacja migrowanych rekordów i ich SHA pozostaje niezmieniona.

@@ -701,7 +701,7 @@
       "stage_evidence": null
     },
     {
-      "id": "MSC-SUV-P01",
+      "id": "MSC-ZAH-P01",
       "title": "Wierna rekonstrukcja naturalnych zachowań społecznych na awatarach o różnym stopniu realizmu",
       "area": "perception",
       "research_state": "deferred",
@@ -713,10 +713,10 @@
         "project_id": null
       },
       "manuscript": {
-        "path": "manuscripts/MSC-SUV-P01/main.tex",
+        "path": "manuscripts/MSC-ZAH-P01/main.tex",
         "format": "latex"
       },
-      "study_plan": "manuscripts/MSC-SUV-P01/study.yaml",
+      "study_plan": "manuscripts/MSC-ZAH-P01/study.yaml",
       "public_listing": false,
       "public_summary": null,
       "doi": null,
