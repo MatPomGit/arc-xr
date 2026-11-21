@@ -10,6 +10,10 @@ Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast 
 
 [MSC-AR-P26: moment prezentacji wskazówki AR względem fazy ruchu dłoni](docs/research-proposals-2026.md) jest koncepcją do audytu nowości, **poza zatwierdzonym zakresem P01–P06**. Nie zmienia bieżącego planu minimalnych badań ani liczby manuskryptów.
 
+## Publiczny katalog tematyki badań
+
+[Wykaz 27 tematów i ich krótkie omówienia](pages/articles.md) przedstawia siedem planowanych manuskryptów oraz dwadzieścia dodatkowych koncepcji. Publiczna witryna powstaje wyłącznie z wydzielonego katalogu `pages/`.
+
 ## Portfolio publikacji
 
 | ID | Temat | Stan |
