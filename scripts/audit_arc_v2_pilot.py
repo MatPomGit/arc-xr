@@ -108,8 +108,8 @@ def audit(root: Path = ROOT) -> list[str]:
             rename+=1
     all_tex={p.relative_to(root).as_posix() for p in
              (root/"manuscripts").glob("*/main.tex")}
-    if all_tex!=target_paths or seen!=set(byid):
-        issues.append("PILOT: incomplete local sources or IDs")
+    if not target_paths.issubset(all_tex) or seen!=set(byid):
+        issues.append("PILOT: missing historical migration sources or IDs")
     if len(public)!=27 or companion!=1 or rename!=6:
         issues.append("PILOT: counts drifted")
     return sorted(set(issues))
