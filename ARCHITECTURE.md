@@ -4,7 +4,7 @@
 
 ## Granice i odpowiedzialności
 
-`manuscripts/P01`–`P06` przechowują odrębne pytania, hipotezy, plany analiz i rejestry wyników. [RESEARCH.md](RESEARCH.md) reguluje poprawność naukową, a [REPRODUCIBILITY.md](REPRODUCIBILITY.md) zamrożenie dowodów. Przyszłe aplikacje i biblioteki powinny mieć jedno kanoniczne źródło kodu, własną wersję i testy; ARC-XR utrzymuje do nich odnośniki z konkretnym SHA lub wydaniem. Nie kopiuj źródeł do każdego manuskryptu.
+`manuscripts/MSC-AR-P01`–`MSC-AR-P06` przechowują odrębne pytania, hipotezy, plany analiz i rejestry wyników. [RESEARCH.md](RESEARCH.md) reguluje poprawność naukową, a [REPRODUCIBILITY.md](REPRODUCIBILITY.md) zamrożenie dowodów. Przyszłe aplikacje i biblioteki powinny mieć jedno kanoniczne źródło kodu, własną wersję i testy; ARC-XR utrzymuje do nich odnośniki z konkretnym SHA lub wydaniem. Nie kopiuj źródeł do każdego manuskryptu.
 
 Propozycja minimalnego podziału wynikająca z [zaakceptowanego kierunku pilotaży](manuscripts/mvp_plan.md):
 

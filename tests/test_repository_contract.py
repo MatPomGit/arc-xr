@@ -43,16 +43,20 @@ class RepositoryContractTests(unittest.TestCase):
             ["P01", "P02", "P03", "P04", "P05", "P06"], 6),
             validator.state_ids(text))
         for n in range(1, 7):
-            self.assertTrue((ROOT / f"manuscripts/P{n:02}/protocol/README.md").is_file())
+            self.assertTrue((ROOT / f"manuscripts/MSC-AR-P{n:02}/protocol/README.md").is_file())
 
-    def test_no_parallel_approved_publication_register(self):
-        self.assertFalse((ROOT / "portfolio/papers.json").exists())
+    def test_only_one_canonical_article_registry(self):
+        self.assertTrue((ROOT / "portfolio/papers.json").is_file())
+        self.assertFalse((ROOT / "portfolio/manuscript_register.md").exists())
+        self.assertFalse((ROOT / "portfolio/publication_register.md").exists())
+        self.assertFalse((ROOT / "manuscripts/source_manifest.json").exists())
+        self.assertTrue((ROOT / "migration/provenance/source-manifest-v1.json").is_file())
         self.assertFalse((ROOT / "CONTRIBUTING.md").exists())
 
     def test_missing_protocol_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "manuscripts/P03/protocol/README.md").unlink()
+            (root / "manuscripts/MSC-AR-P03/protocol/README.md").unlink()
             self.assertIn("ARC MANUSCRIPT: missing P03/protocol/README.md",
                           validator.check_repository(root))
 

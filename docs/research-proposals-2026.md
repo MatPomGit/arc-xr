@@ -17,7 +17,7 @@
 
 **Wynik główny:** Odsetek błędnych kroków / błędów sekwencji, z jednostką analizy trial i uczestnik. Pomocniczo opóźnienie reakcji, wstrzymanie trajektorii, czas ukończenia i dyskomfort. Nie przypisywać efektywności na podstawie testów syntetycznych; pilotaż 5–8 osób może wykazać wyłącznie wykonalność, nie efekt potwierdzający.
 
-**Granica względem istniejącego portfolio:** [P05](../manuscripts/P05/README.md) sprawdza automatyczną weryfikację kroków procedury, natomiast ten temat dotyczy **momentu podania prawidłowej wskazówki** i wpływu na człowieka. W badaniach kinematyki dłoni poza XR oceniana jest informacja o wymaganiach poznawczych, a tutaj mechanizm czasowego przełączania uwagi. Istnieją badania nad timingiem i wiarygodnością AR; konieczny niezależny przegląd stanu badań, szczególnie ISMAR/CHI, aby nie powielać opisanego już efektu.
+**Granica względem istniejącego portfolio:** [P05](../manuscripts/MSC-AR-P05/README.md) sprawdza automatyczną weryfikację kroków procedury, natomiast ten temat dotyczy **momentu podania prawidłowej wskazówki** i wpływu na człowieka. W badaniach kinematyki dłoni poza XR oceniana jest informacja o wymaganiach poznawczych, a tutaj mechanizm czasowego przełączania uwagi. Istnieją badania nad timingiem i wiarygodnością AR; konieczny niezależny przegląd stanu badań, szczególnie ISMAR/CHI, aby nie powielać opisanego już efektu.
 
 **Bramki:** audyt podobieństwa do P05, zamrożony kontrast i outcome, pomiar latencji rzeczywistego renderowania, komfort ekspozycji oraz odpowiednia etyka/zapewnienie zgody na udział. Bez automatycznego pobierania kamer HMD ani zapisu wrażliwych danych.
 

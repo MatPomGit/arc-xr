@@ -55,7 +55,7 @@ class DocumentationPolicyTests(unittest.TestCase):
     def test_manuscripts_are_not_capped(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "manuscripts/P01/manuscript.md").write_text(
+            (root / "manuscripts/MSC-AR-P01/manuscript.md").write_text(
                 "hypothesis\n" * 12000, encoding="utf-8")
             self.assertEqual([], validator.check_documentation(root))
 

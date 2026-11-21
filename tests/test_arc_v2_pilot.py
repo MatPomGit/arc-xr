@@ -37,7 +37,7 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(sum(x["from"]!=x["to"] for x in rows),6)
 
     def test_external_metadata_is_redacted(self):
-        papers=self.load("manuscripts/source_manifest.json")["papers"]
+        papers=self.load("migration/provenance/source-manifest-v1.json")["papers"]
         cross=[x for x in papers if x["local_draft_role"]=="cross_program_companion_plan"]
         self.assertEqual(len(cross),1)
         self.assertEqual(cross[0]["owner_programme"],"external")
@@ -45,19 +45,19 @@ class PilotTests(unittest.TestCase):
                             for key in ("source_repository","source_path","source_sha","source_url")))
 
     def test_tampered_tex_sha_rejected(self):
-        file=self.root/"manuscripts/P01/main.tex"
+        file=self.root/"manuscripts/MSC-AR-P01/main.tex"
         file.write_bytes(file.read_bytes()+b"\n% tamper")
         self.assertTrue(any("source SHA mismatch" in x for x in audit(self.root)))
 
     def test_missing_manuscript_rejected(self):
-        (self.root/"manuscripts/P02/main.tex").unlink()
+        (self.root/"manuscripts/MSC-AR-P02/main.tex").unlink()
         self.assertTrue(any("missing/symlink manuscript" in x for x in audit(self.root)))
 
     def test_destination_collision_rejected(self):
-        path=self.root/"manuscripts/MSC-AR-P01"
+        path=self.root/"manuscripts/P01"
         path.mkdir()
-        (path/"main.tex").write_text("other document")
-        self.assertTrue(any("destination collision" in x for x in audit(self.root)))
+        (path/"main.tex").write_text("legacy document")
+        self.assertTrue(any("legacy source not removed" in x for x in audit(self.root)))
 
     def test_duplicate_id_rejected(self):
         path="migration/arc-v2-pilot-map.json"
@@ -74,7 +74,7 @@ class PilotTests(unittest.TestCase):
         self.assertTrue(any("wrong scientific area" in x for x in audit(self.root)))
 
     def test_private_owner_leak_rejected(self):
-        path="manuscripts/source_manifest.json"
+        path="migration/provenance/source-manifest-v1.json"
         manifest=self.load(path)
         cross=next(x for x in manifest["papers"]
                    if x["local_draft_role"]=="cross_program_companion_plan")
@@ -90,8 +90,8 @@ class PilotTests(unittest.TestCase):
         self.assertTrue(any("incomplete local sources" in x for x in audit(self.root)))
 
     def test_does_not_write_files(self):
-        names=["migration/arc-v2-pilot-map.json","manuscripts/source_manifest.json",
-               "manuscripts/P01/main.tex"]
+        names=["migration/arc-v2-pilot-map.json","migration/provenance/source-manifest-v1.json",
+               "manuscripts/MSC-AR-P01/main.tex"]
         before={name:(self.root/name).read_bytes() for name in names}
         self.assertEqual([],audit(self.root))
         self.assertEqual(before,{name:(self.root/name).read_bytes() for name in names})

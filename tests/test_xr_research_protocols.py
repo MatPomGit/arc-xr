@@ -10,7 +10,7 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 MANUSCRIPTS=ROOT/"manuscripts"
-MANIFEST=json.loads((MANUSCRIPTS/"source_manifest.json").read_text(encoding="utf-8"))
+MANIFEST=json.loads((ROOT/"migration/provenance/source-manifest-v1.json").read_text(encoding="utf-8"))
 PAPERS=MANIFEST["papers"]
 LITERATURE=json.loads((MANUSCRIPTS/"literature"/"prior_art_sources.json").read_text(encoding="utf-8"))["references"]
 
@@ -19,7 +19,7 @@ class XRResearchProtocolTest(unittest.TestCase):
         self.assertEqual(len(PAPERS),27)
         self.assertEqual(len({p["id"] for p in PAPERS}),27)
         self.assertEqual(len({p["folder"] for p in PAPERS}),27)
-        self.assertEqual(sum(p["folder"] in {f"P{i:02d}" for i in range(1,7)} for p in PAPERS),6)
+        self.assertEqual(sum(p["id"] in {f"MSC-AR-P{i:02d}" for i in range(1,7)} for p in PAPERS),6)
         self.assertEqual(sum(p["category"]=="MANUSCRIPT" for p in PAPERS),7)
         self.assertEqual(sum(p["category"]=="CANDIDATE" for p in PAPERS),20)
 

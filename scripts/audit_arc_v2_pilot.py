@@ -22,11 +22,11 @@ def audit(root: Path = ROOT) -> list[str]:
     issues=[]
     try:
         plan=json.loads((root/"migration/arc-v2-pilot-map.json").read_text())
-        manifest=json.loads((root/"manuscripts/source_manifest.json").read_text())
+        manifest=json.loads((root/"migration/provenance/source-manifest-v1.json").read_text())
     except (OSError,ValueError):
         return ["PILOT: unreadable mapping or manifest"]
     if (plan.get("schema_version")!=1 or plan.get("programme")!="arc-xr"
-        or plan.get("intent")!="READ_ONLY_MIGRATION_PREFLIGHT"
+        or plan.get("intent")!="SOURCE_PATHS_MIGRATED"
         or not isinstance(plan.get("source_main_sha"),str)
         or not SHA.fullmatch(plan["source_main_sha"])):
         return ["PILOT: invalid plan header"]
@@ -76,14 +76,14 @@ def audit(root: Path = ROOT) -> list[str]:
             issues.append("PILOT: duplicate source or destination")
         source_paths.add(frm)
         target_paths.add(to)
-        f=root/frm
+        f=root/to
         if f.is_symlink() or not f.is_file() or not f.resolve().is_relative_to(root):
             issues.append("PILOT: missing/symlink manuscript "+ident)
             continue
         blob=item.get("blob_sha")
         if not isinstance(blob,str) or not SHA.fullmatch(blob) or git_blob_sha(f)!=blob:
             issues.append("PILOT: source SHA mismatch "+ident)
-        if source.get("local_draft")!=frm or source.get("local_draft_role")!=item.get("source_role"):
+        if source.get("local_draft")!=to or source.get("local_draft_role")!=item.get("source_role"):
             issues.append("PILOT: changed source mapping "+ident)
         if public.get(source.get("title"))!=item.get("area"):
             issues.append("PILOT: wrong scientific area "+ident)
@@ -92,8 +92,8 @@ def audit(root: Path = ROOT) -> list[str]:
                 issues.append("PILOT: invalid canonical target "+ident)
             if source.get("source_repository")!="MatPomGit/arc-xr":
                 issues.append("PILOT: incorrect local owner "+ident)
-            if frm!=to and (root/to).exists():
-                issues.append("PILOT: destination collision "+ident)
+            if frm!=to and (root/frm).exists():
+                issues.append("PILOT: legacy source not removed "+ident)
         elif item.get("ownership")=="external_companion":
             companion+=1
             if to!=frm or item.get("source_role")!="cross_program_companion_plan":
@@ -108,7 +108,7 @@ def audit(root: Path = ROOT) -> list[str]:
             rename+=1
     all_tex={p.relative_to(root).as_posix() for p in
              (root/"manuscripts").glob("*/main.tex")}
-    if all_tex!=source_paths or seen!=set(byid):
+    if all_tex!=target_paths or seen!=set(byid):
         issues.append("PILOT: incomplete local sources or IDs")
     if len(public)!=27 or companion!=1 or rename!=6:
         issues.append("PILOT: counts drifted")
@@ -123,7 +123,7 @@ def main():
     for err in errors:
         print("FAIL:",err)
     print("arc-v2-pilot-map:", "FAIL" if errors else "PASS",
-          "; migration apply: NOT_RUN")
+          "; source layout: MIGRATED; generic v1-to-v2 apply: NOT_RUN")
     return 1 if errors else 0
 
 
