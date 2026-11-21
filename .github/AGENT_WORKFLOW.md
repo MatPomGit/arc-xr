@@ -16,13 +16,13 @@ Dla dokumentacyjnych zmian wykonaj `python scripts/validate_repository.py`, `pyt
 
 ## Review, merge i publikacja
 
-R2/R3 wymagają niezależnego przeglądu zgodnego z polityką repo. Autor nie może samodzielnie poświadczyć niezależnej recenzji. Nie używaj administracyjnego bypassu, nie usuwaj cudzych gałęzi ani worktree. Po merge zweryfikuj commit `main`. Wydanie kodu, publikacja Pages, złożenie artykułu i rekrutacja to **osobne** czynności.
+R2/R3 wymagają kontroli technicznej i testów exact SHA; niezależne review jest opcjonalne. Autor nie może przedstawiać swojej oceny jako niezależnej. Nie używaj administracyjnego bypassu, nie usuwaj cudzych gałęzi ani worktree. Po merge zweryfikuj commit `main`. Wydanie kodu, publikacja Pages, złożenie artykułu i rekrutacja to **osobne** czynności.
 
 GitHub Pages może pochodzić jedynie z jawnie zatwierdzonego `pages/`, po przeglądzie wynikowego HTML i widoczności. `docs/`, instrukcje dla agentów i notatki redakcyjne nie są źródłami strony. Nie dodawaj automatycznego deploy po merge.
 
 ## DoD i kontynuacja
 
-Potwierdź kryteria na aktualnym SHA, aktualizację właściwych dokumentów, komplet dowodów i wynik recenzji. Zapisz ewentualne blokady i punkt wznowienia w istniejącym Issue/PR, bez mnożenia redundantnych raportów.
+Potwierdź kryteria na aktualnym SHA, aktualizację właściwych dokumentów, komplet dowodów i wynik przeglądu technicznego. Zapisz ewentualne blokady i punkt wznowienia w istniejącym Issue/PR, bez mnożenia redundantnych raportów.
 
 
 ## Intake i triage Issues
