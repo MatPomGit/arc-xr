@@ -54,7 +54,7 @@ class ArcV2RegistryTests(unittest.TestCase):
         row=next(p for p in reg["papers"] if p["id"]=="MSC-AR-P01")
         row["owner"]["repository"]="Other/arc-xr"
         self.save("portfolio/papers.json",reg)
-        self.verify_bad("canonical")
+        self.verify_bad("local ownership/provenance drift")
 
     def test_redacted_external_reference_cannot_become_primary(self):
         reg=self.papers()
