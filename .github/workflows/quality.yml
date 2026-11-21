@@ -47,9 +47,11 @@ jobs:
           python3 -m venv "${RUNNER_TEMP}/arc-v2"
           "${RUNNER_TEMP}/arc-v2/bin/python" -m pip install --disable-pip-version-check --no-input -r requirements-research.txt
       - name: Validate canonical ARC v2 registry and pinned TeX SHA
-        run: "${RUNNER_TEMP}/arc-v2/bin/python" -B scripts/validate_arc_v2_registry.py
+        run: |
+          "${RUNNER_TEMP}/arc-v2/bin/python" -B scripts/validate_arc_v2_registry.py
       - name: Run all offline regression tests
-        run: "${RUNNER_TEMP}/arc-v2/bin/python" -m unittest discover -s tests -v
+        run: |
+          "${RUNNER_TEMP}/arc-v2/bin/python" -m unittest discover -s tests -v
       - name: Build and verify curated GitHub Pages HTML
         shell: bash
         run: |
