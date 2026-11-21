@@ -52,13 +52,13 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
             latexmk lmodern texlive-latex-base texlive-latex-recommended \
             texlive-fonts-recommended texlive-lang-polish poppler-utils
-      - name: Compile and inspect 27 manuscripts in isolated temporary directories
+      - name: Compile and inspect 28 manuscripts in isolated temporary directories
         shell: bash
         run: |
           set -euo pipefail
           shopt -s nullglob
           sources=(manuscripts/MSC-*/main.tex)
-          test "${#sources[@]}" -eq 27
+          test "${#sources[@]}" -eq 28
           out="$RUNNER_TEMP/arc-xr-tex"
           mkdir -p "$out"
           count=0
@@ -83,6 +83,6 @@ jobs:
             echo "::endgroup::"
             count=$((count + 1))
           done
-          test "$count" -eq 27
+          test "$count" -eq 28
           test -z "$(git status --porcelain --untracked-files=all)"
-          echo "PASS: $count/27 valid PDFs; no generated files in the repository"
+          echo "PASS: $count/28 valid PDFs; no generated files in the repository"
