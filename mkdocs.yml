@@ -4,3 +4,9 @@ docs_dir: pages
 site_dir: site
 nav:
   - Program badawczy: index.md
+  - Artykuły: articles.md
+  - Adaptacja i uwaga: adaptation.md
+  - Afekt: affect.md
+  - Percepcja przestrzenna: perception.md
+  - Procedury i wskazówki: procedures.md
+  - Agenci i współpraca: collaboration.md
