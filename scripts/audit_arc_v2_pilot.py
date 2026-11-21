@@ -123,7 +123,7 @@ def main():
     for err in errors:
         print("FAIL:",err)
     print("arc-v2-pilot-map:", "FAIL" if errors else "PASS",
-          "; migration apply: NOT_RUN")
+          "; source layout: MIGRATED; generic v1-to-v2 apply: NOT_RUN")
     return 1 if errors else 0
 
 
