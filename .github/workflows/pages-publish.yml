@@ -41,6 +41,7 @@ jobs:
           test "$GITHUB_REPOSITORY" = "MatPomGit/arc-xr"
           test "$GITHUB_REF" = "refs/heads/main"
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 -B scripts/site_branding.py
           python3 -B scripts/validate_pages.py
           python3 -B scripts/validate_documentation.py
           python3 -B -m unittest discover -s tests -p 'test_article_catalog.py' -v
