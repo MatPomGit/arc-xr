@@ -27,7 +27,7 @@ OTHER = (
   "MSC-AR-P27",
   "MSC-AR-P28",
   "MSC-AR-P29",
-  "MSC-SUV-P01",
+  "MSC-ZAH-P01",
 )
 
 class TeXManuscriptTests(unittest.TestCase):
