@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "programme": "arc-xr",
-  "intent": "READ_ONLY_MIGRATION_PREFLIGHT",
+  "intent": "SOURCE_PATHS_MIGRATED",
   "source_main_sha": "87c9603f5a18359ae1d3477122b800c0631eb20a",
   "manifest_source": "manuscripts/source_manifest.json",
   "records": [

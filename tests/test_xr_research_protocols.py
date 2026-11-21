@@ -19,7 +19,7 @@ class XRResearchProtocolTest(unittest.TestCase):
         self.assertEqual(len(PAPERS),27)
         self.assertEqual(len({p["id"] for p in PAPERS}),27)
         self.assertEqual(len({p["folder"] for p in PAPERS}),27)
-        self.assertEqual(sum(p["folder"] in {f"P{i:02d}" for i in range(1,7)} for p in PAPERS),6)
+        self.assertEqual(sum(p["id"] in {f"MSC-AR-P{i:02d}" for i in range(1,7)} for p in PAPERS),6)
         self.assertEqual(sum(p["category"]=="MANUSCRIPT" for p in PAPERS),7)
         self.assertEqual(sum(p["category"]=="CANDIDATE" for p in PAPERS),20)
 
