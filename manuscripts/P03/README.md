@@ -36,3 +36,7 @@ Główna grupa badana: Użytkownicy HMD AR z kontrolą korekcji wzroku, wcześni
 - [Bibliografia BibTeX](references.bib)
 
 Zanim rozpocznie się zbieranie danych, należy uzupełnić i zatwierdzić protokół, uzasadnienie liczebności próby oraz dokumentację etyczną.
+
+## Manuskrypt w LaTeX
+
+[Równoległe źródło artykułu (main.tex)](main.tex) jest samodzielnym szkicem naukowym. Dotychczasowe protokoły i rozbudowany tekst Markdown zachowują swoją rolę dokumentacji badania.

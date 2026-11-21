@@ -4,6 +4,8 @@
 
 Projekt obejmuje sześć planowanych manuskryptów [P01 do P06](manuscripts/README.md) z zakresu adaptacyjnej AR, okulometrii, stanów afektywnych, wizji przestrzennej, analizy procedur manualnych i interakcji człowieka z agentem.
 
+W folderze [`manuscripts/`](manuscripts/README.md) znajdują się także osobne szkice LaTeX dla 21 dalszych pozycji portfolio ARC-XR, w tym jednej pracy przekrojowej. Utworzenie takich źródeł nie zmienia zaakceptowanej liczby sześciu projektów podstawowych ani nie stanowi decyzji o rozpoczęciu nowych eksperymentów.
+
 Stan naukowy każdego manuskryptu, w tym obecność danych, wyników, prerejestracji i zgód etycznych, należy każdorazowo ustalać na podstawie aktualnego [PROJECT_STATE.yaml](PROJECT_STATE.yaml). Opisy planowanych badań nie potwierdzają ich przeprowadzenia.
 
 ## Poprawność naukowa
