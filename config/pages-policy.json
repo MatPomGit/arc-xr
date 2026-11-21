@@ -4,7 +4,13 @@
   "output_dir": "site",
   "mkdocs_config": "mkdocs.yml",
   "public_files": [
-    "index.md"
+    "index.md",
+    "articles.md",
+    "adaptation.md",
+    "affect.md",
+    "perception.md",
+    "procedures.md",
+    "collaboration.md"
   ],
   "note": "No automatic deploy, no internal docs or agent instructions. Review generated HTML and site visibility separately."
 }
