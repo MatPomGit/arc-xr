@@ -1,6 +1,6 @@
 # Migracja 27 źródeł ARC-XR do rejestru ARC v2
 
-**Punkt źródłowy:** `main` `87c9603f5a18359ae1d3477122b800c0631eb20a`. Migracja jest przygotowana na gałęzi zadaniowej. Nie przesądza o scaleniu, publikacji GitHub Pages ani o wykonaniu eksperymentów.
+**Punkt źródłowy:** `main` `87c9603f5a18359ae1d3477122b800c0631eb20a`. Migracja została zintegrowana z `main`. Nie stanowi zgody na publikację GitHub Pages ani dowodu wykonania eksperymentów.
 
 ## Migracja źródeł i własności
 
@@ -20,4 +20,4 @@ Mapowanie 27 pozycji do pięciu obszarów: `adaptation` 11, `affect` 6, `percept
 
 `python3 scripts/audit_arc_v2_pilot.py` sprawdza kompletność, mapowanie, ścieżki i SHA 27 źródeł. `python3 scripts/validate_arc_v2_registry.py` kontroluje schematy JSON, niezmienniki kanonicznej własności, stan naukowy i powiązania z historyczną migawką. Wymaga `python -m pip install -r requirements-research.txt`. CI instaluje zależności w odrębnym wirtualnym środowisku.
 
-Do integracji wymagane są zielone testy i kompilacja 27 plików LaTeX na dokładnym SHA, niezależna E3/E4 oraz uprawnione zatwierdzenie R2. Migracja nie publikuje Pages, nie tworzy wydań ani nie wykonuje badań.
+Dla zintegrowanej migracji wymagane są zielone testy i kompilacja 27 plików LaTeX na dokładnym SHA oraz kontrola techniczna; niezależne review jest opcjonalne. Przed ponowną zmianą źródeł należy zweryfikować rejestr i uprawnienia. Migracja nie publikuje Pages, nie tworzy wydań ani nie wykonuje badań.
