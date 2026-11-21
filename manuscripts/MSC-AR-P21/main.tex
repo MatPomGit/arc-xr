@@ -20,9 +20,9 @@
 
 \title{Agent XR uczący się preferencji użytkownika w czasie}
 
-\author{}
+\author{Mateusz Pomianek}
 
-\date{Wersja 0.1.0, 21 listopada 2026}
+\date{Wersja 0.3.0, 21 listopada 2026}
 
 \begin{document}
 
@@ -42,6 +42,31 @@ Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji czło
 
 Czy uczenie się preferencji w kolejnych sesjach zwiększa trafność pomocy w XR? Projekt wymaga krytycznego przeglądu aktualnego stanu badań oraz zdefiniowania nowości w stosunku do innych tematów portfolio XR.
 
+\section{Zakres i odrębny wkład naukowy}
+Uczenie trwałych preferencji sposobu przedstawiania wskazówek w kolejnych sesjach bez domniemania, że akceptacja rekomendacji jest równoznaczna z poprawnością zadania. Metryka praktycznej konieczności korekty przez człowieka w odroczonym zadaniu, a nie tylko preferencje wyrażone w chwili treningu.
+\section{Hipotezy badawcze}
+\paragraph{H1.} Agent uwzględniający preferencje z poprzedniej sesji wymaga mniej ręcznych korekt niż interfejs o stałych ustawieniach.
+\paragraph{H2.} Poprawa utrzymuje się na nowym rodzaju zadania bez użycia etykiet z docelowej sesji.
+\paragraph{H3.} Indywidualna pamięć preferencji nie zwiększa liczby błędnych instrukcji przy niezmienionym zasobie informacji.
+\section{Projekt badania i plan eksperymentów}
+\subsection{A. Operacjonalizacja i kwalifikacja danych}
+Uczenie trwałych preferencji sposobu przedstawiania wskazówek w kolejnych sesjach bez domniemania, że akceptacja rekomendacji jest równoznaczna z poprawnością zadania. Jednostka wnioskowania: uczestnik × odroczona sesja wyborów z niezależnymi zadaniami. Przed badaniem należy określić źródła, wersje urządzeń, czas akwizycji, etykiety i niezależną referencję. Nie liczyć zależnych okien i klatek jako niezależnych prób.
+\subsection{B. Eksperyment porównawczy}
+Zestawić ustawienia stałe i aktualizowane wyłącznie z wcześniejszych sesji, z równym zestawem propozycji i identycznym zadaniem. Wynik pierwszorzędowy: różnica liczby ręcznych korekt interfejsu na sesję: agent z pamięcią preferencji vs ustawienia stałe. Zamrozić losowanie warunków, progi, mianownik punktu końcowego i kryteria wyłączeń bez dostępu do oceny końcowej.
+\subsection{C. Kontrole i analiza odporności}
+Zarejestrować ograniczony rejestr preferencji z możliwością usunięcia przez uczestnika; unikać pamiętania sygnałów biometrycznych bez odrębnej zgody. Zmierzyć ręczne korekty i poprawność zadania w kolejnych dniach; uniemożliwić przeciek preferencji z próby testowej. Utrata sygnału, abstencja, przerwanie zadania i dane brakujące są odrębnymi kategoriami wyniku.
+\subsection{D. Walidacja na niezależnym materiale}
+Walidacja musi zachować podział po uczestniku, sesji, scenie lub zadaniu. Porównania parowane w obrębie uczestnika z modelem liczby korekt i odpowiednią ekspozycją na ilość rekomendacji. Raportować wyniki negatywne i rozbieżności z założeniami.
+\section{Estymand, analiza statystyczna i decyzje}
+różnica liczby ręcznych korekt interfejsu na sesję: agent z pamięcią preferencji vs ustawienia stałe. Jednostka: uczestnik × odroczona sesja wyborów z niezależnymi zadaniami. Porównania parowane w obrębie uczestnika z modelem liczby korekt i odpowiednią ekspozycją na ilość rekomendacji. H1 jest planowanym kontrastem głównym; H2 i H3 pozostają pomocnicze do zatwierdzenia hierarchii testów oraz kontroli wielokrotności. Wartości marginesów, mocy, minimalnego efektu istotnego praktycznie i liczebności mają wynikać z pilotażu, a nie z post hoc wyboru wyniku.
+\section{Stan badań i granica nowości}
+\begin{itemize}
+\item XR personalization methods exist; a claim needs a defined multi-session or transfer contrast. \cite{xrprior1}.
+\item Proactive LMM-based AR assistance exists; evaluate the behavioural difference under a fixed number of interventions. \cite{xrprior2}.
+\end{itemize}
+Metryka praktycznej konieczności korekty przez człowieka w odroczonym zadaniu, a nie tylko preferencje wyrażone w chwili treningu. Odrębność na tle opublikowanych metod i pozostałych artykułów wymaga osobnego audytu.
+\section{Warunki bezpieczeństwa, sprzętu i zgodności}
+To prospektywna koncepcja, nie zgoda na eksperyment, prerejestracja lub wynik empiryczny. Praca z uczestnikami, interwencje stresowe i pomiar biometryczny wymagają przeglądu etycznego, świadomej zgody i ochrony danych. Quest 3 w wersji standardowej nie posiada eye trackingu, a Tobii Eye Tracker 5 jest urządzeniem ekranowym; nie zastępować jednego stanowiska drugim.
 \section{Materiał i metody}
 
 Porównany zostanie agent o ustawieniach stałych z agentem korzystającym z informacji o preferencjach pozyskanych w poprzednich sesjach. Wymagane jest zdefiniowanie jednostki analizy, zasad doboru przypadków, wersji scenariusza i źródeł pomiaru. Rozkład warunków oraz reguły wykluczenia prób należy określić przed pomiarem. W badaniach z udziałem ludzi niezbędna jest uprzednia właściwa ocena etyczna i świadoma zgoda. W testach wyłącznie symulacyjnych należy oddzielić prawdę symulacyjną od obserwacji empirycznej.
@@ -70,5 +95,9 @@ Wiedza o preferencjach jest osobnym zasobem wrażliwym; ocena musi uwzględniać
 
 Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
 
+\begin{thebibliography}{9}
+\bibitem{xrprior1} Adapting to the User: A Systematic Review of Personalized Interaction in VR (2025), arXiv:2510.13123. \url{https://arxiv.org/abs/2510.13123}.
+\bibitem{xrprior2} Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents (2025), UIST 2025. \url{https://discovery.ucl.ac.uk/id/eprint/10224695/}.
+\end{thebibliography}
 \end{document}
 
