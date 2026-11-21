@@ -44,17 +44,45 @@ jobs:
         env:
           EXPECTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
-      - name: Install LaTeX with Polish language and Latin Modern
-        run: |
-          sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends latexmk lmodern texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-lang-polish
-      - name: Compile 27 independent prospective manuscripts
+      - name: Install LaTeX and PDF verification tools
+        shell: bash
         run: |
           set -euo pipefail
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+            latexmk lmodern texlive-latex-base texlive-latex-recommended \
+            texlive-fonts-recommended texlive-lang-polish poppler-utils
+      - name: Compile and inspect 27 manuscripts in isolated temporary directories
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          sources=(manuscripts/MSC-*/main.tex)
+          test "${#sources[@]}" -eq 27
+          out="$RUNNER_TEMP/arc-xr-tex"
+          mkdir -p "$out"
           count=0
-          for f in manuscripts/MSC-*/main.tex; do
-            latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
-            count=$((count+1))
+          for source in "${sources[@]}"; do
+            paper="$(basename "$(dirname "$source")")"
+            target="$out/$paper"
+            mkdir -p "$target"
+            echo "::group::Compiling $paper"
+            if ! latexmk -pdf -cd -interaction=nonstopmode -halt-on-error \
+              -outdir="$target" \
+              -pdflatex="pdflatex -no-shell-escape -file-line-error %O %S" \
+              "$source" > "$target/latexmk.stdout" 2>&1; then
+              echo "::error file=$source::LaTeX compilation failed"
+              tail -n 100 "$target/latexmk.stdout"
+              exit 1
+            fi
+            pdf="$target/main.pdf"
+            test -s "$pdf"
+            pages="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
+            test "${pages:-0}" -ge 1
+            echo "PASS $paper: $pages page(s)"
+            echo "::endgroup::"
+            count=$((count + 1))
           done
           test "$count" -eq 27
-          echo "Compiled $count LaTeX manuscripts"
+          test -z "$(git status --porcelain --untracked-files=all)"
+          echo "PASS: $count/27 valid PDFs; no generated files in the repository"
