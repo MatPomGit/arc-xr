@@ -23,7 +23,7 @@ Zakres obejmuje wszystkie pliki repozytorium. Obowiązują przepisy, uprawnienia
 
 - Issues definiują zadania, PR gromadzą zmiany i dowody. Nie tworzyć raportowego PR po każdym teście.
 - Weryfikacje oznaczać `PASS`, `FAIL`, `SKIPPED`, `UNAVAILABLE`, `NOT_APPLICABLE` albo `NOT_RUN`; odnosić je do dokładnego SHA. Przegląd tekstu i struktury nie zastępuje testów kodu ani dowodu empirycznego.
-- Autor zmiany nie może samodzielnie poświadczyć niezależnej recenzji technicznej. Wymagane są bieżące dowody, werdykt i pochodzenie recenzji. Dla R2/R3 wymagane jest osobne upoważnienie do scalania przez agenta.
+- Nie przedstawiaj własnego przeglądu jako niezależnego. Niezależne review PR jest opcjonalne; wymagane są bieżące dowody techniczne i werdykt. Dla R2/R3 wymagane jest osobne upoważnienie do scalania przez agenta.
 - Przed scaleniem sprawdź stan PR, aktualny HEAD, wymaganą recenzję, dostępne kontrole i ochronę gałęzi. Nie używaj force-push ani nie usuwaj cudzych gałęzi.
 - Nie utożsamiaj `merged` z wdrożeniem, publikacją naukową lub wynikiem eksperymentu.
 
@@ -33,16 +33,16 @@ Pisz poprawną polszczyzną, pełnymi zdaniami i zwięźle. Zachowuj anglojęzyc
 
 ## Uzupełnienie: definicje ryzyka i gotowości
 
-**DoR:** cel i kryteria odbioru, właściciel, dokładny base SHA, powiązany Issue/PR, wpływ na badania i użytkownika, klasa R0–R3, uprawnienia, testy i rollback. **DoD:** zweryfikowane kryteria na exact HEAD SHA, zmieniona dokumentacja, niezależny review, poprawne bramki i potwierdzenie uprawnionego merge. Publikacja i pomiary to odrębne etapy.
+**DoR:** cel i kryteria odbioru, właściciel, dokładny base SHA, powiązany Issue/PR, wpływ na badania i użytkownika, klasa R0–R3, uprawnienia, testy i rollback. **DoD:** zweryfikowane kryteria na exact HEAD SHA, zmieniona dokumentacja, przegląd techniczny, poprawne bramki i potwierdzenie uprawnionego merge. Publikacja i pomiary to odrębne etapy.
 
 | Klasa | Zakres i minimalny dowód |
 | --- | --- |
 | **R0** | Korekta redakcyjna bez zmiany znaczenia: aktualny diff, linki i SHA |
 | **R1** | Drobna zmiana bez wpływu na API, CI, bezpieczeństwo i protokół: adekwatny test |
-| **R2** | Polityka agentów, CI, struktura, kontrakty, kod: testy exact SHA, niezależny review |
+| **R2** | Polityka agentów, CI, struktura, kontrakty, kod: testy exact SHA i przegląd techniczny |
 | **R3** | Dane uczestników, udostępnianie, publikacja, uprawnienia, zmiana protokołu badania: odrębna zgoda i kontrola wycofania |
 
-Stosuj szczegółową [procedurę](.github/AGENT_WORKFLOW.md). `COMMENTED/ACCEPT` nie jest formalnym GitHub `APPROVED`; własna recenzja nie jest niezależna.
+Stosuj szczegółową [procedurę](.github/AGENT_WORKFLOW.md). `APPROVED` od niezależnego recenzenta nie jest wymagane; własnego przeglądu nie przedstawiaj jako niezależnego.
 
 **Dostępność materiałów:** `docs/` i `manuscripts/` są dokumentacją projektu, a `pages/` jedynym źródłem publicznej witryny. Żadnych instrukcji dla agentów, treści edytorskich, porad o współtworzeniu repozytorium, prywatnych danych ani surowych pomiarów w Pages. Zobacz [politykę](docs/pages.md). Nie twórz `CONTRIBUTING.md`.
 
