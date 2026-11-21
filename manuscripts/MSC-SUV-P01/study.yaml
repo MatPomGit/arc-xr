@@ -1,0 +1,32 @@
+schema_version: 1
+paper_id: MSC-SUV-P01
+study_type: methods
+research_question: "Czy zachowanie można wiernie retargetować na różnie wyglądające awatary?"
+hypotheses:
+  - id: H1
+    statement: "Wspólna reprezentacja zachowania ogranicza błędy czasowe względem prostego baseline."
+    status: proposed
+  - id: H2
+    statement: "Jakość odtworzenia pozostaje porównywalna między poziomami realizmu."
+    status: proposed
+  - id: H3
+    statement: "Niepewność wynikająca z zasłonięć istotnie zmienia błąd wybranych kanałów."
+    status: proposed
+design:
+  type: "Walidacja wierności retargetingu na archiwalnych sekwencjach"
+  unit_of_analysis: "Anotowane zdarzenie w klipie"
+  population: null
+  sample_size: null
+outcomes:
+  primary:
+    name: "Temporal event reconstruction error"
+    unit: ms
+    definition: "Błąd czasu zdarzeń względem anotacji źródłowych"
+  secondary: []
+analysis:
+  methods:
+    - "Porównanie baseline, efektów klipu i riga w modelu mieszanym"
+  validation: "Held-out source identities, expert perceptual fidelity ratings and source quality"
+evidence:
+  empirical_results: not_available
+  protocol_frozen: false

@@ -33,15 +33,15 @@ class ArcV2RegistryTests(unittest.TestCase):
         self.assertEqual([],audit(ROOT))
         self.assertEqual([],audit(self.root))
 
-    def test_27_articles_and_26_local_sources(self):
+    def test_28_entries_preserve_historical_27_records(self):
         paper=self.papers()["papers"]
-        self.assertEqual(len(paper),27)
-        self.assertEqual(len({p["id"] for p in paper}),27)
-        self.assertEqual(sum(p["owner"]["mode"]=="local" for p in paper),26)
+        self.assertEqual(len(paper),28)
+        self.assertEqual(len({p["id"] for p in paper}),28)
+        self.assertEqual(sum(p["owner"]["mode"]=="local" for p in paper),27)
         self.assertEqual(sum(p["owner"]["redacted"] is True for p in paper
                              if p["owner"]["mode"]=="external"),1)
         self.assertEqual(sum(p["publication_stage"]=="draft" for p in paper),7)
-        self.assertEqual(sum(p["publication_stage"]=="concept" for p in paper),20)
+        self.assertEqual(sum(p["publication_stage"]=="concept" for p in paper),21)
         self.assertTrue(all(p["public_listing"] is False for p in paper))
 
     def test_modified_local_tex_fails_pinned_blob_validation(self):

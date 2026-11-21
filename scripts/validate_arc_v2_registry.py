@@ -66,8 +66,9 @@ def audit(root:Path=ROOT)->list[str]:
     byid={p.get("id"):p for p in records if isinstance(p,dict)}
     old={p.get("id"):p for p in prior if isinstance(p,dict)}
     pinned={p.get("id"):p for p in mapping if isinstance(p,dict)}
-    if any(len(x)!=27 for x in (byid,old,pinned)) or not (set(byid)==set(old)==set(pinned)):
-        errors.append("ARC_V2_COVERAGE: exactly 27 unique entries required")
+    if (len(old)!=27 or len(pinned)!=27 or set(old)!=set(pinned)
+            or not set(old).issubset(set(byid))):
+        errors.append("ARC_V2_COVERAGE: exactly 27 historical migration entries required")
     local=related=0
     for ident,p in byid.items():
         source=old.get(ident)
