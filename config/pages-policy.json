@@ -12,5 +12,6 @@
     "procedures.md",
     "collaboration.md"
   ],
-  "note": "No automatic deploy, no internal docs or agent instructions. Review generated HTML and site visibility separately."
+  "note": "No automatic deploy, no internal docs or agent instructions. Review generated HTML and site visibility separately.",
+  "approved_image_sha256": {}
 }

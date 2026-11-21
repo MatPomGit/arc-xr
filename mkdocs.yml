@@ -2,6 +2,9 @@
 site_name: ARC-XR
 docs_dir: pages
 site_dir: site
+theme:
+  name: mkdocs
+  highlightjs: false
 nav:
   - Program badawczy: index.md
   - Artykuły: articles.md
