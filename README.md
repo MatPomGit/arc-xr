@@ -14,6 +14,10 @@ Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast 
 
 [Wykaz 27 tematów i ich krótkie omówienia](pages/articles.md) przedstawia siedem planowanych manuskryptów oraz dwadzieścia dodatkowych koncepcji. Publiczna witryna powstaje wyłącznie z wydzielonego katalogu `pages/`.
 
+## Pilotaż migracji do ARC v2
+
+[Mapa migracyjna 27 manuskryptów](docs/migrations/arc-v2-pilot.md) przypina pliki TeX do ich identyfikatorów MSC i wykrywa sześć starszych katalogów wymagających późniejszego przemianowania. Jedna pozycja jest pomocniczym szkicem projektu kanonicznego poza ARC-XR. Audyt: `python3 scripts/audit_arc_v2_pilot.py`. Narzędzie nie zapisuje plików, nie zmienia właścicieli i nie uruchamia publikacji.
+
 ## Portfolio publikacji
 
 | ID | Temat | Stan |

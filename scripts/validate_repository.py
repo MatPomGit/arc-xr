@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from validate_documentation import check_documentation
 from validate_pages import check_pages
 from validate_issues import check_issues
+from audit_arc_v2_pilot import audit as audit_arc_v2_pilot
 
 REQUIRED = (
     "AGENTS.md", ".github/AGENT_WORKFLOW.md",
@@ -30,6 +31,10 @@ REQUIRED = (
     ".github/ISSUE_TEMPLATE/01-task.yml", ".github/ISSUE_TEMPLATE/02-bug.yml",
     ".github/ISSUE_TEMPLATE/03-experiment.yml", ".github/ISSUE_TEMPLATE/04-manuscript.yml",
     "tests/test_issues_policy.py",
+    "scripts/audit_arc_v2_pilot.py",
+    "migration/arc-v2-pilot-map.json",
+    "tests/test_arc_v2_pilot.py",
+    "docs/migrations/arc-v2-pilot.md",
     "docs/index.md", "docs/documentation.md", "docs/pages.md",
     "docs/architecture/README.md", "docs/architecture/components.md",
     "docs/architecture/data-flow.md",
@@ -95,6 +100,7 @@ def check_repository(root: Path = ROOT) -> list[str]:
     problems.extend(check_documentation(root))
     problems.extend(check_pages(root))
     problems.extend(check_issues(root))
+    problems.extend(audit_arc_v2_pilot(root))
     return sorted(set(problems))
 
 

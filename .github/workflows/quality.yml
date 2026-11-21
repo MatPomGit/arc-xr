@@ -15,10 +15,19 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
-      - name: Check out exact commit
+      - name: Check out exact PR HEAD in isolated runner
         uses: actions/checkout@v4
         with:
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
+          submodules: false
+          lfs: false
+      - name: Verify exact checkout SHA
+        env:
+          EXPECTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
       - name: Check Python syntax
         run: python3 -m compileall -q scripts tests
       - name: Validate ARC-XR research structure
@@ -29,6 +38,8 @@ jobs:
         run: python3 scripts/validate_pages.py
       - name: Validate GitHub Issues intake and JUMP contract
         run: python3 scripts/validate_issues.py
+      - name: Audit ARC v2 migration plan without writes
+        run: python3 -B scripts/audit_arc_v2_pilot.py
       - name: Run all offline regression tests
         run: python3 -m unittest discover -s tests -v
       - name: Build and verify curated GitHub Pages HTML
