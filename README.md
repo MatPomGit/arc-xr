@@ -27,6 +27,10 @@ W pierwotnym opisie występowało sześć merytorycznie określonych propozycji,
 
 Każda publikacja w `manuscripts/PXX/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [manuscripts/README.md](manuscripts/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
+## Źródła manuskryptów w LaTeX
+
+Katalog [`manuscripts/`](manuscripts/README.md) zawiera **27 odrębnych plików `main.tex`**: sześć podstawowych projektów P01–P06 oraz 21 dodatkowych pozycji z pełnymi identyfikatorami MSC. Wszystkie są szkicami naukowymi; ich opracowanie nie oznacza zebrania danych ani potwierdzonych wyników.
+
 ## Standard GitHub Issues
 
 Zadania przyjmujemy przez [formularze Issues](https://github.com/MatPomGit/arc-xr/issues/new/choose): zadanie/JUMP, błąd, eksperyment i manuskrypt. [Standard Issues](docs/issues.md) określa typy intencji, klasyfikację `agent-work-classification:v1`, relacje, kryteria akceptacji i dowody exact SHA. Metadane nie przyznają zgody na wykonanie, a `PROJECT_STATE.yaml` pozostaje jedynym stanem badań P01–P06.

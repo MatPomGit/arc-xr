@@ -11,6 +11,36 @@
 | [P05](P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych |
 | [P06](P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR |
 
+## Źródła LaTeX i pozostałe tematy publikacyjne
+
+Wszystkie **27 pozycji** posiadają niezależny plik `main.tex`, będący szkicem naukowym w wersji 0.1.0. Sześć manuskryptów podstawowych korzysta z dotychczasowych folderów `P01`–`P06`; materiały `manuscript.md`, protokoły i pliki bibliograficzne pozostają zachowane. Dodatkowe katalogi zawierają **jedną pracę przekrojową i 20 koncepcji**, bez podnoszenia ich statusu do zrealizowanych badań.
+
+| Identyfikator MSC | Temat | Źródło LaTeX | Etap |
+| --- | --- | --- | --- |
+| `MSC-AAL-P07` | Pomoc przestrzenna AR wobec interfejsu 2D w wykonywaniu bezpiecznych czynności domowych | [main.tex](MSC-AAL-P07/main.tex) | Koncepcja badawcza |
+| `MSC-ADHD-P04` | Transfer regulacji do ucieleśnionej interakcji i AR | [main.tex](MSC-ADHD-P04/main.tex) | Planowany manuskrypt przekrojowy |
+| `MSC-AR-P07` | Wyprzedzająca predykcja przeciążenia poznawczego przed błędem w zadaniu AR | [main.tex](MSC-AR-P07/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P08` | Adaptacja poziomu wyzwania XR a transfer poprawnego wykonania zadań | [main.tex](MSC-AR-P08/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P09` | Wykrywanie błądzenia myślami i odzyskiwanie uwagi z EEG i okulografii | [main.tex](MSC-AR-P09/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P10` | Adaptacyjne uczenie w VR i odroczona retencja pamięciowa | [main.tex](MSC-AR-P10/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P11` | Metapoznanie w XR: informacja zwrotna o szacowanym obciążeniu | [main.tex](MSC-AR-P11/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P12` | Emocjonalne lustro XR wizualizujące oszacowany stan afektywny | [main.tex](MSC-AR-P12/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P13` | Generatywna Neuroadaptive Art Therapy w środowisku XR | [main.tex](MSC-AR-P13/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P14` | Empatyczny awatar AI adaptujący komunikację do pobudzenia użytkownika | [main.tex](MSC-AR-P14/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P15` | Adaptacyjna ekspozycja na stresory w XR | [main.tex](MSC-AR-P15/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P17` | Kalibracja niepewności rozpoznania stanu użytkownika a selektywna abstencja adaptatora XR | [main.tex](MSC-AR-P17/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P18` | Wyjaśnialna neuroadaptacja XR a zaufanie i immersja | [main.tex](MSC-AR-P18/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P21` | Agent XR uczący się preferencji użytkownika w czasie | [main.tex](MSC-AR-P21/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P22` | Neuroadaptive Social XR z odrębną personalizacją uczestników współpracy | [main.tex](MSC-AR-P22/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P23` | Adaptacja poziomu wyzwania XR a dynamika subiektywnego doświadczenia flow | [main.tex](MSC-AR-P23/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P25` | Behawioralny koszt wstrzymania adaptacji XR wobec adaptacji statycznej i reaktywnej | [main.tex](MSC-AR-P25/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P26` | Faza ruchu dłoni a optymalny moment wyświetlania instrukcji w AR | [main.tex](MSC-AR-P26/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P27` | Odporność adaptacyjnego HUD na błędy estymacji obciążenia poznawczego | [main.tex](MSC-AR-P27/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P28` | Wyprzedzające wykrywanie ryzyka błędu manipulacji z kinematyki dłoni i VLM | [main.tex](MSC-AR-P28/main.tex) | Koncepcja badawcza |
+| `MSC-AR-P29` | Predykcja subiektywnej niepewności decyzji z mikroruchów dłoni, spojrzenia i EEG | [main.tex](MSC-AR-P29/main.tex) | Koncepcja badawcza |
+
+Poszczególne opracowania formułują rozłączne pytania badawcze, a wspólne stanowiska oraz możliwe współdzielenie uczestników należy opisać przed publikacją wyników. Obecność źródła `main.tex` nie oznacza prerejestracji, pozyskania danych ani gotowości zgłoszeniowej.
+
 ## Minimalne badania
 
 Uzgodniono dwie wspólne platformy i sześć małych pilotaży. Szczegóły: [plan minimalny](mvp_plan.md). Zmiana zakresu pilotaży nie zatwierdza hipotez ani wyników.

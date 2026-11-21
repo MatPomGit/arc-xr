@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[polish]{babel}
+
+\usepackage{lmodern}
+
+\usepackage{geometry}
+
+\geometry{a4paper,margin=27mm}
+
+\usepackage{microtype}
+
+\usepackage[hidelinks]{hyperref}
+
+% Portfolio: MSC-AR-P04; source: prospective ARC-XR research scope.
+
+\title{Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM}
+
+\author{}
+
+\date{Wersja 0.1.0, 21 listopada 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Przedmiotem opracowania jest Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM. Czy dołączenie kalibrowanej geometrii 3D do wejścia VLM poprawia wskazywanie obiektu względem modelu 2D? Ten sam model VLM zostanie oceniony na jednakowych scenach w wariancie obrazowym 2D i w wariancie z niezależnie skalibrowaną geometrią 3D. Głównym punktem końcowym jest odsetek prawidłowo wskazanych obiektów na niezależnym zbiorze scen. Opis ma charakter wstępny i nie przedstawia niezweryfikowanych wyników.
+
+\end{abstract}
+
+\section{Wprowadzenie}
+
+Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji człowieka z informacją przestrzenną, ale samo zastosowanie AR, VR lub modeli sztucznej inteligencji nie przesądza o przewadze poznawczej czy ergonomicznej. W rozpatrywanym zagadnieniu, Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM, kluczowe jest rozdzielenie właściwości systemu od zmienności zachowania użytkownika. Porównanie należy zaprojektować tak, aby mierzyć jednoznaczne zjawisko, a nie tylko ogólną ocenę technologii.
+
+\section{Cel pracy i pytanie badawcze}
+
+Czy dołączenie kalibrowanej geometrii 3D do wejścia VLM poprawia wskazywanie obiektu względem modelu 2D? Wariant minimalny nie wymaga bezpośredniej akwizycji głębi z HMD: niezależna referencja przestrzenna może pochodzić z kalibrowanej sceny.
+
+\section{Materiał i metody}
+
+Ten sam model VLM zostanie oceniony na jednakowych scenach w wariancie obrazowym 2D i w wariancie z niezależnie skalibrowaną geometrią 3D. Wymagane jest zdefiniowanie jednostki analizy, zasad doboru przypadków, wersji scenariusza i źródeł pomiaru. Rozkład warunków oraz reguły wykluczenia prób należy określić przed pomiarem. W badaniach z udziałem ludzi niezbędna jest uprzednia właściwa ocena etyczna i świadoma zgoda. W testach wyłącznie symulacyjnych należy oddzielić prawdę symulacyjną od obserwacji empirycznej.
+
+\subsection{Wynik główny i kryteria jakości}
+
+Odsetek prawidłowo wskazanych obiektów na niezależnym zbiorze scen. Pomiar powinien zachowywać jawne jednostki, znaczniki czasu i reguły oceny poprawności. Przy modelach predykcyjnych stosować rozłączne partycje oceny; przy eksperymentach interwencyjnych oddzielić skuteczność predykcji od przyczynowego wpływu interfejsu.
+
+\section{Plan analizy}
+
+Porównać dokładność na poziomie sceny i obiektu, analizować klasy pomyłek, abstencję i wpływ błędu kalibracji. W wynikach należy raportować wielkość efektu lub błąd estymacji z przedziałem niepewności, liczbą obserwacji i odsetkiem odrzuconych prób. Analizy dodatkowe wymagają jasnego oznaczenia jako eksploracyjne. Nie wybierać progów decyzyjnych ani modelu na podstawie obserwacji ze zbioru testowego.
+
+\section{Wyniki}
+
+W obecnej wersji nie raportuje się wyników pomiarów, tabel statystycznych ani parametrów wyznaczonych z nieudokumentowanych danych. Nie stwierdza się w tym opracowaniu, że eksperyment został wykonany lub zgłoszony do czasopisma.
+
+\section{Dyskusja}
+
+Interpretacja przyszłych wyników musi uwzględnić alternatywne mechanizmy i zależność wniosków od jakości danych, warunków zadania oraz ograniczeń sprzętu. Wartość potencjalnego rozwiązania zależy nie tylko od trafności modelu, lecz także od jego opóźnienia, stabilności i wpływu na zachowanie człowieka. Wyniki testów syntetycznych nie mogą być automatycznie uogólniane na populację uczestników.
+
+\section{Ograniczenia badania}
+
+Nie zakładać dostępu do map głębi Quest 3; geometria musi pochodzić z udokumentowanego, kalibrowanego źródła. Prawidłowe przypisanie przestrzenne, odrębne od weryfikacji kolejności kroków P05. Żadna część szkicu nie dowodzi przeprowadzenia zbierania danych, uzyskania zgód etycznych ani gotowości manuskryptu do zgłoszenia.
+
+\section{Wnioski}
+
+Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
+
+\end{document}
+

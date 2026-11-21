@@ -17,3 +17,13 @@ __pycache__/
 
 # Generowany wynik publicznego MkDocs, nie publikować z repo
 site/
+
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
