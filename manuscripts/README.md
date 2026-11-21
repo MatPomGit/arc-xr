@@ -4,12 +4,12 @@
 
 | ID | Temat artykułu |
 | --- | --- |
-| [P01](P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR |
-| [P02](P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR |
-| [P03](P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze |
-| [P04](P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR |
-| [P05](P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych |
-| [P06](P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR |
+| [P01](MSC-AR-P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR |
+| [P02](MSC-AR-P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR |
+| [P03](MSC-AR-P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze |
+| [P04](MSC-AR-P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR |
+| [P05](MSC-AR-P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych |
+| [P06](MSC-AR-P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR |
 
 ## Źródła LaTeX i pozostałe tematy publikacyjne
 

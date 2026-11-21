@@ -31,7 +31,7 @@ jobs:
         run: |
           set -euo pipefail
           count=0
-          for f in manuscripts/P0[1-6]/main.tex manuscripts/MSC-*/main.tex; do
+          for f in manuscripts/MSC-*/main.tex; do
             latexmk -pdf -cd -interaction=nonstopmode -halt-on-error "$f"
             count=$((count+1))
           done

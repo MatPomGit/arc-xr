@@ -22,12 +22,12 @@ Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast 
 
 | ID | Temat | Stan |
 | --- | --- | --- |
-| [P01](manuscripts/P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
-| [P02](manuscripts/P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
-| [P03](manuscripts/P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
-| [P04](manuscripts/P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
-| [P05](manuscripts/P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
-| [P06](manuscripts/P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
+| [P01](manuscripts/MSC-AR-P01/README.md) | Multimodalna ocena obciążenia poznawczego i adaptacja interfejsu AR | Planowana |
+| [P02](manuscripts/MSC-AR-P02/README.md) | Detekcja frustracji i dekoncentracji podczas procedur manualnych w AR | Planowana |
+| [P03](manuscripts/MSC-AR-P03/README.md) | Wpływ okluzji i asynchronii renderowania AR na zmęczenie wzrokowo-poznawcze | Planowana |
+| [P04](manuscripts/MSC-AR-P04/README.md) | Grounding przestrzenny 3D modeli VLM w zadaniach manipulacyjnych AR | Planowana |
+| [P05](manuscripts/MSC-AR-P05/README.md) | Autonomiczny asystent AR do weryfikacji procedur manualnych | Planowana |
+| [P06](manuscripts/MSC-AR-P06/README.md) | Multimodalna komunikacja człowiek–agent oraz współdzielenie uwagi w AR | Planowana |
 
 W pierwotnym opisie występowało sześć merytorycznie określonych propozycji, ale numeracja była niespójna (dwie pozycje 3 oraz pusta pozycja 8). Nadano im identyfikatory P01–P06 bez dodawania nieopisanych artykułów.
 

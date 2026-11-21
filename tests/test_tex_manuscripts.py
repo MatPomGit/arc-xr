@@ -4,7 +4,7 @@ import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE = {f"MSC-AR-P{i:02d}": f"P{i:02d}" for i in range(1, 7)}
+CORE = {f"MSC-AR-P{i:02d}": f"MSC-AR-P{i:02d}" for i in range(1, 7)}
 OTHER = (
   "MSC-AAL-P07",
   "MSC-ADHD-P04",

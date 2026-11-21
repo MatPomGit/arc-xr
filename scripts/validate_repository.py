@@ -94,7 +94,7 @@ def check_repository(root: Path = ROOT) -> list[str]:
             problems.append("ARC STATE: planned publication count or IDs inconsistent")
         for identifier in identifiers:
             for name in MANUSCRIPT_FILES:
-                file = root / "manuscripts" / identifier / name
+                file = root / "manuscripts" / ("MSC-AR-" + identifier) / name
                 if not file.is_file() or file.is_symlink():
                     problems.append(f"ARC MANUSCRIPT: missing {identifier}/{name}")
     problems.extend(check_documentation(root))

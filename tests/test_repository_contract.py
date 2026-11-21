@@ -52,7 +52,7 @@ class RepositoryContractTests(unittest.TestCase):
     def test_missing_protocol_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "manuscripts/P03/protocol/README.md").unlink()
+            (root / "manuscripts/MSC-AR-P03/protocol/README.md").unlink()
             self.assertIn("ARC MANUSCRIPT: missing P03/protocol/README.md",
                           validator.check_repository(root))
 
