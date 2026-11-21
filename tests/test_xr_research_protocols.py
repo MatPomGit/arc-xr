@@ -10,7 +10,7 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 MANUSCRIPTS=ROOT/"manuscripts"
-MANIFEST=json.loads((MANUSCRIPTS/"source_manifest.json").read_text(encoding="utf-8"))
+MANIFEST=json.loads((ROOT/"migration/provenance/source-manifest-v1.json").read_text(encoding="utf-8"))
 PAPERS=MANIFEST["papers"]
 LITERATURE=json.loads((MANUSCRIPTS/"literature"/"prior_art_sources.json").read_text(encoding="utf-8"))["references"]
 

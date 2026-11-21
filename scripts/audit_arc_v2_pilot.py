@@ -22,7 +22,7 @@ def audit(root: Path = ROOT) -> list[str]:
     issues=[]
     try:
         plan=json.loads((root/"migration/arc-v2-pilot-map.json").read_text())
-        manifest=json.loads((root/"manuscripts/source_manifest.json").read_text())
+        manifest=json.loads((root/"migration/provenance/source-manifest-v1.json").read_text())
     except (OSError,ValueError):
         return ["PILOT: unreadable mapping or manifest"]
     if (plan.get("schema_version")!=1 or plan.get("programme")!="arc-xr"

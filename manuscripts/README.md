@@ -79,4 +79,4 @@ Identyfikatory P01–P06 są stałe. Nie zmieniać kolejności identyfikatorów 
 
 ## Weryfikacja E4.0 i bibliografia
 
-Wszystkie 27 źródeł `main.tex` zawiera po **trzy hipotezy** i **cztery etapy badań**, główny estymand, kontrolę zależności obserwacji oraz literaturę porównawczą. [Macierz nowości](literature/novelty_matrix.md), [źródła bibliograficzne](literature/prior_art_sources.json) i [manifest właścicieli, statusów oraz commitów](source_manifest.json) rozróżniają projekty podstawowe od koncepcji. Plany nie zmieniają zgód, statusu badań ani wyników.
+Wszystkie 27 źródeł `main.tex` zawiera po **trzy hipotezy** i **cztery etapy badań**, główny estymand, kontrolę zależności obserwacji oraz literaturę porównawczą. [Macierz nowości](literature/novelty_matrix.md), [źródła bibliograficzne](literature/prior_art_sources.json) i [manifest właścicieli, statusów oraz commitów](../migration/provenance/source-manifest-v1.json) rozróżniają projekty podstawowe od koncepcji. Plany nie zmieniają zgód, statusu badań ani wyników.

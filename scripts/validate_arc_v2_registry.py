@@ -30,7 +30,7 @@ def audit(root:Path=ROOT)->list[str]:
         values={name:read(root,name) for name in
                 ("program.json","portfolio/projects.json","portfolio/papers.json",
                  "portfolio/dependencies.json","areas/index.json",
-                 "migration/arc-v2-pilot-map.json","manuscripts/source_manifest.json")}
+                 "migration/arc-v2-pilot-map.json","migration/provenance/source-manifest-v1.json")}
         for rel,schema_rel in MAP.items():
             schema=read(root,schema_rel)
             Draft202012Validator.check_schema(schema)
@@ -60,7 +60,7 @@ def audit(root:Path=ROOT)->list[str]:
     errors.extend(validate_registry_v2(root,meta,records,deps,project_repos,
                                        lines,no_unreviewed_url))
     mapping=values["migration/arc-v2-pilot-map.json"].get("records")
-    prior=values["manuscripts/source_manifest.json"].get("papers")
+    prior=values["migration/provenance/source-manifest-v1.json"].get("papers")
     if not isinstance(mapping,list) or not isinstance(prior,list):
         return errors+["ARC_V2_MAPPING: missing historical source manifest"]
     byid={p.get("id"):p for p in records if isinstance(p,dict)}

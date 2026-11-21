@@ -3,7 +3,7 @@
   "programme": "arc-xr",
   "intent": "SOURCE_PATHS_MIGRATED",
   "source_main_sha": "87c9603f5a18359ae1d3477122b800c0631eb20a",
-  "manifest_source": "manuscripts/source_manifest.json",
+  "manifest_source": "migration/provenance/source-manifest-v1.json",
   "records": [
     {
       "id": "MSC-AR-P01",
