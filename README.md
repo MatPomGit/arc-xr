@@ -16,7 +16,7 @@ Badania prowadzić jako niewielkie pilotaże i dwa wspólne środowiska zamiast 
 
 ## Pilotaż migracji do ARC v2
 
-[Mapa migracyjna 27 manuskryptów](docs/migrations/arc-v2-pilot.md) przypina pliki TeX do ich identyfikatorów MSC i wykrywa sześć starszych katalogów wymagających późniejszego przemianowania. Jedna pozycja jest pomocniczym szkicem projektu kanonicznego poza ARC-XR. Audyt: `python3 scripts/audit_arc_v2_pilot.py`. Narzędzie nie zapisuje plików, nie zmienia właścicieli i nie uruchamia publikacji.
+[Mapa i audyt migracji](docs/migrations/arc-v2-pilot.md) dokumentują przeniesienie sześciu starszych katalogów do identyfikatorów MSC, bez zmiany treści źródeł TeX. Kanoniczny rejestr 27 artykułów znajduje się w [portfolio/papers.json](portfolio/papers.json). Jedna pozycja jest pomocniczym szkicem projektu kanonicznego poza ARC-XR. Audyt: `python3 scripts/audit_arc_v2_pilot.py`. Narzędzie nie zapisuje plików, nie zmienia właścicieli i nie uruchamia publikacji.
 
 ## Portfolio publikacji
 
@@ -33,7 +33,7 @@ W pierwotnym opisie występowało sześć merytorycznie określonych propozycji,
 
 ## Organizacja repozytorium
 
-Każda publikacja w `manuscripts/PXX/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [manuscripts/README.md](manuscripts/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+Każda publikacja podstawowa w `manuscripts/MSC-AR-PNN/` ma własny opis zakresu, szkic manuskryptu, hipotezy, protokół, dokumentację eksperymentów, plan analiz, rejestr wyników oraz katalog figur. Indeks: [manuscripts/README.md](manuscripts/README.md). Wymagania naukowe i zasady udostępniania danych: [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Źródła manuskryptów w LaTeX
 

@@ -4,7 +4,7 @@ Zakres obejmuje wszystkie pliki repozytorium. Obowiązują przepisy, uprawnienia
 
 ## Przed rozpoczęciem zadania
 
-1. Przeczytaj `README.md`, `RESEARCH.md`, `PROJECT_STATE.yaml`, `AUTOPILOT_PLAN.md` oraz odpowiedni `manuscripts/PXX/protocol/README.md`.
+1. Przeczytaj `README.md`, `RESEARCH.md`, `PROJECT_STATE.yaml`, `AUTOPILOT_PLAN.md` oraz odpowiedni `manuscripts/MSC-AR-PNN/protocol/README.md`.
 2. Sprawdź aktualny stan `main`, Issues, otwarte PR, gałęzie zadaniowe oraz potencjalne konflikty prac. Wykorzystaj istniejący Issue/PR, zamiast powielać zadania.
 3. Ustal kryteria odbioru, ryzyko (R0 do R3), dokładny SHA bazowy, dozwolone skutki uboczne oraz możliwe testy. Zachowaj limity: najwyżej 4 otwarte PR i 4 aktywne gałęzie zadaniowe w repozytorium; sprawdź również limit portfelowy 5 otwartych PR.
 4. Stosuj najmniejszą możliwą zmianę. Nie buduj osobnych kolejek, schedulerów, routerów modeli, rejestrów dowodów ani mechanizmów scalania. Research Autopilot pozostaje jedynym kontrolerem działań autonomicznych.

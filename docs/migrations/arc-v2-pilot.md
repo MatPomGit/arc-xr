@@ -1,21 +1,23 @@
-# Pilotaż migracji ARC-XR do standardu ARC v2
+# Migracja 27 źródeł ARC-XR do rejestru ARC v2
 
-Aktualny punkt odniesienia to `main` SHA `87c9603f5a18359ae1d3477122b800c0631eb20a`. Zarejestrowano 27 źródeł `main.tex`, z których 26 reprezentuje kanoniczne lokalne plany naukowe. Jeden dokument jest szkicem pomocniczym do manuskryptu o zewnętrznym właścicielu kanonicznym. Żaden dokument nie jest dowodem publikacji ani wykonania badania.
+**Punkt źródłowy:** `main` `87c9603f5a18359ae1d3477122b800c0631eb20a`. Migracja jest przygotowana na gałęzi zadaniowej. Nie przesądza o scaleniu, publikacji GitHub Pages ani o wykonaniu eksperymentów.
 
-## Mapa i zakres
+## Migracja źródeł i własności
 
-Jedyną mapą **tej operacji migracyjnej** jest [arc-v2-pilot-map.json](../../migration/arc-v2-pilot-map.json). Zawiera 27 ID MSC, rzeczywiste ścieżki, proponowane ścieżki docelowe, obszary z publicznego katalogu, role i Git blob SHA źródeł. Nie jest kolejnym rejestrem redagowanym ręcznie ani źródłem prawdy o statusie publikacji. Po migracji kanonicznym rejestrem programu powinien być `portfolio/papers.json`.
+Przeniesiono kompletne sześć katalogów `manuscripts/P01`–`P06` do `manuscripts/MSC-AR-P01`–`MSC-AR-P06`, zachowując obiekty Git (w tym źródła LaTeX, protokoły i bibliografię). Pozostałe 21 katalogów `MSC-*` nie wymagało zmiany nazw. Każdy z 27 plików `main.tex` jest nadal weryfikowany przez Git blob SHA z [pinned migration map](../../migration/arc-v2-pilot-map.json).
 
-Sześć katalogów `P01`–`P06` wymaga zachowania zawartości oraz przeniesienia do `MSC-AR-P01`–`MSC-AR-P06`, wraz z aktualizacją rzeczywistych odnośników, testów i dokumentacji. Dwadzieścia lokalnych katalogów `MSC-*` nie wymaga zmian lokalizacji źródłowego `main.tex`. Dodatkowy szkic przekrojowy pozostaje `external_companion`, bez tworzenia drugiego właściciela.
+Kanoniczny rejestr znajduje się wyłącznie w [portfolio/papers.json](../../portfolio/papers.json) i zawiera 26 lokalnych artykułów `primary` oraz jeden zewnętrzny artykuł `related`. W publicznym ARC-XR nie przechowuje się adresu prywatnego repozytorium właściciela zewnętrznego. Rekord powiązany nie deklaruje lokalnego kanonicznego TeX. Dane pochodzenia poprzedniego standardu zostały zachowane w [historycznej migawce](../../migration/provenance/source-manifest-v1.json); nie są drugim aktywnym rejestrem.
 
-Przypisano obszary badawcze na podstawie istniejących publicznych kart artykułów: `adaptation` (11), `affect` (6), `perception` (4), `procedures` (3), `collaboration` (3). Wszystkie 27 tytułów odpowiadają nagłówkom publicznych kart, bez nadawania nowych tytułów i bez zmiany zakresów.
+Stan publikacyjny to 7 szkiców (`draft`) i 20 koncepcji (`concept`). Stan naukowy jest oddzielny i nie wynika automatycznie z posiadania plików TeX. Nie zatwierdzono `public_listing` dla żadnej z nowych pozycji w rejestrze v2. Publiczne karty tematyczne w `pages/` pozostają dotychczasowym, ręcznie recenzowanym materiałem.
 
-## Audyt i następny krok
+## Zachowanie informacji historycznych
 
-Uruchom `python3 -B scripts/audit_arc_v2_pilot.py` lub testy repozytorium. Audyt weryfikuje sumy obiektów Git dla wszystkich 27 plików, kompletność mapy, jednoznaczność ID, zgodność katalogów i właścicieli oraz brak prywatnych odnośników w rekordzie pomocniczym. Jest wyłącznie odczytowy i **nie wykonuje migracji**.
+`PROJECT_STATE.yaml` nadal przechowuje oryginalny, zagnieżdżony stan sześciu głównych prac. Skróty `P01`–`P06` zachowano wyłącznie jako zgodność operacyjną; identyfikatory kanoniczne zaczynają się od `MSC-AR-`. Nie zastąpiono szczegółowego stanu badawczego płaskim przykładem z szablonu.
 
-Do właściwego wdrożenia wymagane są: dostępna i zintegrowana wersja szablonu ARC v2, zmapowanie istniejących wielopoziomowych ustawień `PROJECT_STATE.yaml`, przeniesienie źródeł ze śledzeniem blob SHA, aktualizacja wszystkich testów i linków oraz dowody CI na dokładnym HEAD. Nie wolno zastąpić istniejącego `PROJECT_STATE.yaml` szablonowym stanem płaskim bez świadomej migracji jego treści. Katalog artykułów Pages powinien nadal korzystać wyłącznie z osobnego `pages/`.
+Mapowanie 27 pozycji do pięciu obszarów: `adaptation` 11, `affect` 6, `perception` 4, `procedures` 3 i `collaboration` 3.
 
-Dane własności prywatnego projektu zewnętrznego nie są dalej powielane w bieżącym publicznym manifeście. Poprzednie commity Git mogą nadal zawierać historyczne odniesienia; ich ewentualne usunięcie wymaga odrębnej decyzji dotyczącej przepisywania historii. Nie wykonuj takiej operacji automatycznie.
+## Walidacja i integracja
 
-Status: **PREFLIGHT_ONLY**. `apply`, Release, Pages deployment, migracja produkcyjna i merge: **NOT_RUN**.
+`python3 scripts/audit_arc_v2_pilot.py` sprawdza kompletność, mapowanie, ścieżki i SHA 27 źródeł. `python3 scripts/validate_arc_v2_registry.py` kontroluje schematy JSON, niezmienniki kanonicznej własności, stan naukowy i powiązania z historyczną migawką. Wymaga `python -m pip install -r requirements-research.txt`. CI instaluje zależności w odrębnym wirtualnym środowisku.
+
+Do integracji wymagane są zielone testy i kompilacja 27 plików LaTeX na dokładnym SHA, niezależna E3/E4 oraz uprawnione zatwierdzenie R2. Migracja nie publikuje Pages, nie tworzy wydań ani nie wykonuje badań.
