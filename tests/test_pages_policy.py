@@ -88,6 +88,16 @@ class PagesPolicyTests(unittest.TestCase):
             p.write_text(json.dumps(data))
             self.assertIn("PAGES POLICY: unsafe public file allowlist", validator.check_pages(root))
 
+    def test_manual_pages_deployment_requires_approval(self):
+        path = ROOT / ".github/workflows/pages-publish.yml"
+        workflow = path.read_text(encoding="utf-8")
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertNotIn("\n  push:", workflow)
+        self.assertNotIn("\n  pull_request:", workflow)
+        self.assertIn("inputs.publication_authorized == true", workflow)
+        self.assertIn("github.ref == 'refs/heads/main'", workflow)
+        self.assertIn("scripts/verify_site_output.py site", workflow)
+
     def test_private_key_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
