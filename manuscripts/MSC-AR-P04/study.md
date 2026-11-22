@@ -1,45 +1,36 @@
-# MSC-AR-P04 — plan badania i powiązania
+# MSC-AR-P04 — Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM
 
-**Temat:** Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM
+**Program:** `arc-xr` · **obszar:** `immersive-interaction` · **rodzaj:** `MANUSCRIPT` · **etap źródłowy:** `PLANNED`.
 
-**Program:** `arc-xr`. **Obszar:** `immersive-interaction`. **Typ:** `MANUSCRIPT` (MANUSCRIPT). **Stan źródła:** `PLANNED`. **Tryb integracji:** `LINK_ONLY`.
+## Projekt badania
 
-## Cel, wynik główny i granice badania
+**Przedmiot:** Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM.
 
-Przedmiot badania: Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM. Istnieje ślad źródłowego manuskryptu; stan dowodów wymaga weryfikacji.
-
-- **Główny wynik proponowany:** Błąd lokalizacji/powiązania opisu VLM z obiektem w scenie
-- **Odrębność naukowa:** Prawidłowe przypisanie przestrzenne, odrębne od weryfikacji kolejności kroków P05.
-- **Uzasadnienie klasyfikacji:** Klasyfikacja wg pytania badawczego: Wkład przestrzenny: poprawność wskazania obiektu przez VLM z geometrią 3D. Status źródła: PLANNED. Nie oznacza zatwierdzonych danych ani gotowości publikacji. | Proponowane doprecyzowanie zakresu portfolio 2026-11-20, wymaga zatwierdzenia naukowego: Prawidłowe przypisanie przestrzenne, odrębne od weryfikacji kolejności kroków P05. Główny wynik do prerejestracji: Błąd lokalizacji/powiązania opisu VLM z obiektem w scenie. Tytuł źródłowy zachowano w original_title_pl. Nie zmienia to zatwierdzonego tytułu manuskryptu źródłowego ani zamrożonego protokołu.
-- **Powiązane rekordy:** `MSC-AR-P28` (arc-xr:PROTO-AR-02)
+- **Proponowany wynik główny:** Błąd lokalizacji/powiązania opisu VLM z obiektem w scenie
+- **Odrębność i ograniczenia:** Prawidłowe przypisanie przestrzenne, odrębne od weryfikacji kolejności kroków P05.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** `MSC-AR-P28`.
 
 ## Stanowisko badawcze
 
-**Wstępne powiązanie:** `ST-03`. To propozycja na podstawie domeny, a nie potwierdzenie uruchomienia aparatury.
+**`ST-03`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Stanowiska ARC](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md); [inwentarz prywatny `devices`](https://github.com/MatPomGit/devices).
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-xr`** (`APP-ARC-07`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-xr` (`APP-ARC-07`), `OPTIONAL`, profil `unity-openxr`, bramka `RESEARCH_GO`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-unity`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`OptiCore`**: `PRIVATE_REPOSITORY_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
 
-- `lib-asr`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-events`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-image` (historyczna nazwa; wymaga uzgodnienia z `lib-vis`): planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-unity`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-vlm`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-voice`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `OptiCore`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
+## Proweniencja i bramki
 
-Relacje APP i LIB pochodzą odpowiednio z `app_publication_links.csv` i `component_dependencies.csv`. Są kandydaturami, nie dowodami wykonania prac. Aktualność nazw `lib-signals`, `lib-image` i `lib-llm` wymaga osobnego uzgodnienia z nowymi repozytoriami.
+Źródło opisuje publiczny projekt [`arc-xr`](https://github.com/MatPomGit/arc-xr); pierwotny identyfikator `P04`.
 
-## Proweniencja, metodologia i bramki
-
-- **UID źródłowy:** `arc-xr:P04`; repozytorium `MatPomGit/arc-xr`, identyfikator `P04`.
-- **Ścieżka źródłowa:** `manuscripts/P04/README.md`.
-- **Materiał:** [źródło projektu](https://github.com/MatPomGit/arc-xr/blob/main/manuscripts/P04/README.md).
-- **Rejestr MSC:** [kanoniczna macierz](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed badaniem wymagane są niezależny wynik i plan analizy, źródła literaturowe, ocena nowości, kontrola praw do danych/oprogramowania, ocena bezpieczeństwa i kwalifikacja etyczna, jeżeli dotyczy. Szkic nie zawiera danych empirycznych ani nie potwierdza dostępności stanowiska.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

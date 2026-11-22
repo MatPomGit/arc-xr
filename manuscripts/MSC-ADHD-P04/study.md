@@ -1,47 +1,38 @@
-# MSC-ADHD-P04 — plan badania i powiązania
+# MSC-ADHD-P04 — Transfer regulacji do ucieleśnionej interakcji i AR
 
-**Temat:** Transfer regulacji do ucieleśnionej interakcji i AR
+**Program:** `arc-xr` · **obszar:** `embodied-ar` · **rodzaj:** `MANUSCRIPT` · **etap źródłowy:** `ACTIVE`.
 
-**Program:** `arc-xr`. **Obszar:** `embodied-ar`. **Typ:** `MANUSCRIPT` (MANUSCRIPT). **Stan źródła:** `ACTIVE`. **Tryb integracji:** `LINK_ONLY`.
+## Projekt badania
 
-## Cel, wynik główny i granice badania
+**Przedmiot:** Transfer regulacji do ucieleśnionej interakcji i AR.
 
-Przedmiot badania: Transfer regulacji do ucieleśnionej interakcji i AR. Istnieje ślad źródłowego manuskryptu; stan dowodów wymaga weryfikacji.
-
-- **Główny wynik proponowany:** Nieokreślony w rejestrze. Wymaga zdefiniowania metryki, estymandu i jednostki analizy przed rozpoczęciem badania.
-- **Odrębność naukowa:** Należy porównać źródłowy protokół z pokrewnymi manuskryptami przed formalizacją hipotezy.
-- **Uzasadnienie klasyfikacji:** Oddzielny kontrast ekran versus ruch versus AR; klasyfikacja XR warunkowa.
-- **Powiązane rekordy:** Nie zarejestrowano.
+- **Proponowany wynik główny:** Wymaga określenia estymandu, głównej miary i jednostki analizy przed rozpoczęciem zbierania danych.
+- **Odrębność i ograniczenia:** Przed zatwierdzeniem wymagany przegląd źródłowego protokołu i pokrewnych publikacji.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** nie wskazano jawnej relacji.
 
 ## Stanowisko badawcze
 
-**Wstępne powiązanie:** `ST-03`. To propozycja na podstawie domeny, a nie potwierdzenie uruchomienia aparatury.
+**`ST-03`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Stanowiska ARC](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md); [inwentarz prywatny `devices`](https://github.com/MatPomGit/devices).
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-regulation-mobile`** (`APP-ARC-02`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
+- **`app-xr`** (`APP-ARC-07`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-regulation-mobile` (`APP-ARC-02`), `OPTIONAL`, profil `android-native`, bramka `RESEARCH_GO`.
-- `app-xr` (`APP-ARC-07`), `OPTIONAL`, profil `unity-openxr`, bramka `RESEARCH_GO`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-adapt`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-regulation-mobile`; wykonanie integracji niezweryfikowane.
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-regulation-mobile`, `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-unity`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`OptiCore`**: `PRIVATE_REPOSITORY_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
 
-- `lib-adapt`: planowana zależność pośrednia przez `app-regulation-mobile`; brak dowodu integracji.
-- `lib-asr`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-events`: planowana zależność pośrednia przez `app-regulation-mobile`, `app-xr`; brak dowodu integracji.
-- `lib-image` (historyczna nazwa; wymaga uzgodnienia z `lib-vis`): planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-unity`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-vlm`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-voice`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `OptiCore`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
+## Proweniencja i bramki
 
-Relacje APP i LIB pochodzą odpowiednio z `app_publication_links.csv` i `component_dependencies.csv`. Są kandydaturami, nie dowodami wykonania prac. Aktualność nazw `lib-signals`, `lib-image` i `lib-llm` wymaga osobnego uzgodnienia z nowymi repozytoriami.
+Dane o niepublicznych repozytoriach i pełnej historii pochodzenia znajdują się poza dokumentacją publiczną.
 
-## Proweniencja, metodologia i bramki
-
-- **UID źródłowy:** `arc-adhd-game:P04`; repozytorium `MatPomGit/arc-adhd-game`, identyfikator `P04`.
-- **Ścieżka źródłowa:** `manuscripts/04-embodied-ar/README.md`.
-- **Materiał:** [źródło projektu](https://github.com/MatPomGit/arc-adhd-game/blob/main/manuscripts/04-embodied-ar/README.md).
-- **Rejestr MSC:** [kanoniczna macierz](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed badaniem wymagane są niezależny wynik i plan analizy, źródła literaturowe, ocena nowości, kontrola praw do danych/oprogramowania, ocena bezpieczeństwa i kwalifikacja etyczna, jeżeli dotyczy. Szkic nie zawiera danych empirycznych ani nie potwierdza dostępności stanowiska.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

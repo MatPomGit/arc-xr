@@ -1,39 +1,30 @@
-# MSC-ZAH-P01 — plan badania i powiązania
+# MSC-ZAH-P01 — Wierne przenoszenie naturalnych zachowań społecznych z nagrań na awatary o zróżnicowanym realizmie
 
-**Temat:** Wierne przenoszenie naturalnych zachowań społecznych z nagrań na awatary o zróżnicowanym realizmie
+**Program:** `arc-xr` · **obszar:** `avatar-behavior-retargeting` · **rodzaj:** `IDEA` · **etap źródłowy:** `NEW_RESEARCH_PROGRAM_IDEA_HOLD`.
 
-**Program:** `arc-xr`. **Obszar:** `avatar-behavior-retargeting`. **Typ:** `IDEA` (CANDIDATE). **Stan źródła:** `NEW_RESEARCH_PROGRAM_IDEA_HOLD`. **Tryb integracji:** `LOCAL_TEX_CONCEPT_SOURCE_CREATED`.
+## Projekt badania
 
-## Cel, wynik główny i granice badania
+**Przedmiot:** Wierne przenoszenie naturalnych zachowań społecznych z nagrań na awatary o zróżnicowanym realizmie.
 
-Przedmiot badania: Wierne przenoszenie naturalnych zachowań społecznych z nagrań na awatary o zróżnicowanym realizmie. Kandydatura, bez zatwierdzonego odrębnego protokołu.
-
-- **Główny wynik proponowany:** Zgodność czasowa i percepcyjna retargetingu przy zmianie realizmu postaci
-- **Odrębność naukowa:** Nowość metodologiczna i wierność transferu; nie skutki psychologiczne oglądania
-- **Uzasadnienie klasyfikacji:** Utworzono w programowym repozytorium prospektywny manuskrypt LaTeX i dokumentację stanowiska ST-08. Status naukowy pozostaje IDEA_HOLD / CANDIDATE; brak wyników empirycznych, zamrożonego protokołu, potwierdzonych licencji na wszystkie dane oraz automatycznej publikacji w Pages. Początkowy zakres i hipotezy zachowano w origin_source_url oraz manuscript_plan_url.
-- **Powiązane rekordy:** Nie zarejestrowano.
+- **Proponowany wynik główny:** Zgodność czasowa i percepcyjna retargetingu przy zmianie realizmu postaci
+- **Odrębność i ograniczenia:** Nowość metodologiczna i wierność transferu; nie skutki psychologiczne oglądania
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** nie wskazano jawnej relacji.
 
 ## Stanowisko badawcze
 
-**Wstępne powiązanie:** `ST-08`. To propozycja na podstawie domeny, a nie potwierdzenie uruchomienia aparatury.
+**`ST-08`**: status `DIRECT_PLAN`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Stanowiska ARC](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md); [inwentarz prywatny `devices`](https://github.com/MatPomGit/devices).
+## Aplikacje
 
-## Powiązane aplikacje APP
+Brak przypisanej aplikacji w mapie APP–MSC. Nie oznacza to braku możliwych narzędzi, ale ich integracja wymaga kwalifikacji.
 
-Brak jawnej relacji APP w planistycznej tabeli.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+Brak udokumentowanego powiązania z biblioteką w znormalizowanej macierzy. Nie przypisywać fikcyjnego kodu.
 
-Brak wyprowadzalnych relacji z tabeli APP→LIB.
+## Proweniencja i bramki
 
-Relacje APP i LIB pochodzą odpowiednio z `app_publication_links.csv` i `component_dependencies.csv`. Są kandydaturami, nie dowodami wykonania prac. Aktualność nazw `lib-signals`, `lib-image` i `lib-llm` wymaga osobnego uzgodnienia z nowymi repozytoriami.
+Źródło opisuje publiczny projekt [`arc-xr`](https://github.com/MatPomGit/arc-xr); pierwotny identyfikator `MSC-ZAH-P01`.
 
-## Proweniencja, metodologia i bramki
-
-- **UID źródłowy:** `portfolio:MSC-ZAH-P01`; repozytorium `MatPomGit/arc-xr`, identyfikator `MSC-ZAH-P01`.
-- **Ścieżka źródłowa:** `manuscripts/MSC-ZAH-P01/main.tex`.
-- **Materiał:** [źródło projektu](https://github.com/MatPomGit/arc-xr/blob/main/manuscripts/MSC-ZAH-P01/main.tex).
-- **Rejestr MSC:** [kanoniczna macierz](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed badaniem wymagane są niezależny wynik i plan analizy, źródła literaturowe, ocena nowości, kontrola praw do danych/oprogramowania, ocena bezpieczeństwa i kwalifikacja etyczna, jeżeli dotyczy. Szkic nie zawiera danych empirycznych ani nie potwierdza dostępności stanowiska.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

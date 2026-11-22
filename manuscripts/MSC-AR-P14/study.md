@@ -1,45 +1,36 @@
-# MSC-AR-P14 — plan badania i powiązania
+# MSC-AR-P14 — Empatyczny awatar AI adaptujący komunikację do pobudzenia użytkownika
 
-**Temat:** Empatyczny awatar AI adaptujący komunikację do pobudzenia użytkownika
+**Program:** `arc-xr` · **obszar:** `social-agents` · **rodzaj:** `IDEA` · **etap źródłowy:** `IDEA_UNREVIEWED`.
 
-**Program:** `arc-xr`. **Obszar:** `social-agents`. **Typ:** `IDEA` (CANDIDATE). **Stan źródła:** `IDEA_UNREVIEWED`. **Tryb integracji:** `INDEX_ONLY_NO_NEW_FOLDER`.
+## Projekt badania
 
-## Cel, wynik główny i granice badania
+**Przedmiot:** Empatyczny awatar AI adaptujący komunikację do pobudzenia użytkownika.
 
-Przedmiot badania: Empatyczny awatar AI adaptujący komunikację do pobudzenia użytkownika. Kandydatura, bez zatwierdzonego odrębnego protokołu.
-
-- **Główny wynik proponowany:** Nieokreślony w rejestrze. Wymaga zdefiniowania metryki, estymandu i jednostki analizy przed rozpoczęciem badania.
-- **Odrębność naukowa:** Należy porównać źródłowy protokół z pokrewnymi manuskryptami przed formalizacją hipotezy.
-- **Uzasadnienie klasyfikacji:** Oddzielić reakcję afektywną i czasową od ogólnej komunikacji multimodalnej.
-- **Powiązane rekordy:** `MSC-AR-P06` (arc-xr:P06)
+- **Proponowany wynik główny:** Wymaga określenia estymandu, głównej miary i jednostki analizy przed rozpoczęciem zbierania danych.
+- **Odrębność i ograniczenia:** Przed zatwierdzeniem wymagany przegląd źródłowego protokołu i pokrewnych publikacji.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** `MSC-AR-P06`.
 
 ## Stanowisko badawcze
 
-**Wstępne powiązanie:** `ST-03`. To propozycja na podstawie domeny, a nie potwierdzenie uruchomienia aparatury.
+**`ST-03`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Stanowiska ARC](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md); [inwentarz prywatny `devices`](https://github.com/MatPomGit/devices).
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-xr`** (`APP-ARC-07`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-xr` (`APP-ARC-07`), `OPTIONAL`, profil `unity-openxr`, bramka `RESEARCH_GO`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-unity`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`OptiCore`**: `PRIVATE_REPOSITORY_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
 
-- `lib-asr`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-events`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-image` (historyczna nazwa; wymaga uzgodnienia z `lib-vis`): planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-unity`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-vlm`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-voice`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `OptiCore`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
+## Proweniencja i bramki
 
-Relacje APP i LIB pochodzą odpowiednio z `app_publication_links.csv` i `component_dependencies.csv`. Są kandydaturami, nie dowodami wykonania prac. Aktualność nazw `lib-signals`, `lib-image` i `lib-llm` wymaga osobnego uzgodnienia z nowymi repozytoriami.
+Źródło opisuje publiczny projekt [`arc-xr`](https://github.com/MatPomGit/arc-xr); pierwotny identyfikator `XR-IDEA-08`.
 
-## Proweniencja, metodologia i bramki
-
-- **UID źródłowy:** `arc-xr:XR-IDEA-08`; repozytorium `MatPomGit/arc-xr`, identyfikator `XR-IDEA-08`.
-- **Ścieżka źródłowa:** `docs/pomysly.md`.
-- **Materiał:** [źródło projektu](https://github.com/MatPomGit/arc-xr/blob/main/docs/pomysly.md).
-- **Rejestr MSC:** [kanoniczna macierz](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed badaniem wymagane są niezależny wynik i plan analizy, źródła literaturowe, ocena nowości, kontrola praw do danych/oprogramowania, ocena bezpieczeństwa i kwalifikacja etyczna, jeżeli dotyczy. Szkic nie zawiera danych empirycznych ani nie potwierdza dostępności stanowiska.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.

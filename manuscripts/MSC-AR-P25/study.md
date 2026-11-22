@@ -1,48 +1,39 @@
-# MSC-AR-P25 — plan badania i powiązania
+# MSC-AR-P25 — Behawioralny koszt wstrzymania adaptacji XR wobec adaptacji statycznej i reaktywnej
 
-**Temat:** Behawioralny koszt wstrzymania adaptacji XR wobec adaptacji statycznej i reaktywnej
+**Program:** `arc-xr` · **obszar:** `uncertainty-aware-adaptation` · **rodzaj:** `IDEA` · **etap źródłowy:** `DETAILED_CONCEPT`.
 
-**Program:** `arc-xr`. **Obszar:** `uncertainty-aware-adaptation`. **Typ:** `IDEA` (CANDIDATE). **Stan źródła:** `DETAILED_CONCEPT`. **Tryb integracji:** `INDEX_ONLY_NO_NEW_FOLDER`.
+## Projekt badania
 
-## Cel, wynik główny i granice badania
+**Przedmiot:** Behawioralny koszt wstrzymania adaptacji XR wobec adaptacji statycznej i reaktywnej.
 
-Przedmiot badania: Behawioralny koszt wstrzymania adaptacji XR wobec adaptacji statycznej i reaktywnej. Kandydatura, bez zatwierdzonego odrębnego protokołu.
-
-- **Główny wynik proponowany:** Odsetek błędów zadań i koszt zbędnych interwencji u użytkownika
-- **Odrębność naukowa:** Weryfikacja skutku polityki odmowy w badaniu użytkowników; osobne pytanie wobec kalibracji predykatora XR-IDEA-11.
-- **Uzasadnienie klasyfikacji:** Rozwinięcie pomysłu 11: cztery warunki Static/Performance/Neuroadaptive/Uncertainty-Aware; nie odrębny artykuł bez nowości. AUDYT DUPLIKACJI: rozwinięcie XR-IDEA-11 w jeden pełniejszy protokół; wskazać wspólne pochodzenie, nie mnożyć manuskryptów. | Proponowane doprecyzowanie zakresu portfolio 2026-11-20, wymaga zatwierdzenia naukowego: Weryfikacja skutku polityki odmowy w badaniu użytkowników; osobne pytanie wobec kalibracji predykatora XR-IDEA-11. Główny wynik do prerejestracji: Odsetek błędów zadań i koszt zbędnych interwencji u użytkownika. Tytuł źródłowy zachowano w original_title_pl.
-- **Powiązane rekordy:** `MSC-AR-P17` (arc-xr:XR-IDEA-11), `MSC-AR-P01` (arc-xr:P01)
+- **Proponowany wynik główny:** Odsetek błędów zadań i koszt zbędnych interwencji u użytkownika
+- **Odrębność i ograniczenia:** Weryfikacja skutku polityki odmowy w badaniu użytkowników; osobne pytanie wobec kalibracji predykatora XR-IDEA-11.
+- **Plan metodologii:** należy ustalić hipotezy, próbę lub scenariusze, procedurę, metryki, plan weryfikacji i analizę wrażliwości; samo istnienie pliku nie oznacza ukończenia badania.
+- **Powiązane MSC:** `MSC-AR-P17`, `MSC-AR-P01`.
 
 ## Stanowisko badawcze
 
-**Wstępne powiązanie:** `ST-03`. To propozycja na podstawie domeny, a nie potwierdzenie uruchomienia aparatury.
+**`ST-03`**: status `PROPOSED_BY_SCOPE`, kwalifikacja aparatury `NOT_VERIFIED`. Jest to mapa planistyczna, nie raport uruchomionego stanowiska.
 
-[Stanowiska ARC](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/shared_research_platforms.md); [inwentarz prywatny `devices`](https://github.com/MatPomGit/devices).
+## Aplikacje
 
-## Powiązane aplikacje APP
+- **`app-2d-desktop`** (`APP-ARC-01D`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
+- **`app-xr`** (`APP-ARC-07`): rola `OPTIONAL`, bramka `RESEARCH_GO`, status repozytorium `PLANNED_NOT_CREATED`.
 
-- `app-2d-desktop` (`APP-ARC-01D`), `OPTIONAL`, profil `desktop-browser`, bramka `RESEARCH_GO`.
-- `app-xr` (`APP-ARC-07`), `OPTIONAL`, profil `unity-openxr`, bramka `RESEARCH_GO`.
+## Biblioteki
 
-## Powiązane biblioteki LIB
+- **`lib-audio`**: `SCOPE_CONSOLIDATED_PLAN`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-events`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-2d-desktop`, `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-eye`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-2d-desktop`; wykonanie integracji niezweryfikowane.
+- **`lib-study`**: `PLANNED_NOT_CREATED`, powiązanie planowane przez `app-2d-desktop`; wykonanie integracji niezweryfikowane.
+- **`lib-track`**: `NEW_SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-unity`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vis`**: `RENAMED_ARCHITECTURE_ONLY`, powiązanie planowane przez `app-2d-desktop`, `app-xr`; wykonanie integracji niezweryfikowane.
+- **`lib-vlm`**: `SCAFFOLD_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
+- **`OptiCore`**: `PRIVATE_REPOSITORY_EXISTS`, powiązanie planowane przez `app-xr`; wykonanie integracji niezweryfikowane.
 
-- `lib-asr`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-events`: planowana zależność pośrednia przez `app-2d-desktop`, `app-xr`; brak dowodu integracji.
-- `lib-eye`: planowana zależność pośrednia przez `app-2d-desktop`; brak dowodu integracji.
-- `lib-image` (historyczna nazwa; wymaga uzgodnienia z `lib-vis`): planowana zależność pośrednia przez `app-2d-desktop`, `app-xr`; brak dowodu integracji.
-- `lib-study`: planowana zależność pośrednia przez `app-2d-desktop`; brak dowodu integracji.
-- `lib-unity`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-vlm`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `lib-voice`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
-- `OptiCore`: planowana zależność pośrednia przez `app-xr`; brak dowodu integracji.
+## Proweniencja i bramki
 
-Relacje APP i LIB pochodzą odpowiednio z `app_publication_links.csv` i `component_dependencies.csv`. Są kandydaturami, nie dowodami wykonania prac. Aktualność nazw `lib-signals`, `lib-image` i `lib-llm` wymaga osobnego uzgodnienia z nowymi repozytoriami.
+Źródło opisuje publiczny projekt [`arc-xr`](https://github.com/MatPomGit/arc-xr); pierwotny identyfikator `XR-IDEA-19`.
 
-## Proweniencja, metodologia i bramki
-
-- **UID źródłowy:** `arc-xr:XR-IDEA-19`; repozytorium `MatPomGit/arc-xr`, identyfikator `XR-IDEA-19`.
-- **Ścieżka źródłowa:** `docs/pomysly.md`.
-- **Materiał:** [źródło projektu](https://github.com/MatPomGit/arc-xr/blob/main/docs/pomysly.md).
-- **Rejestr MSC:** [kanoniczna macierz](https://github.com/MatPomGit/research-autopilot/blob/main/docs/portfolio/reorganizacja-systemu-badan/publication_matrix.csv).
-
-Przed badaniem wymagane są niezależny wynik i plan analizy, źródła literaturowe, ocena nowości, kontrola praw do danych/oprogramowania, ocena bezpieczeństwa i kwalifikacja etyczna, jeżeli dotyczy. Szkic nie zawiera danych empirycznych ani nie potwierdza dostępności stanowiska.
+Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.
