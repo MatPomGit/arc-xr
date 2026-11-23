@@ -27,7 +27,7 @@
 % orcid_verified:
 \author{Mateusz Pomianek}
 
-\date{Wersja 0.5.0, 23 listopada 2026}
+\date{Wersja 0.6.0, 23 listopada 2026}
 
 \begin{document}
 
@@ -92,17 +92,49 @@ H3 odpowiada na PB3, lecz ma obecnie charakter eksploracyjny, ponieważ limit cz
 Możliwe jest uzyskanie podobnej poprawności w obu warunkach, przewagi instrukcji 2D albo korzystnego efektu AR tylko dla części zadań. Odmienny czas wykonania przy podobnej liczbie błędów również byłby informacyjny. Żaden z tych rezultatów nie został zaobserwowany w ramach tego projektu. Status koncepcji pozostaje \textit{deferred}.
 
 \section{Projekt metodologiczny}
-\subsection{Zadania i warunki porównawcze}
-Projekt zakłada dwa warunki: instrukcje wyświetlane na ekranie 2D i przestrzenne wskazówki AR. Treść, liczba kroków, dostępne informacje i poziom trudności powinny być porównywalne między warunkami. Zadania mają obejmować czynności o minimalnym ryzyku, z rozróżnieniem etapów zależnych od relacji przestrzennych i etapów sekwencyjnych.
+Niniejszy rozdział stanowi \emph{projekt protokołu}, nie dokumentację wykonanego eksperymentu. Nie rozpoczęto rekrutacji, nie zatwierdzono próby, stanowiska ani procedury. Przed badaniem należy zatwierdzić scenariusze, instrukcje, plan analizy i wymagania etyczne oraz utrwalić ich wersje.
 
-\subsection{Uczestnicy, przypisanie i przebieg}
-Dobór uczestników, kryteria włączenia i wyłączenia, liczebność oraz decyzja o planie wewnątrz- lub międzyosobniczym wymagają ustalenia przed rozpoczęciem badania. W wariancie z powtarzanymi pomiarami należy zrównoważyć kolejność warunków i sekwencji zadań, a także uwzględnić uczenie się i zmęczenie. Obecnie nie istnieje zatwierdzony schemat randomizacji.
+\subsection{Schemat badania i jednostka wnioskowania}
+Rozważany jest kontrolowany eksperyment porównujący dwa sposoby przedstawienia tej samej instrukcji: ekranowy 2D i przestrzenny AR. Preferowany do oceny wykonalności jest wariant wewnątrzosobniczy, w którym każdy uczestnik realizowałby porównywalne, lecz nieidentyczne sekwencje w obu warunkach. Dobór tego wariantu wymaga pilotażowej oceny transferu uczenia się; alternatywą pozostaje plan międzyosobniczy, jeśli efekt treningu uniemożliwi wiarygodne porównanie. Wybór schematu należy zatwierdzić przed rekrutacją.
 
-\subsection{Operacjonalizacja i jakość danych}
-Jednostką zapisu byłby pojedynczy krok przypisany do uczestnika, sekwencji i warunku. Za poprawny krok należałoby uznać wykonanie spełniające z góry ustaloną regułę oceny, niezależną od samego interfejsu. Dokumentacja powinna zawierać mianownik ocenianych kroków, typ błędu, czas, przerwanie zadania oraz przyczynę ewentualnego braku obserwacji. Ocena poprawności i sposób traktowania kroków nieukończonych muszą być określone przed pomiarem.
+Jednostką manipulacji byłby przydział sposobu prezentacji instrukcji do sekwencji zadania, a pojedynczy krok stanowiłby jednostkę zapisu wyniku. Kroki są zagnieżdżone w sekwencjach, a sekwencje mogą powtarzać się u uczestników; analiza musi odzwierciedlać te zależności. Nie wolno utożsamiać liczby kroków z liczebnością niezależnej próby.
 
-\subsection{Bezpieczeństwo, etyka i wykonalność}
-Planowany scenariusz nie może wymagać kontaktu z zasilanymi urządzeniami, gorącymi przedmiotami ani narzędziami powodującymi obrażenia. Przed badaniem z udziałem osób konieczne jest ustalenie wymagań formalno-etycznych i świadomej zgody. Stanowisko AR, widoczność obiektów, opóźnienia i ergonomia wymagają oceny wykonalności; proponowane zasoby sprzętowe nie stanowią potwierdzenia gotowej infrastruktury. Nie przewiduje się publikowania surowych nagrań uczestników.
+\subsection{Populacja docelowa i dobór próby}
+Pierwotną populacją odniesienia mogą być dorośli ochotnicy zdolni do zrozumienia instrukcji, samodzielnej obsługi neutralnych przedmiotów i świadomego udziału. Nie zakłada się rekrutacji pacjentów ani osób wymagających opieki. Dobór prawdopodobnie miałby charakter dogodnościowy; zakres uogólniania wyników należałoby ograniczyć odpowiednio do cech rekrutowanej grupy.
+
+Proponowane kryteria włączenia obejmują pełnoletność, świadomą zgodę, zdolność zrozumienia instrukcji i możliwość wykonania zadania w obu porównywanych warunkach, z uwzględnieniem dostępnych udogodnień. Wyłączenia powinny dotyczyć wyłącznie przeciwwskazań bezpośrednio związanych z bezpieczeństwem procedury lub niemożnością uzyskania ważnego pomiaru. Nie należy automatycznie wykluczać osób z niepełnosprawnością ani przyjmować rozpoznań klinicznych bez uzasadnienia. Kryteria przerwania próby i ewentualnego wycofania danych muszą być odrębnie opisane w informacji dla uczestnika.
+
+Liczebność próby badania właściwego nie jest określona. Należałoby ją wyznaczyć na podstawie precyzji oszacowania lub analizy mocy dla przyjętego estymandu, zależności pomiarów, realistycznej zmienności międzyosobniczej i efektu istotnego praktycznie. Wstępna ocena wykonalności nie może być traktowana jako test potwierdzający H1. Rekrutacja i liczebność wymagają zatwierdzenia.
+
+\subsection{Materiał zadaniowy i równoważność warunków}
+Zadania powinny wykorzystywać wyłącznie niegroźne przedmioty, takie jak pojemniki, etykiety i elementy do układania, bez zasilania, ostrych krawędzi i gorących powierzchni. Każda sekwencja wymaga jawnej listy kroków, stanu początkowego, oczekiwanego rezultatu, reguły poprawności oraz informacji o tym, czy krok wymaga odniesienia przestrzennego. Zestawy porównawcze należy przygotować przed badaniem, a ich trudność sprawdzić w odrębnej ocenie wykonalności.
+
+W obu warunkach treść semantyczna, kolejność informacji, liczba wskazówek oraz zasady przejścia między krokami powinny być możliwie równoważne. W warunku 2D instrukcja byłaby widoczna na ekranie, a w AR odnosiłaby się przestrzennie do obiektów. Należy z góry opisać sposób wyświetlania błędów, komunikatów pomocy i powtórzeń. Nie wolno poprawiać wyłącznie jednego wariantu na podstawie wyników uczestników badania właściwego.
+
+\subsection{Konstrukty, zmienne i instrumenty}
+Zmienną niezależną jest \emph{modalność prezentacji instrukcji}, kodowana jako AR lub 2D. Wynik główny stanowi \emph{poprawność kroku}, oceniana binarnie na podstawie uprzednio przygotowanej rubryki, bez odnoszenia oceny do samej technologii. Poprawny krok oznacza osiągnięcie wymaganego stanu zadania zgodnie z regułą; pominięcie, błędny obiekt i niepoprawna kolejność wymagają osobnych kodów. Trzeba ustalić, czy poprawność po korekcie błędu jest liczona w wyniku głównym, oraz jak traktuje się kroki niewykonane po przerwaniu.
+
+Drugorzędowe obserwacje obejmowałyby liczbę pominięć, czas ukończenia sekwencji, czas kroku, liczbę przerwań, prośby o pomoc i błędy systemowe. Typ kroku (przestrzenny lub sekwencyjny) jest uprzednio definiowaną cechą scenariusza, nie oceną dokonywaną po obejrzeniu wyników. Potencjalnymi moderatorami lub czynnikami zakłócającymi są kolejność warunków, doświadczenie XR, znajomość podobnych zadań, różnice ergonomiczne i jakość zakotwiczenia AR.
+
+Minimalnym instrumentarium byłyby dwie porównywalne implementacje instrukcji, wersjonowane scenariusze, zegar lub rejestr zdarzeń oraz jednolity arkusz oceny kroków. Stanowisko ST-03 jest jedynie propozycją; poprawność działania oprogramowania i sprzętu nie została potwierdzona. EEG, okulometria, VLM i analiza biometryczna nie są wymagane do odpowiedzi na PB1. Ich ewentualne dodanie wymagałoby odrębnego uzasadnienia, zgód i protokołu.
+
+\subsection{Proponowany przebieg sesji}
+Po uzyskaniu wymaganych zgód i potwierdzeniu kwalifikacji uczestnik otrzymałby jednolite objaśnienie zadania oraz neutralną próbę zapoznawczą niezaliczaną do analizy. Następnie, zgodnie z uprzednio ustalonym planem przydziału, wykonywałby sekwencje w obu warunkach. Należy zapewnić porównywalne odstępy, odpoczynek i zasady pomocy, a kolejność warunków zrównoważyć lub randomizować zgodnie z zatwierdzonym schematem.
+
+Dla każdej próby należałoby zapisać pseudonimowy identyfikator uczestnika, wersję scenariusza, warunek, kolejność, znaczniki czasu, wyniki kroków i przyczynę przerwania. Po zakończeniu sesji uczestnik powinien mieć możliwość zgłoszenia dyskomfortu oraz wycofania się zgodnie z otrzymaną informacją. Nie przewiduje się adaptacyjnych zmian scenariusza w trakcie zbierania danych potwierdzających.
+
+\subsection{Kontrola jakości i wiarygodność oceny}
+Przed pierwszą próbą należy wykonać kontrolę kalibracji przestrzennej, widoczności przedmiotów, czytelności instrukcji, synchronizacji zegarów i kompletności zapisów. Błąd rejestracji wskazówki AR lub utratę logu należy oznaczyć jako zdarzenie techniczne, a nie automatycznie jako błąd uczestnika. Kontrole stanowiska i wersje oprogramowania należy zapisać dla każdej sesji.
+
+Rubrykę oceny poprawności należy sprawdzić na neutralnych przykładach przed badaniem. Przy ocenie obserwacyjnej wskazany jest drugi, niezależny oceniający dla części prób oraz wcześniej określona procedura rozstrzygania niezgodności; możliwość maskowania warunku może być ograniczona przez widoczność interfejsu. Wszelkie rozbieżności, braki danych, wyłączenia prób i odstępstwa od procedury należy zachować w rejestrze, a ich wpływ uwzględnić w analizie wrażliwości. Kryteria jakości i progi akceptacji muszą być określone przed badaniem, bez dopasowywania do uzyskanych wyników.
+
+\subsection{Bezpieczeństwo, etyka i ochrona danych}
+Plan musi wykluczać ekspozycję na napięcie elektryczne, wysokie temperatury, ostre przedmioty i konieczność przemieszczania się w niekontrolowanym otoczeniu. Sesję należy przerwać na życzenie uczestnika, przy objawach dyskomfortu lub awarii mogącej ograniczać bezpieczeństwo. Przed rekrutacją konieczna jest właściwa ocena etyczna albo udokumentowane rozstrzygnięcie o jej niewymagalności oraz zatwierdzona informacja i zgoda uczestnika. Tych czynności nie wykonano w ramach niniejszego szkicu.
+
+Zakres zbieranych danych powinien być ograniczony do informacji niezbędnych do oceny zadania; nagrywanie obrazu, głosu i danych biometrycznych nie jest domyślną częścią projektu. Należy ustalić podstawę prawną, okres retencji, dostęp do danych i zasady usunięcia lub wycofania danych. Do repozytorium publicznego nie wolno trafiać z nagraniami ani danymi identyfikującymi uczestników.
+
+\subsection{Otwarte decyzje przed zatwierdzeniem protokołu}
+Wymagają rozstrzygnięcia: ostateczny schemat eksperymentu, populacja i liczebność próby, lista scenariuszy i klasyfikacja kroków, szczegółowa rubryka poprawności, reguły czasu i przerwań, realizacja równoważności instrukcji, kryteria braków danych, instrumentarium oraz wymogi etyczne. Żadna z tych propozycji nie jest deklaracją ukończonego pilotażu, gotowości stanowiska ani rozpoczęcia badań.
 
 \section{Plan analizy statystycznej}
 \subsection{Estymand i wynik główny}
