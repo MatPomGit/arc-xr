@@ -27,7 +27,7 @@
 % orcid_verified:
 \author{Mateusz Pomianek}
 
-\date{Wersja 0.6.0, 23 listopada 2026}
+\date{Wersja 0.7.0, 23 listopada 2026}
 
 \begin{document}
 
@@ -137,14 +137,49 @@ Zakres zbieranych danych powinien być ograniczony do informacji niezbędnych do
 Wymagają rozstrzygnięcia: ostateczny schemat eksperymentu, populacja i liczebność próby, lista scenariuszy i klasyfikacja kroków, szczegółowa rubryka poprawności, reguły czasu i przerwań, realizacja równoważności instrukcji, kryteria braków danych, instrumentarium oraz wymogi etyczne. Żadna z tych propozycji nie jest deklaracją ukończonego pilotażu, gotowości stanowiska ani rozpoczęcia badań.
 
 \section{Plan analizy statystycznej}
-\subsection{Estymand i wynik główny}
-Kandydackim estymandem jest różnica prawdopodobieństwa poprawnego wykonania kroku pomiędzy AR a 2D, uśredniona w uprzednio określonej populacji zadań i uczestników. Operacyjnie wynik główny można przedstawić jako udział poprawnych kroków przy jawnym mianowniku. Przed analizą należy uzgodnić, czy celem jest kontrast marginalny, oraz przyjąć reguły dotyczące przerwań i braków danych.
+Poniższy plan jest prospektywną propozycją dla badania porównawczego AR--2D. Nie przeprowadzono pomiarów, estymacji ani testowania hipotez. Wybór końcowego schematu eksperymentu, pełnego estymandu i reguł decyzyjnych wymaga zatwierdzenia przed rozpoczęciem zbierania danych potwierdzających.
 
-\subsection{Model i zależności obserwacji}
-Dla binarnej poprawności kroku rozważa się model mieszany z efektem warunku i efektami związanymi z uczestnikiem oraz sekwencją. Kolejność, typ kroku i doświadczenie mogą stanowić wcześniej określone zmienne towarzyszące. Estymatę efektu należy prezentować wraz z przedziałem niepewności; nie można traktować kolejnych kroków tej samej osoby jako niezależnych uczestników.
+\subsection{Populacja, jednostki analizy i estymand pierwszorzędowy}
+Zmienną wynikową na poziomie kroku będzie binarna poprawność według zamrożonej rubryki. Rozważa się estymand w postaci marginalnej różnicy prawdopodobieństwa poprawnego wykonania kroku pomiędzy interwencją AR i interfejsem 2D, wyrażonej w punktach procentowych. Dodatni znak będzie oznaczał przewagę AR. Populacja odniesienia miałaby obejmować osoby spełniające zatwierdzone kryteria kwalifikacji i zaplanowaną pulę neutralnych zadań.
 
-\subsection{Wyniki uzupełniające i analizy odporności}
-Pominięcia, czas wykonania i przerwane sekwencje powinny być raportowane oddzielnie. Różnice według typu kroku można analizować eksploracyjnie. Należy przewidzieć analizę wrażliwości na reguły kodowania nieukończonych sekwencji i brakujących obserwacji. Liczebność, minimalny efekt o znaczeniu praktycznym oraz ewentualny margines niegorszości nie zostały ustalone; nie wolno ich dobierać po poznaniu wyników.
+Uśrednianie po osobach, sekwencjach i krokach należy zdefiniować przed badaniem. Preferowane jest nadanie każdemu uczestnikowi porównywalnej wagi oraz jawne określenie wag typów zadań, tak aby osoba wykonująca więcej kroków nie dominowała automatycznie w estymandzie. Kroki stanowią obserwacje powtarzane, a nie niezależne jednostki losowania. Wariant wewnątrzosobniczy wymaga uwzględnienia korelacji pomiarów, okresu i kolejności warunków. Dla wariantu międzyosobniczego należy osobno opisać mechanizm przydziału i populację uśredniania.
+
+\subsection{Zdarzenia po przydziale i mianownik wyniku}
+Przed rekrutacją należy rozstrzygnąć, czy poprawność oznacza wykonanie kroku za pierwszą próbą, czy dopuszcza korektę błędu. Dla przerwania sekwencji trzeba ustalić, które zaplanowane kroki należą do mianownika, oraz odróżnić brak wykonania od nieobserwowalności z przyczyn technicznych. Kandydacką strategią jest traktowanie pominiętego lub niewykonanego kroku z przyczyn zadaniowych jako niepoprawnego, a utraty obserwacji wskutek awarii sprzętu jako brakującej, z osobnym raportem zdarzenia i analizą wrażliwości. Są to propozycje, nie zatwierdzone reguły.
+
+Zgłoszenia dyskomfortu, rezygnacje uczestnika, utraty sygnału, awarie rejestracji AR i odstępstwa od procedury wymagają oddzielnych kodów przyczyn. Nie wolno usuwać takich sekwencji wyłącznie dlatego, że zmieniają oszacowanie efektu. Konieczne jest zdefiniowanie populacji analitycznej według pierwotnego przydziału i zasad dopuszczalnych wyłączeń jeszcze przed oceną wyników.
+
+\subsection{Model pierwszorzędowy i wielkości efektu}
+Dla binarnej poprawności przewiduje się model regresji logistycznej z efektami mieszanymi. Stały efekt warunku AR--2D byłby uzupełniony o uprzednio określone czynniki projektowe, takie jak kolejność lub okres, typ kroku i zestaw scenariuszy. Efekty losowe uczestnika i sekwencji powinny odpowiadać rzeczywistemu zagnieżdżeniu lub skrzyżowaniu pomiarów; dobór ich struktury musi poprzedzać analizę potwierdzającą, z zachowaniem możliwości identyfikacji parametrów przy planowanej liczebności.
+
+Wynikiem głównym ma być standaryzowana marginalna różnica prawdopodobieństw AR minus 2D, wyznaczona z przewidywań modelu dla zdefiniowanej populacji i wag. Iloraz szans z modelu można przedstawić pomocniczo, lecz nie należy utożsamiać go z różnicą ryzyka ani interpretować jako względnej zmiany prawdopodobieństwa. Niepewność oszacowania należy podać w przedziałach ufności zgodnych z przyjętym planem testowania. Jeśli zastosowany zostanie bootstrap, jednostką ponownego losowania powinien być uczestnik lub jednostka przydziału, z zachowaniem zależności kroków i sekwencji; schemat bootstrapu wymaga zatwierdzenia przed analizą.
+
+\subsection{Precyzja, liczebność i kontrola błędu pierwszego rodzaju}
+Liczebność należy ustalić na podstawie analizy mocy lub wymaganej szerokości przedziału ufności dla pierwszorzędowego kontrastu marginalnego, uwzględniając liczbę uczestników, liczbę sekwencji, zależności wewnątrzosobnicze i spodziewaną niekompletność obserwacji. Parametry projektowe można uzyskać ze źródeł lub odrębnego pilotażu wykonalności, ale danych pilotażowych nie wolno przedstawiać jako niezależnego potwierdzenia H1. Nie przypisuje się obecnie żadnych wartości mocy, efektu minimalnego, liczebności ani przedziałów ufności.
+
+H1 pozostaje kandydatem na jedyną hipotezę konfirmacyjną. Przed badaniem należy ustalić, czy test będzie jedno- czy dwustronny, poziom błędu pierwszego rodzaju oraz regułę decyzji. Jeśli jedynym testem potwierdzającym będzie uprzednio zdefiniowana H1, nie wymaga on korekty za eksploracyjne analizy dodatkowe. Jeśli H2, H3 lub dodatkowe punkty końcowe zostaną podniesione do rangi konfirmacyjnej, należy wcześniej określić rodzinę testów, hierarchię lub metodę korekty, np. procedurę Holma. Po obejrzeniu wyników nie wolno zmieniać rodzin hipotez ani poziomu istotności. Same wartości \emph{p} nie zastępują oszacowania efektu i jego niepewności.
+
+\subsection{Wyniki uzupełniające i moderacja}
+Dla pominięć należy zdefiniować licznik i ekspozycję, np. liczbę zaplanowanych kroków, oraz rozważyć model licznikowy z odpowiednim offsetem; wybór modelu Poissona lub ujemnego dwumianu powinien zależeć od właściwości danych i wcześniejszego planu diagnostycznego. Czas wykonania wymaga jednoznacznego początku i końca pomiaru, rozróżnienia czasu zadania i czasu instrukcji oraz uwzględnienia przerwań i cenzorowania; można rozważyć model czasu lub analizę przeżycia. Przerwanie sekwencji powinno stanowić osobny wynik binarny lub zdarzenie w czasie.
+
+H2 dotyczy różnicy efektów AR--2D między krokami przestrzennymi i sekwencyjnymi. Odpowiedni kontrast wymaga bezpośredniego oszacowania interakcji warunku i typu kroku, a nie porównania dwóch osobnych wartości \emph{p}. Dla H3 należy raportować czas i przerwania, ale nie wnioskować o niegorszości bez wcześniej zatwierdzonego marginesu i odpowiednio zaplanowanego testu. Analizy moderatorów, podgrup i alternatywnych punktów końcowych pozostają eksploracyjne.
+
+\subsection{Brakujące dane, odstępstwa i analizy wrażliwości}
+Braki należy opisywać na poziomie uczestnika, sesji, sekwencji i kroku, podając liczebności, odsetki i przyczyny w każdym warunku. Analiza dostępnych przypadków nie może być uznana za nieobciążoną bez oceny mechanizmu braków. Dla odpowiednio uzasadnionego założenia o brakach warunkowo losowych można rozważyć wielokrotną imputację na właściwym poziomie hierarchii lub modelowanie procesu obserwacji. Przy podejrzeniu braków zależnych od nieobserwowanego wyniku potrzebne będą scenariusze wrażliwości, bez przedstawiania ich jako identyfikacji prawdziwego mechanizmu.
+
+Plan wrażliwości powinien porównać co najmniej alternatywne kodowanie kroków przerwanych, obecność i brak wyłączeń technicznych, różne uzasadnione struktury korelacji oraz wpływ kolejności i doświadczenia XR. Przy niewystarczającej liczbie obserwacji albo braku zbieżności modelu należy jawnie zgłosić ograniczenia estymacji i zastosować wcześniej wybraną prostszą analizę, bez selekcjonowania modelu według korzystniejszego wyniku. Wszystkie odstępstwa i analizy post hoc zostaną oznaczone jako eksploracyjne.
+
+\subsection{Rozdzielenie eksploracji od testowania}
+Przed dostępem do właściwych wyników należy utrwalić wersję protokołu zawierającą hipotezy, zmienne, mianowniki, estymand, strukturę modelu, plan doboru próby, reguły wyłączeń, korekty i analizy wrażliwości. Pilotaż może służyć kontroli wykonalności, kodowania i kompletności danych, lecz po wykorzystaniu go do wyboru modelu nie może być przedstawiany jako niezależny test hipotezy. Zmiany wprowadzone po obejrzeniu danych należy oznaczyć datą, powodem i statusem eksploracyjnym. Nie wolno nazywać takiego planu prerejestracją bez rzeczywistego potwierdzenia rejestracji.
+
+\section{Warunki reprodukowalności przyszłej analizy}
+Odtwarzalność będzie wymagała jawnego powiązania zatwierdzonej wersji protokołu, katalogu zmiennych i reguł kodowania z identyfikatorami sesji, manifestem danych, kodem analizy oraz środowiskiem wykonania. Identyfikatory uczestników muszą być pseudonimowe, a tabela umożliwiająca identyfikację osób przechowywana oddzielnie i poza repozytorium publicznym. Każde późniejsze twierdzenie empiryczne powinno wskazywać dokładny hash danych lub manifestu, commit kodu i konfigurację wykonania.
+
+Planowanym środowiskiem analitycznym jest Python. W momencie realizacji należy odnotować rzeczywiste wersje interpretera, zależności (np. pandas, NumPy, SciPy, statsmodels lub innego uzasadnionego narzędzia do modeli mieszanych), systemu operacyjnego, sprzętu i narzędzi akwizycji. Wybrane pakiety muszą obsługiwać określoną strukturę modelu; sam wybór biblioteki nie potwierdza możliwości estymacji. Wersje należy zamrozić w pliku zależności lub blokadzie środowiska, ale żadnej wersji oprogramowania nie uznaje się obecnie za zweryfikowaną.
+
+Przed analizą należy przygotować schemat danych ze słownikiem kolumn, jednostkami, dozwolonymi kodami, typami braków i regułami walidacji. Zestaw testów na jawnie syntetycznych danych może sprawdzać zakresy, kompletność kluczy, powtarzalność agregacji, poprawność kierunku kontrastu i obsługę przerwań; wyniki syntetyczne nie są wynikami uczestników. Dla procedur losowych należy zapisywać ziarno oraz wersję generatora, a przy zależnych od platformy obliczeniach odnotować ograniczenia deterministyczności.
+
+Przyszły pakiet reprodukcyjny powinien rozdzielać dane źródłowe, pochodne, kodowanie zmiennych, skrypty analiz, konfigurację i wygenerowane tabele. Raport powinien wskazywać liczbę uczestników, sesji i kroków na każdej fazie filtracji, wyłączenia, nieudane przebiegi i wyniki negatywne. Uprawnienia do udostępniania danych oraz ryzyko reidentyfikacji trzeba ocenić przed jakąkolwiek publikacją. Obecnie nie istnieje udokumentowany wykonany pipeline, zamrożone środowisko analityczne ani dane tego projektu; niniejszy rozdział określa tylko wymagania do ich przyszłej realizacji.
 
 \section{Plan prezentacji wyników}
 Jeżeli badanie zostanie zatwierdzone i wykonane, raport powinien rozdzielać liczbę uczestników, sekwencji i kroków od ich wzajemnej zależności. Należałoby przedstawić przepływ prób, kompletność obserwacji, poprawność w obu warunkach, estymowaną różnicę wraz z niepewnością oraz wyniki uzupełniające, w tym przerwania i zdarzenia niepożądane. W obecnym szkicu nie ma wyników, tabel z pomiarami ani wnioskowania statystycznego.
