@@ -27,7 +27,7 @@
 % orcid_verified:
 \author{Mateusz Pomianek}
 
-\date{Wersja 0.4.1, 23 listopada 2026}
+\date{Wersja 0.5.0, 23 listopada 2026}
 
 \begin{document}
 
@@ -45,26 +45,51 @@ Rozważono projekt porównania przestrzennych wskazówek rzeczywistości rozszer
 MSC-AAL-P07 jest koncepcją badawczą o statusie \textit{deferred} (historycznie \texttt{NEW\_CROSS\_DOMAIN\_IDEA\_HOLD}), a nie ukończonym badaniem. Właścicielem naukowym jest Mateusz Pomianek; kanoniczne źródło tekstu znajduje się w \texttt{MatPomGit/arc-xr}. Własność naukowa, lokalizacja repozytorium i autorstwo są odrębnymi pojęciami. Nie udokumentowano danych empirycznych, prerejestracji ani zgody etycznej.
 
 \section{Wprowadzenie i uzasadnienie}
-Instrukcja przestrzenna może wskazywać miejsce i kolejność czynności bez konieczności przenoszenia uwagi na osobny ekran. Nie przesądza to jednak, że AR prowadzi do mniejszej liczby błędów: sposób prezentacji, obciążenie wzrokowe, widoczność obiektu i znajomość zadania mogą zmieniać wynik. Porównanie z instrukcją 2D wymaga zatem wyrównania treści wskazówek oraz jawnego rozdzielenia jakości interfejsu od zachowania uczestnika.
+Instrukcje wykonywania czynności wieloetapowych przekazują co najmniej dwa rodzaje informacji: co należy zrobić i gdzie należy wykonać działanie. W interfejsie ekranowym 2D odbiorca może potrzebować przełożyć opis lub obraz na położenie obiektu w otoczeniu. Przestrzenna wskazówka AR ma natomiast możliwość powiązania komunikatu z miejscem wykonania czynności. Taka różnica formy prezentacji uzasadnia porównanie, ale nie stanowi dowodu wyższej skuteczności AR.
 
-Punktem odniesienia są kontrolowane, nieszkodliwe czynności o strukturze wieloetapowej. Przez „bezpieczne czynności domowe” rozumie się tutaj zadania laboratoryjne bez ekspozycji na zagrożenia elektryczne, termiczne i mechaniczne; nie jest to deklaracja bezpieczeństwa rzeczywistych urządzeń ani skuteczności opieki wspomaganej technologicznie.
+\subsection{Proponowane mechanizmy poznawcze}
+Pierwszym kandydackim mechanizmem jest ograniczenie konieczności przenoszenia informacji między ekranem a przestrzenią zadania. Jeśli wskazówka trafnie wskazuje obiekt i jego położenie, może zmniejszać wymagania związane z odnajdywaniem punktu odniesienia. Drugi mechanizm dotyczy uwagi: bezpośrednie odniesienie do obiektu mogłoby ograniczać przełączanie spojrzenia między instrukcją i stanowiskiem. Trzeci wiąże się z zewnętrznym podtrzymywaniem informacji o bieżącym kroku, co hipotetycznie mogłoby ograniczać pominięcia w procedurze wieloetapowej. Są to wyjaśnienia projektowe wymagające osobnej weryfikacji, a nie ustalone mechanizmy działania tego systemu.
 
-\section{Cel, pytanie i zakres nowości}
-Celem proponowanej pracy jest oszacowanie, czy przestrzenne wskazówki AR zmieniają poprawność kolejnych kroków względem informacyjnie równoważnych instrukcji ekranowych 2D. Pytanie główne brzmi: czy przy porównywalnej treści i trudności zadania interfejs AR ogranicza błędy wykonania neutralnych czynności domowych?
+\subsection{Mechanizmy konkurencyjne i warunki brzegowe}
+AR może również zwiększać obciążenie percepcyjne przez zasłanianie elementów sceny, rozproszenie uwagi, nieprecyzyjne zakotwiczenie wskazówki, opóźnienie jej aktualizacji albo konieczność obsługi dodatkowego urządzenia. Instrukcja 2D może okazać się korzystniejsza w zadaniach czysto sekwencyjnych, gdy położenie przedmiotów nie jest istotne, albo gdy użytkownik już zna stanowisko. Efekt nowości technologii, uczenie się procedury oraz odmienna ergonomia urządzeń mogą prowadzić do pozornej przewagi jednego z warunków. Dlatego dokładność rejestracji przestrzennej, czytelność wskazówek, kolejność prób i uprzednie doświadczenie są potencjalnymi czynnikami zakłócającymi lub modyfikatorami efektu, a nie automatycznie wyjaśnieniami przyczynowymi.
 
-Potencjalnym wkładem jest zdefiniowany kontrast dwóch sposobów prezentacji tej samej instrukcji, z rozróżnieniem kroków wymagających lokalizacji przestrzennej i kroków wyłącznie sekwencyjnych. Nowość tego ujęcia wymaga jeszcze krytycznej weryfikacji literatury. Nie należy utożsamiać ewentualnej przewagi poprawności z poprawą bezpieczeństwa rzeczywistej opieki AAL.
+Propozycja dotyczy kontrolowanych czynności laboratoryjnych o minimalnym ryzyku, takich jak manipulowanie nieszkodliwymi przedmiotami. Nie zakłada ekspozycji na urządzenia elektryczne, wysoką temperaturę ani potencjalnie niebezpieczne prace domowe. Trafność ekologiczna i możliwość przeniesienia wyników na wsparcie samodzielności w środowisku domowym pozostają osobnymi pytaniami.
+
+\section{Cel, pytania i zakres nowości}
+Celem proponowanej pracy jest porównanie poprawności wykonywania kroków w warunkach informacyjnie równoważnych instrukcji AR i ekranowych instrukcji 2D. Podstawowym przedmiotem wnioskowania ma być wpływ formy wskazówki na zachowanie w określonej klasie bezpiecznych zadań, nie skuteczność kliniczna ani bezpieczeństwo urządzeń.
+
+\paragraph{PB1 (główne).} Czy prawdopodobieństwo poprawnego wykonania kroku różni się między przestrzennymi wskazówkami AR a instrukcjami 2D przy porównywalnej treści i trudności zadań?
+\paragraph{PB2 (eksploracyjne).} Czy zależność między warunkiem interfejsu a pominięciami różni się między krokami wymagającymi lokalizacji przestrzennej i krokami wyłącznie sekwencyjnymi?
+\paragraph{PB3 (eksploracyjne).} Czy ewentualnym różnicom w poprawności towarzyszą różnice czasu wykonania lub częstości przerywania sekwencji?
+
+Kandydacki wkład naukowy dotyczy mierzalnego kontrastu AR--2D na poziomie poprawności kroku z uwzględnieniem jego charakteru przestrzennego. Samo zastosowanie AR, modeli wizualnych, EEG lub okulometrii nie stanowi dowodu nowości. Ostateczną wartość wkładu należy ocenić po systematyczniejszym przeglądzie badań porównujących te same typy zadań i punkty końcowe.
 
 \section{Stan badań i luka badawcza}
-Badania dotyczące instrukcji AR w precyzyjnych zadaniach manualnych stanowią punkt wyjścia do projektu porównawczego \cite{xrprior1,xrprior2}. Zakres porównywalności tych prac z neutralnymi czynnościami domowymi, definicje błędu i szczegóły interwencji należy sprawdzić w pełnych tekstach źródłowych, zanim zostaną sformułowane twierdzenia o luce badawczej.
+Zhang i współautorzy porównali w zadaniach precyzyjnej manipulacji wskazówki AR o charakterze wizualnym i multisensorycznym, analizując wykonanie i doświadczenie użytkownika \cite{xrprior1}. W odrębnej pracy oceniali instrukcje AR oparte na początkowym i dynamicznym przydziale tolerancji montażowych \cite{xrprior2}. Wyniki tych badań pokazują, że projekt wskazówek AR i wybrana miara wykonania mają znaczenie dla interpretacji porównań. Nie stanowią jednak bezpośredniego testu przestrzennej instrukcji AR względem ekranowej instrukcji 2D w neutralnych czynnościach domowych.
 
-Odrębność niniejszej propozycji ma wynikać z analizy poprawności poszczególnych kroków i ich charakteru przestrzennego, a nie wyłącznie z zastosowania sprzętu AR. Projekt nie zakłada potrzeby użycia VLM, EEG ani okulometrii do rozstrzygnięcia pytania głównego.
+\subsection{Granica wnioskowania z dostępnych źródeł}
+Oba przywołane badania dotyczą precyzyjnych działań manualnych, a ich porównania obejmują odmiany instrukcji AR, nie zaś zaplanowany tu kontrast AR--2D. Nie uzasadniają więc twierdzenia, że w literaturze nie istnieją odpowiednie badania domowe lub że wykazano brak przewagi 2D. Dla oceny luki niezbędne jest odrębne przeszukanie i krytyczne zestawienie prac dotyczących wskazówek AR i ekranowych, z uwzględnieniem typów zadań, definicji pominięcia, sposobów pomiaru i kontekstu uczestników.
+
+\subsection{Zadanie weryfikacyjne przed zatwierdzeniem projektu}
+Należy uzupełnić przegląd pierwotnych badań bezpośrednio porównujących AR z instrukcjami 2D w wieloetapowych zadaniach o charakterze przestrzennym. Dopiero po sprawdzeniu metod, wielkości efektów i ograniczeń tych prac będzie można rozstrzygnąć, czy proponowany kontrast uzupełnia rzeczywistą lukę. Na obecnym etapie jest to luka \emph{kandydacka}, nie potwierdzona nowość.
 
 \section{Hipotezy i przewidywania}
+\subsection{Kandydat na hipotezę konfirmacyjną}
 \paragraph{H1.} W bezpiecznych, wyrównanych zadaniach instrukcje przestrzenne AR zwiększają udział poprawnych kroków względem instrukcji 2D.
+
+H1 odpowiada na PB1 i dotyczy planowanego wyniku głównego: poprawności kroku. Jej kierunek jest przewidywaniem wynikającym z postulowanego ułatwienia lokalizacji wskazówek, a nie ze zweryfikowanej przewagi AR w tym samym typie zadań. Nadanie jej statusu konfirmacyjnego wymaga jeszcze zatwierdzenia operacjonalizacji, estymandu, próby, randomizacji i analizy przed pozyskaniem danych. Do tego czasu H1 pozostaje \emph{kandydatem}, a nie prerejestrowaną hipotezą.
+
+\subsection{Hipotezy eksploracyjne}
 \paragraph{H2.} AR zmniejsza pominięcia w krokach o relacjach przestrzennych, ale niekoniecznie przy zadaniach czysto sekwencyjnych.
+
+H2 odpowiada na PB2 i wymaga osobnego zdefiniowania pominięcia oraz uprzedniej klasyfikacji kroków. Sama różnica w jednym typie kroków przy braku istotności w drugim nie dowodzi interakcji. Dla takiego wniosku należałoby bezpośrednio oszacować różnicę efektów między typami kroków.
+
 \paragraph{H3.} Wzrost poprawności nie jest osiągany kosztem przekroczenia wcześniej wybranego limitu czasu ani większej liczby przerwanych sekwencji.
 
-H1 pozostaje kandydatem na hipotezę pierwszorzędową. H2 i H3 mają obecnie charakter eksploracyjny; ich potwierdzający status wymaga uprzedniego ustalenia miar, reguł decyzyjnych i kontroli wielokrotnych porównań. Powyższe hipotezy nie zostały przetestowane.
+H3 odpowiada na PB3, lecz ma obecnie charakter eksploracyjny, ponieważ limit czasu i dopuszczalny koszt przerwań nie zostały wyznaczone. Brak statystycznie istotnej różnicy czasu nie potwierdza niegorszości. Ewentualne formalne testowanie H3 wymaga uprzedniego określenia marginesów oraz odpowiedniego projektu analizy.
+
+\subsection{Alternatywne rozstrzygnięcia}
+Możliwe jest uzyskanie podobnej poprawności w obu warunkach, przewagi instrukcji 2D albo korzystnego efektu AR tylko dla części zadań. Odmienny czas wykonania przy podobnej liczbie błędów również byłby informacyjny. Żaden z tych rezultatów nie został zaobserwowany w ramach tego projektu. Status koncepcji pozostaje \textit{deferred}.
 
 \section{Projekt metodologiczny}
 \subsection{Zadania i warunki porównawcze}
@@ -122,8 +147,8 @@ Nie są dostępne udokumentowane wyniki badań z udziałem ludzi ani dane do pub
 % publisher_specific_statements_verified:
 
 \begin{thebibliography}{9}
-\bibitem{xrprior1} Comparison of visual and multisensory augmented reality for precise manual manipulation tasks (2024), Displays. \url{https://www.sciencedirect.com/science/article/pii/S014193822400132X}.
-\bibitem{xrprior2} Evaluation of augmented reality instructions based on initial and dynamic assembly tolerance allocation schemes in precise manual assembly (2024), Advanced Engineering Informatics. \url{https://doi.org/10.1016/j.aei.2024.102954}.
+\bibitem{xrprior1} Zhang, X., He, W., Qin, Y., Billinghurst, M. i in. (2024). Comparison of visual and multisensory augmented reality for precise manual manipulation tasks. \textit{Displays}, 84, 102768. \url{https://doi.org/10.1016/j.displa.2024.102768}.
+\bibitem{xrprior2} Zhang, X., He, W., Bai, J., Billinghurst, M. i in. (2025). Evaluation of Augmented Reality instructions based on initial and dynamic assembly tolerance allocation schemes in precise manual assembly. \textit{Advanced Engineering Informatics}, 63, 102954. \url{https://doi.org/10.1016/j.aei.2024.102954}.
 \end{thebibliography}
 \end{document}
 
