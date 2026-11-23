@@ -27,7 +27,7 @@
 % orcid_verified:
 \author{Mateusz Pomianek}
 
-\date{Wersja 0.7.0, 23 listopada 2026}
+\date{Wersja 0.8.0, 23 listopada 2026}
 
 \begin{document}
 
@@ -182,7 +182,105 @@ Przed analizą należy przygotować schemat danych ze słownikiem kolumn, jednos
 Przyszły pakiet reprodukcyjny powinien rozdzielać dane źródłowe, pochodne, kodowanie zmiennych, skrypty analiz, konfigurację i wygenerowane tabele. Raport powinien wskazywać liczbę uczestników, sesji i kroków na każdej fazie filtracji, wyłączenia, nieudane przebiegi i wyniki negatywne. Uprawnienia do udostępniania danych oraz ryzyko reidentyfikacji trzeba ocenić przed jakąkolwiek publikacją. Obecnie nie istnieje udokumentowany wykonany pipeline, zamrożone środowisko analityczne ani dane tego projektu; niniejszy rozdział określa tylko wymagania do ich przyszłej realizacji.
 
 \section{Plan prezentacji wyników}
-Jeżeli badanie zostanie zatwierdzone i wykonane, raport powinien rozdzielać liczbę uczestników, sekwencji i kroków od ich wzajemnej zależności. Należałoby przedstawić przepływ prób, kompletność obserwacji, poprawność w obu warunkach, estymowaną różnicę wraz z niepewnością oraz wyniki uzupełniające, w tym przerwania i zdarzenia niepożądane. W obecnym szkicu nie ma wyników, tabel z pomiarami ani wnioskowania statystycznego.
+Niniejsza część zawiera wyłącznie \emph{szablony przyszłego raportowania}. Nie zebrano ani nie przeanalizowano danych empirycznych. Pola oznaczone słowami „do uzupełnienia” nie są wartościami zerowymi, brakami obserwacji ani wynikami symulacji. Tabele i rysunki nie mogą zostać przedstawione jako rezultaty do czasu uzyskania i weryfikacji danych, zatwierdzenia reguł analizy oraz oznaczenia ich wersji i pochodzenia.
+
+\subsection{Przepływ uczestników i kompletność obserwacji}
+W raporcie należałoby odróżnić liczbę osób zakwalifikowanych, przydzielonych do warunków, uczestniczących w sesjach i uwzględnionych w analizie. Należy oddzielnie zestawić liczbę sekwencji oraz zaplanowanych, ocenialnych i nieocenialnych kroków. Liczba kroków nie jest równoważna liczbie niezależnych uczestników. Tabela~\ref{tab:aal07-flow} określa układ takiego zestawienia.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Szablon, bez danych empirycznych. Przepływ i kompletność obserwacji według warunku instrukcji.}
+\label{tab:aal07-flow}
+\begin{tabular}{p{0.50\linewidth}p{0.19\linewidth}p{0.19\linewidth}}
+\hline
+Miara i jednostka & AR & 2D \\
+\hline
+Uczestnicy poddani ocenie (osoby) & do uzupełnienia & do uzupełnienia \\
+Uczestnicy analizowani (osoby) & do uzupełnienia & do uzupełnienia \\
+Sekwencje rozpoczęte (liczba) & do uzupełnienia & do uzupełnienia \\
+Sekwencje przerwane (liczba) & do uzupełnienia & do uzupełnienia \\
+Kroki zaplanowane (liczba) & do uzupełnienia & do uzupełnienia \\
+Kroki ocenialne (liczba) & do uzupełnienia & do uzupełnienia \\
+Kroki nieocenialne (liczba) & do uzupełnienia & do uzupełnienia \\
+\hline
+\end{tabular}
+\end{table}
+
+W projekcie wewnątrzosobniczym należy dodatkowo podać liczbę unikalnych uczestników łącznie i liczebności obu kolejności warunków, nie sumując tych samych osób dwukrotnie. Dla wszystkich braków i przerwań konieczny będzie wykaz powodów, z rozróżnieniem zachowania uczestnika, wycofania zgody i awarii technicznej. Schemat przepływu przedstawiono wyłącznie jako niewypełnione miejsce na rysunek~\ref{fig:aal07-flow}.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][23mm][c]{0.87\linewidth}{\centering
+SZABLON RYSUNKU, BRAK DANYCH\\
+Plan: kwalifikacja $\rightarrow$ przydział $\rightarrow$ sesje $\rightarrow$ analiza.\\
+Liczby osób, sekwencji i kroków do uzupełnienia.
+}}
+\caption{Szablon, bez danych empirycznych. Przepływ uczestników i obserwacji. Każdy etap powinien mieć liczebność, jednostkę oraz przyczynę wyłączenia lub braku.}
+\label{fig:aal07-flow}
+\end{figure}
+
+\subsection{Wynik pierwszorzędowy i estymand}
+Tabela~\ref{tab:aal07-primary} przewiduje zestawienie poprawności w obu warunkach i marginalnego kontrastu AR minus 2D. Odsetki mają być podawane w procentach, a różnica prawdopodobieństw w punktach procentowych. Wynik modelowy i jego przedział ufności należy powiązać z planem wag uczestników i sekwencji, z uwzględnieniem zależności pomiarów. Surowy udział kroków poprawnych nie zastępuje marginalnego oszacowania modelowego.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Szablon, bez danych empirycznych. Poprawność kroków i pierwszorzędowy kontrast AR względem 2D.}
+\label{tab:aal07-primary}
+\begin{tabular}{p{0.47\linewidth}p{0.41\linewidth}}
+\hline
+Miara (jednostka) & Wynik \\
+\hline
+Poprawność AR (\%) & do uzupełnienia \\
+Poprawność 2D (\%) & do uzupełnienia \\
+Różnica marginalna AR minus 2D (p.p.) & do uzupełnienia \\
+Przedział ufności różnicy (p.p.) & do uzupełnienia \\
+Liczba unikalnych uczestników (osoby) & do uzupełnienia \\
+Liczba ocenialnych kroków (liczba) & do uzupełnienia \\
+\hline
+\end{tabular}
+\end{table}
+
+Planowany wykres efektu powinien przedstawiać na osi poziomej różnicę marginalną AR minus 2D w punktach procentowych, z linią odniesienia dla braku różnicy i poziomym przedziałem ufności; oś pionowa wskazywałaby analizowany kontrast. Rysunek~\ref{fig:aal07-effect} stanowi jedynie miejsce na taką wizualizację. Po uzyskaniu danych należy wyraźnie podać metodę wyznaczania przedziału i poziom ufności.
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][23mm][c]{0.87\linewidth}{\centering
+SZABLON WYKRESU, BRAK DANYCH\\
+Oś X: różnica AR minus 2D (p.p.); oś Y: kontrast.\\
+Punkt i przedział ufności do naniesienia po analizie.
+}}
+\caption{Szablon, bez danych empirycznych. Marginalna różnica poprawności kroków między AR a 2D wraz z planowanym przedziałem ufności. Dodatnie wartości oznaczałyby przewagę AR; linia odniesienia oznacza brak różnicy.}
+\label{fig:aal07-effect}
+\end{figure}
+
+\subsection{Wyniki uzupełniające i błędy techniczne}
+Tabela~\ref{tab:aal07-secondary} określa wymagane jednostki i format wyników dotyczących pominięć, czasu oraz przerwań. Dla liczby pominięć należy podać przyjętą ekspozycję, dla czasu jednostkę i reguły traktowania nieukończonych sekwencji, a dla przerwań jawny mianownik. Nie należy łączyć zdarzeń technicznych z błędami uczestnika.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Szablon, bez danych empirycznych. Wyniki uzupełniające i zdarzenia techniczne.}
+\label{tab:aal07-secondary}
+\begin{tabular}{p{0.52\linewidth}p{0.36\linewidth}}
+\hline
+Miara (jednostka) & Wynik lub kontrast \\
+\hline
+Pominięcia (liczba na zaplanowane kroki) & do uzupełnienia \\
+Czas ukończenia sekwencji (s) & do uzupełnienia \\
+Przerwane sekwencje (\% sekwencji) & do uzupełnienia \\
+Zdarzenia techniczne (liczba) & do uzupełnienia \\
+Brakujące obserwacje (\% kroków) & do uzupełnienia \\
+Interakcja warunku i typu kroku (skala do ustalenia) & do uzupełnienia \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Reguły prezentacji i interpretacji}
+W przyszłym raporcie każda tabela i każdy wykres powinny wskazywać liczebności, właściwy mianownik, jednostki, sposób agregacji, status analizy (konfirmacyjna lub eksploracyjna), przedziały niepewności i powiązanie z wersją danych oraz kodu. Należy odrębnie raportować brak przewagi AR, wyniki niezgodne z hipotezami i niepowodzenia estymacji. Różnic w podgrupach nie wolno interpretować na podstawie samych porównań istotności w poszczególnych warstwach.
+
+Zaprezentowane tu trzy tabele i dwa miejsca na rysunki są wyłącznie wzorami redakcyjnymi. Nie zawierają danych empirycznych ani syntetycznych i nie dowodzą wykonania analizy. Zostaną zastąpione rzeczywistymi zestawieniami wyłącznie wtedy, gdy projekt wyjdzie ze stanu \textit{deferred}, spełni wymagane bramki oraz zostanie przeprowadzony i udokumentowany.
 
 \section{Ramy przyszłej dyskusji}
 Ewentualny efekt warunku należałoby interpretować w świetle różnic w kierowaniu uwagą, widoczności instrukcji, uczeniu się i obciążeniu interfejsem. Brak przewagi AR również byłby istotnym rozstrzygnięciem pytania badawczego. Efekt lokalny w neutralnym zadaniu nie uprawnia do twierdzeń o skuteczności klinicznej, samodzielności osób wymagających wsparcia ani zapobieganiu wypadkom domowym.
