@@ -22,93 +22,72 @@
 
 \author{Mateusz Pomianek}
 
-\date{Wersja 0.3.1, 23 listopada 2026}
+\date{Wersja 0.4.0, 23 listopada 2026}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-
-Przedmiotem opracowania jest Pomoc przestrzenna AR wobec interfejsu 2D w wykonywaniu bezpiecznych czynności domowych. Czy przestrzenna pomoc AR ogranicza błędy czynności domowych względem instrukcji ekranowej 2D? Porównane zostaną instrukcje ekranowe 2D i przestrzenne wskazówki AR podczas krótkich, bezpiecznych sekwencji czynności domowych. Głównym punktem końcowym jest odsetek poprawnych kroków i liczba pominięć przy zapewnieniu bezpiecznych warunków. Opis ma charakter wstępny i nie przedstawia niezweryfikowanych wyników.
-
+Przedstawiono koncepcję porównania przestrzennych wskazówek rzeczywistości rozszerzonej (AR) z instrukcjami ekranowymi 2D podczas wykonywania krótkich, neutralnych i niskiego ryzyka sekwencji czynności domowych. Proponowany kontrast dotyczy udziału poprawnie wykonanych kroków; pominięcia, czas i przerwania sekwencji stanowią wyniki uzupełniające. Szkic określa pytanie badawcze, hipotezy, potencjalne źródła zakłóceń i kierunek analiz statystycznych. Jest to koncepcja o statusie \textit{deferred}, a nie raport z badań: nie przedstawia wyników empirycznych, zatwierdzonego protokołu ani dowodów skuteczności lub bezpieczeństwa systemu AAL.
 \end{abstract}
 
-\section{Status koncepcji i granice dowodów}
+\section{Wprowadzenie i uzasadnienie}
+Instrukcja przestrzenna może wskazywać miejsce i kolejność czynności bez konieczności przenoszenia uwagi na osobny ekran. Nie przesądza to jednak, że AR prowadzi do mniejszej liczby błędów: sposób prezentacji, obciążenie wzrokowe, widoczność obiektu i znajomość zadania mogą zmieniać wynik. Porównanie z instrukcją 2D wymaga zatem wyrównania treści wskazówek oraz jawnego rozdzielenia jakości interfejsu od zachowania uczestnika.
 
-Niniejszy tekst jest szkicem koncepcyjnym MSC-AAL-P07 o statusie \textit{deferred} (historycznie \texttt{NEW\_CROSS\_DOMAIN\_IDEA\_HOLD}). Właścicielem naukowym pracy jest Mateusz Pomianek, a kanonicznym źródłem tego szkicu jest repozytorium \texttt{MatPomGit/arc-xr}. Wpis w portfolio i przygotowane hipotezy nie oznaczają zatwierdzenia protokołu ani rozpoczęcia eksperymentu.
+Punktem odniesienia są kontrolowane, nieszkodliwe czynności o strukturze wieloetapowej. Przez „bezpieczne czynności domowe” rozumie się tutaj zadania laboratoryjne bez ekspozycji na zagrożenia elektryczne, termiczne i mechaniczne; nie jest to deklaracja bezpieczeństwa rzeczywistych urządzeń ani skuteczności opieki wspomaganej technologicznie.
 
-Dostępne materiały obejmują pytanie badawcze, propozycję porównania AR z interfejsem 2D, wstępne hipotezy, kandydacki estymand i plan analiz. Nie udokumentowano dla tej koncepcji zebranych danych, wyników empirycznych, prerejestracji ani właściwej oceny etycznej. Przed podniesieniem statusu wymagane są co najmniej: weryfikacja źródeł i odrębności wkładu, zatwierdzenie protokołu i miar, ocena wykonalności stanowiska oraz rozstrzygnięcie wymagań etycznych. Brak tych dowodów nie jest wynikiem negatywnym badania.
+\section{Cel, pytanie i zakres nowości}
+Celem proponowanej pracy jest oszacowanie, czy przestrzenne wskazówki AR zmieniają poprawność kolejnych kroków względem informacyjnie równoważnych instrukcji ekranowych 2D. Pytanie główne brzmi: czy przy porównywalnej treści i trudności zadania interfejs AR ogranicza błędy wykonania neutralnych czynności domowych?
 
-\section{Wprowadzenie}
+Potencjalnym wkładem jest zdefiniowany kontrast dwóch sposobów prezentacji tej samej instrukcji, z rozróżnieniem kroków wymagających lokalizacji przestrzennej i kroków wyłącznie sekwencyjnych. Nowość tego ujęcia wymaga jeszcze krytycznej weryfikacji literatury. Nie należy utożsamiać ewentualnej przewagi poprawności z poprawą bezpieczeństwa rzeczywistej opieki AAL.
 
-Rozwój adaptacyjnych systemów XR stwarza możliwość badania interakcji człowieka z informacją przestrzenną, ale samo zastosowanie AR, VR lub modeli sztucznej inteligencji nie przesądza o przewadze poznawczej czy ergonomicznej. W rozpatrywanym zagadnieniu, Pomoc przestrzenna AR wobec interfejsu 2D w wykonywaniu bezpiecznych czynności domowych, kluczowe jest rozdzielenie właściwości systemu od zmienności zachowania użytkownika. Porównanie należy zaprojektować tak, aby mierzyć jednoznaczne zjawisko, a nie tylko ogólną ocenę technologii.
+\section{Stan badań i luka badawcza}
+Badania dotyczące instrukcji AR w precyzyjnych zadaniach manualnych stanowią punkt wyjścia do projektu porównawczego \cite{xrprior1,xrprior2}. Zakres porównywalności tych prac z neutralnymi czynnościami domowymi, definicje błędu i szczegóły interwencji należy sprawdzić w pełnych tekstach źródłowych, zanim zostaną sformułowane twierdzenia o luce badawczej.
 
-\section{Cel pracy i pytanie badawcze}
+Odrębność niniejszej propozycji ma wynikać z analizy poprawności poszczególnych kroków i ich charakteru przestrzennego, a nie wyłącznie z zastosowania sprzętu AR. Projekt nie zakłada potrzeby użycia VLM, EEG ani okulometrii do rozstrzygnięcia pytania głównego.
 
-Czy przestrzenna pomoc AR ogranicza błędy czynności domowych względem instrukcji ekranowej 2D? Badanie dotyczy porównania form wskazówek w scenach o minimalnym ryzyku, bez zakładania wdrożenia klinicznego lub domowego.
-
-\section{Zakres i odrębny wkład naukowy}
-Przestrzenne wskazówki AR wobec analogicznych instrukcji 2D podczas nieszkodliwych czynności domowych. Wynik nie stanowi dowodu bezpieczeństwa urządzeń lub skuteczności opieki AAL. Dopasowany kontrast błędów przestrzennych w neutralnych czynnościach, nie generalizacja bezpieczeństwa AAL.
-
-\section{Hipotezy badawcze}
+\section{Hipotezy i przewidywania}
 \paragraph{H1.} W bezpiecznych, wyrównanych zadaniach instrukcje przestrzenne AR zwiększają udział poprawnych kroków względem instrukcji 2D.
 \paragraph{H2.} AR zmniejsza pominięcia w krokach o relacjach przestrzennych, ale niekoniecznie przy zadaniach czysto sekwencyjnych.
 \paragraph{H3.} Wzrost poprawności nie jest osiągany kosztem przekroczenia wcześniej wybranego limitu czasu ani większej liczby przerwanych sekwencji.
 
-\section{Projekt badania i plan eksperymentów}
-\subsection{A. Operacjonalizacja i kwalifikacja danych}
-Przestrzenne wskazówki AR wobec analogicznych instrukcji 2D podczas nieszkodliwych czynności domowych. Wynik nie stanowi dowodu bezpieczeństwa urządzeń lub skuteczności opieki AAL. Jednostka wnioskowania: uczestnik × sekwencja zadań domowych zagnieżdżająca kroki. Punkt końcowy i sposób oceny będą zamrożone przed próbą potwierdzającą. Należy udokumentować pochodzenie obserwacji, czas akwizycji, identyfikatory sesji, harmonogram oraz legalność użycia materiałów.
+H1 pozostaje kandydatem na hipotezę pierwszorzędową. H2 i H3 mają obecnie charakter eksploracyjny; ich potwierdzający status wymaga uprzedniego ustalenia miar, reguł decyzyjnych i kontroli wielokrotnych porównań. Powyższe hipotezy nie zostały przetestowane.
 
-\subsection{B. Eksperyment porównawczy}
-Porównać jednakową instrukcję 2D i AR; randomizować sekwencje i użyć wyłącznie przedmiotów bez ryzyka elektrycznego lub termicznego. Estymand pierwszorzędowy: różnica udziału poprawnie ukończonych kroków: przestrzenne AR minus 2D. Przypisanie warunków, mianowniki i kryteria wyłączeń nie mogą być dobierane po przejrzeniu wyników.
+\section{Projekt metodologiczny}
+\subsection{Zadania i warunki porównawcze}
+Projekt zakłada dwa warunki: instrukcje wyświetlane na ekranie 2D i przestrzenne wskazówki AR. Treść, liczba kroków, dostępne informacje i poziom trudności powinny być porównywalne między warunkami. Zadania mają obejmować czynności o minimalnym ryzyku, z rozróżnieniem etapów zależnych od relacji przestrzennych i etapów sekwencyjnych.
 
-\subsection{C. Kontrole i analiza odporności}
-Ujednolicić czas instrukcji, wielkość tekstu, nawyki uczestnika i widoczność obiektu. Sprawdzać łatwe i przestrzennie złożone kroki; bez wnioskowania o populacji klinicznej. Każdą odmowę systemu, niekompletną próbę i brak sygnału należy raportować osobno, a nie po cichu usuwać z próby.
+\subsection{Uczestnicy, przypisanie i przebieg}
+Dobór uczestników, kryteria włączenia i wyłączenia, liczebność oraz decyzja o planie wewnątrz- lub międzyosobniczym wymagają ustalenia przed rozpoczęciem badania. W wariancie z powtarzanymi pomiarami należy zrównoważyć kolejność warunków i sekwencji zadań, a także uwzględnić uczenie się i zmęczenie. Obecnie nie istnieje zatwierdzony schemat randomizacji.
 
-\subsection{D. Walidacja na niezależnym materiale}
-Ocenę należy wykonać na uprzednio odłożonych scenach, sesjach lub uczestnikach. Model binominalny poprawności z efektami uczestnika i sekwencji oraz osobny licznik pominięć. Model i próg zatrzymać przed analizą końcową; rejestrować również brak przewagi i działania niepożądane.
+\subsection{Operacjonalizacja i jakość danych}
+Jednostką zapisu byłby pojedynczy krok przypisany do uczestnika, sekwencji i warunku. Za poprawny krok należałoby uznać wykonanie spełniające z góry ustaloną regułę oceny, niezależną od samego interfejsu. Dokumentacja powinna zawierać mianownik ocenianych kroków, typ błędu, czas, przerwanie zadania oraz przyczynę ewentualnego braku obserwacji. Ocena poprawności i sposób traktowania kroków nieukończonych muszą być określone przed pomiarem.
 
-\section{Estymand, analiza statystyczna i decyzje}
-Główny estymand: różnica udziału poprawnie ukończonych kroków: przestrzenne AR minus 2D. Jednostką powtarzalności jest uczestnik × sekwencja zadań domowych zagnieżdżająca kroki. Model binominalny poprawności z efektami uczestnika i sekwencji oraz osobny licznik pominięć. H1 jest kandydatem na hipotezę potwierdzającą. H2 i H3 pozostają eksploracyjne, dopóki protokół nie określi ich hierarchii i kontroli wielokrotnych porównań. Minimalny efekt istotny praktycznie, liczebność prób, margines nie gorszości i progi jakości wyznaczyć na podstawie pilotażu i analizy precyzji, nie zgadywać wartości.
+\subsection{Bezpieczeństwo, etyka i wykonalność}
+Planowany scenariusz nie może wymagać kontaktu z zasilanymi urządzeniami, gorącymi przedmiotami ani narzędziami powodującymi obrażenia. Przed badaniem z udziałem osób konieczne jest ustalenie wymagań formalno-etycznych i świadomej zgody. Stanowisko AR, widoczność obiektów, opóźnienia i ergonomia wymagają oceny wykonalności; proponowane zasoby sprzętowe nie stanowią potwierdzenia gotowej infrastruktury. Nie przewiduje się publikowania surowych nagrań uczestników.
 
-\section{Stan badań i granica nowości}
-\begin{itemize}
-\item AR versus other guidance modalities is established; a new effect needs precise task and performance definitions. \cite{xrprior1}.
-\item AR assistance for precise manual procedures is established; independent sequential error detection requires a different endpoint. \cite{xrprior2}.
-\end{itemize}
-Dopasowany kontrast błędów przestrzennych w neutralnych czynnościach, nie generalizacja bezpieczeństwa AAL. Samo zastosowanie VLM, EEG, okulometrii lub adaptacyjnego HUD nie stanowi wystarczającej nowości międzynarodowej.
+\section{Plan analizy statystycznej}
+\subsection{Estymand i wynik główny}
+Kandydackim estymandem jest różnica prawdopodobieństwa poprawnego wykonania kroku pomiędzy AR a 2D, uśredniona w uprzednio określonej populacji zadań i uczestników. Operacyjnie wynik główny można przedstawić jako udział poprawnych kroków przy jawnym mianowniku. Przed analizą należy uzgodnić, czy celem jest kontrast marginalny, oraz przyjąć reguły dotyczące przerwań i braków danych.
 
-\section{Warunki bezpieczeństwa, sprzętu i zgodności}
-Opis stanowi prospektywny plan, a nie prerejestrację ani zatwierdzoną procedurę. Przed zbieraniem danych od ludzi niezbędna jest właściwa weryfikacja etyczna i zgoda. Standardowy Quest 3 nie ma wbudowanego eye trackingu, a Tobii Eye Tracker 5 działa na stanowisku ekranowym. Odstępstwa, obciążenia i ograniczenia czujników muszą być ujawnione. Nie publikować surowych danych biometrycznych ani nagrań uczestników.
+\subsection{Model i zależności obserwacji}
+Dla binarnej poprawności kroku rozważa się model mieszany z efektem warunku i efektami związanymi z uczestnikiem oraz sekwencją. Kolejność, typ kroku i doświadczenie mogą stanowić wcześniej określone zmienne towarzyszące. Estymatę efektu należy prezentować wraz z przedziałem niepewności; nie można traktować kolejnych kroków tej samej osoby jako niezależnych uczestników.
 
-\section{Materiał i metody}
+\subsection{Wyniki uzupełniające i analizy odporności}
+Pominięcia, czas wykonania i przerwane sekwencje powinny być raportowane oddzielnie. Różnice według typu kroku można analizować eksploracyjnie. Należy przewidzieć analizę wrażliwości na reguły kodowania nieukończonych sekwencji i brakujących obserwacji. Liczebność, minimalny efekt o znaczeniu praktycznym oraz ewentualny margines niegorszości nie zostały ustalone; nie wolno ich dobierać po poznaniu wyników.
 
-Porównane zostaną instrukcje ekranowe 2D i przestrzenne wskazówki AR podczas krótkich, bezpiecznych sekwencji czynności domowych. Wymagane jest zdefiniowanie jednostki analizy, zasad doboru przypadków, wersji scenariusza i źródeł pomiaru. Rozkład warunków oraz reguły wykluczenia prób należy określić przed pomiarem. W badaniach z udziałem ludzi niezbędna jest uprzednia właściwa ocena etyczna i świadoma zgoda. W testach wyłącznie symulacyjnych należy oddzielić prawdę symulacyjną od obserwacji empirycznej.
+\section{Plan prezentacji wyników}
+Jeżeli badanie zostanie zatwierdzone i wykonane, raport powinien rozdzielać liczbę uczestników, sekwencji i kroków od ich wzajemnej zależności. Należałoby przedstawić przepływ prób, kompletność obserwacji, poprawność w obu warunkach, estymowaną różnicę wraz z niepewnością oraz wyniki uzupełniające, w tym przerwania i zdarzenia niepożądane. W obecnym szkicu nie ma wyników, tabel z pomiarami ani wnioskowania statystycznego.
 
-\subsection{Wynik główny i kryteria jakości}
+\section{Ramy przyszłej dyskusji}
+Ewentualny efekt warunku należałoby interpretować w świetle różnic w kierowaniu uwagą, widoczności instrukcji, uczeniu się i obciążeniu interfejsem. Brak przewagi AR również byłby istotnym rozstrzygnięciem pytania badawczego. Efekt lokalny w neutralnym zadaniu nie uprawnia do twierdzeń o skuteczności klinicznej, samodzielności osób wymagających wsparcia ani zapobieganiu wypadkom domowym.
 
-Odsetek poprawnych kroków i liczba pominięć przy zapewnieniu bezpiecznych warunków. Pomiar powinien zachowywać jawne jednostki, znaczniki czasu i reguły oceny poprawności. Przy modelach predykcyjnych stosować rozłączne partycje oceny; przy eksperymentach interwencyjnych oddzielić skuteczność predykcji od przyczynowego wpływu interfejsu.
+\section{Ograniczenia koncepcji}
+Koncepcja nie ma zatwierdzonego protokołu, potwierdzonej liczebności próby, kompletnej krytycznej syntezy literatury ani udokumentowanej oceny wykonalności stanowiska. Transfer wyników z czynności laboratoryjnych do codziennych zadań i różnych populacji pozostaje otwartą kwestią. Wymaga także kontroli potencjalnego wpływu różnic sprzętowych między AR i 2D.
 
-\section{Plan analizy}
-
-Model mieszany dla kroku i uczestnika z kontrolą kolejności, doświadczenia oraz czasu ukończenia. W wynikach należy raportować wielkość efektu lub błąd estymacji z przedziałem niepewności, liczbą obserwacji i odsetkiem odrzuconych prób. Analizy dodatkowe wymagają jasnego oznaczenia jako eksploracyjne. Nie wybierać progów decyzyjnych ani modelu na podstawie obserwacji ze zbioru testowego.
-
-\section{Wyniki}
-
-W obecnej wersji nie raportuje się wyników pomiarów, tabel statystycznych ani parametrów wyznaczonych z nieudokumentowanych danych. To kierunek badawczy, a nie zatwierdzony protokół badania ani zgłoszony artykuł.
-
-\section{Dyskusja}
-
-Interpretacja przyszłych wyników musi uwzględnić alternatywne mechanizmy i zależność wniosków od jakości danych, warunków zadania oraz ograniczeń sprzętu. Wartość potencjalnego rozwiązania zależy nie tylko od trafności modelu, lecz także od jego opóźnienia, stabilności i wpływu na zachowanie człowieka. Wyniki testów syntetycznych nie mogą być automatycznie uogólniane na populację uczestników.
-
-\section{Ograniczenia badania}
-
-Wynik dla symulowanych zadań nie potwierdza bezpieczeństwa urządzeń domowych ani skuteczności systemów AAL w opiece. Granice nowości i trafności ekologicznej wymagają niezależnej weryfikacji. Żadna część szkicu nie dowodzi przeprowadzenia zbierania danych, uzyskania zgód etycznych ani gotowości manuskryptu do zgłoszenia.
-
-\section{Wnioski}
-
-Przedstawiono problem, kontrast i sposób jego planowanej oceny. Rozstrzygnięcie postawionego pytania wymaga przygotowania protokołu, zweryfikowanych źródeł oraz poprawnie udokumentowanych wyników. Bez tych materiałów nie można sformułować konkluzji empirycznych.
+\section{Wnioski koncepcyjne}
+Przedstawiony projekt pozwala sformułować testowalny kontrast między instrukcją przestrzenną AR i ekranową 2D oraz powiązać go z poprawnością kroków. Dalsze prace wymagają weryfikacji literatury, zamknięcia operacjonalizacji, planu doboru uczestników, oceny bezpieczeństwa i decyzji etycznych. Na obecnym etapie nie ma podstaw do wniosków o przewadze AR; status projektu pozostaje \textit{deferred}.
 
 \begin{thebibliography}{9}
 \bibitem{xrprior1} Comparison of visual and multisensory augmented reality for precise manual manipulation tasks (2024), Displays. \url{https://www.sciencedirect.com/science/article/pii/S014193822400132X}.
