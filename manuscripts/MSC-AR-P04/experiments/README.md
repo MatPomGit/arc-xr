@@ -20,3 +20,7 @@ Jednostki rejestrowane: uczestnik/scena, sesja, warunek, próba, znacznik czasu,
 Dokument konfiguracji (w tym seed, jeśli dotyczy), identyfikatory wersji danych/modelu/kodu, manifest podziału na grupy, raport kompletności i synchronizacji, log wykluczeń, skrypt odtworzeniowy oraz rezultaty zagregowane bez danych osobowych.
 
 Nie umieszczać w repozytorium surowych nagrań uczestników. Etapy z ludźmi realizować wyłącznie po zamknięciu wymagań z [protokołu](../protocol/README.md).
+
+## Implementacja techniczna v0.2.0
+
+[Benchmark Python i instrukcja odtworzenia](benchmark/README.md) zawierają generator scen, adapter Ollama i ewaluator parowany. Wariant techniczny realizuje minimalne porównanie RGB vs RGB+geometria; rozszerzony wariant trójwarunkowy powyżej nie jest częścią tego prototypu. Prototyp nie zamraża protokołu badania. Scientific owner: Mateusz Pomianek (MatPomGit).
