@@ -27,6 +27,20 @@ class XRResearchProtocolTest(unittest.TestCase):
         for p in PAPERS:
             with self.subTest(id=p["id"]):
                 source=(ROOT/p["local_draft"]).read_text(encoding="utf-8")
+                if p["id"] == "MSC-ADHD-P04":
+                    folder = ROOT / p["local_draft"]
+                    self.assertIn(r"\documentclass[man]{apa7}", source)
+                    self.assertIn(r"\authorsnames{Mateusz Pomianek}", source)
+                    self.assertIn(r"\addbibresource{references.bib}", source)
+                    self.assertTrue((folder.parent / "references.bib").is_file())
+                    sections = re.findall(r"\\input\{(sections/[^}]+)\}", source)
+                    self.assertEqual(len(sections), 15)
+                    self.assertEqual(len(set(sections)), 15)
+                    for section in sections:
+                        self.assertTrue((folder.parent / (section + ".tex")).is_file())
+                    self.assertEqual(source.count(r"\begin{document}"), 1)
+                    self.assertEqual(source.count(r"\end{document}"), 1)
+                    continue
                 expected_version = {"MSC-AR-P04": "0.4.0"}.get(p["id"], "0.3.0")
                 self.assertRegex(source, r"\\date\{Wersja " + re.escape(expected_version) + r",")
                 self.assertEqual(re.findall(r"\\paragraph\{H([1-3])\.\}",source),["1","2","3"])

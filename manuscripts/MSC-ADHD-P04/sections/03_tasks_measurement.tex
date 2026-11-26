@@ -1,0 +1,41 @@
+\section{Tasks and Measurement}
+
+\subsection{Matched executive tasks}
+
+Each condition should instantiate the same underlying rule wherever possible. Examples include response inhibition, rule switching, working-memory updating, and stop-and-go control. The stationary version uses touchscreen input, the embodied version maps the same decision to controlled device or body movement, and the AR version maps it to spatially anchored targets.
+
+A matched task pair is rejected if condition-specific instructions introduce a different cognitive construct or materially change the probability of success before movement is considered.
+
+\subsection{Sensorimotor synchronization}
+
+For a target cue at time \(h_k\) and detected movement event at time \(m_k\),
+
+\[
+e_k=m_k-h_k.
+\]
+
+Preregistered summaries can include
+
+\[
+\mathrm{MAE}_{sync}
+=
+\frac{1}{K}\sum_{k=1}^{K}|e_k|,
+\qquad
+\mathrm{Bias}_{sync}
+=
+\frac{1}{K}\sum_{k=1}^{K}e_k,
+\]
+
+together with the standard deviation of \(e_k\). Absolute error, systematic anticipation or delay, and temporal variability are therefore distinguished.
+
+\subsection{Movement exposure}
+
+Movement is quantified using derived inertial summaries such as cumulative angular displacement, movement time, stop compliance, and bounded activity counts. Increased movement is an exposure outcome, not a therapeutic endpoint by itself.
+
+\subsection{Environmental search}
+
+AR tasks may use the rear camera to identify coarse non-identifying environmental properties such as color, simple shape, or a study-provided marker. Processing should be local. Standard telemetry should record derived detections and task events rather than environmental video.
+
+\subsection{Recovery and transfer}
+
+The same monitoring-anchored \(T_{\mathrm{rec}}\) definition used in the core paper is applied across contexts. \(T_{\mathrm{pre}}\) and \(T_{\mathrm{total}}\) are retained separately because embodied or AR conditions may change the time required to orient, move, or execute a strategy before measurable recovery monitoring begins. Independent transfer tasks should differ from the trained interaction and should not require the same AR interface. A transfer claim requires improvement on an outcome that is not simply another version of the practiced spatial task.

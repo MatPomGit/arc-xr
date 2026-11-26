@@ -51,7 +51,8 @@ jobs:
           sudo apt-get update -qq
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
             latexmk lmodern texlive-latex-base texlive-latex-recommended \
-            texlive-fonts-recommended texlive-lang-polish poppler-utils
+            texlive-fonts-recommended texlive-lang-polish poppler-utils \
+            texlive-publishers texlive-latex-extra texlive-bibtex-extra biber
       - name: Compile and inspect 28 manuscripts in isolated temporary directories
         shell: bash
         run: |
