@@ -46,6 +46,23 @@ class TeXManuscriptTests(unittest.TestCase):
                 self.assertFalse(tex.is_symlink())
                 self.assertTrue((tex.parent / "README.md").is_file())
                 body = tex.read_text(encoding="utf-8")
+                if identifier == "MSC-ADHD-P04":
+                    sections = re.findall(r"\\input\{(sections/[^}]+)\}", body)
+                    self.assertEqual(len(sections), 15)
+                    self.assertEqual(set(sections), {"sections/" + p.stem for p in (tex.parent / "sections").glob("*.tex")})
+                    expanded = body + "".join((tex.parent / (s + ".tex")).read_text(encoding="utf-8") for s in sections)
+                    self.assertGreater(len(expanded), 3500)
+                    self.assertIn(r"\abstract{", expanded)
+                    self.assertIn(r"\authorsnames{Mateusz Pomianek}", body)
+                    self.assertIn(r"\addbibresource{references.bib}", body)
+                    self.assertTrue((tex.parent / "references.bib").is_file())
+                    match = re.search(r"\\title\{(.+)\}", body)
+                    self.assertIsNotNone(match)
+                    self.assertNotIn(match.group(1), seen_titles)
+                    seen_titles.add(match.group(1))
+                    self.assertEqual(body.count(r"\begin{document}"), 1)
+                    self.assertEqual(body.count(r"\end{document}"), 1)
+                    continue
                 self.assertGreater(len(body), 3500)
                 for token in (
                     r"\documentclass", r"\usepackage[T1]{fontenc}",

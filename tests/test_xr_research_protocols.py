@@ -34,8 +34,8 @@ class XRResearchProtocolTest(unittest.TestCase):
                     self.assertIn(r"\addbibresource{references.bib}", source)
                     self.assertTrue((folder.parent / "references.bib").is_file())
                     sections = re.findall(r"\\input\{(sections/[^}]+)\}", source)
-                    self.assertEqual(len(sections), 14)
-                    self.assertEqual(len(set(sections)), 14)
+                    self.assertEqual(len(sections), 15)
+                    self.assertEqual(len(set(sections)), 15)
                     for section in sections:
                         self.assertTrue((folder.parent / (section + ".tex")).is_file())
                     self.assertEqual(source.count(r"\begin{document}"), 1)
