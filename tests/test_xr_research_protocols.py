@@ -27,7 +27,8 @@ class XRResearchProtocolTest(unittest.TestCase):
         for p in PAPERS:
             with self.subTest(id=p["id"]):
                 source=(ROOT/p["local_draft"]).read_text(encoding="utf-8")
-                self.assertIn("Wersja 0.3.0",source)
+                expected_version = {"MSC-AR-P04": "0.4.0"}.get(p["id"], "0.3.0")
+                self.assertRegex(source, r"\\date\{Wersja " + re.escape(expected_version) + r",")
                 self.assertEqual(re.findall(r"\\paragraph\{H([1-3])\.\}",source),["1","2","3"])
                 self.assertEqual(re.findall(r"\\subsection\{([A-D])\. ",source),["A","B","C","D"])
                 for section in ("Zakres i odrębny wkład naukowy",
