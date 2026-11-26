@@ -1,4 +1,4 @@
-# MSC-AR-P04 — benchmark techniczny v0.3.0
+# MSC-AR-P04 — benchmark techniczny v0.4.0
 
 Scientific owner: Mateusz Pomianek (MatPomGit).
 Powiązane zadanie: [Issue #10](https://github.com/MatPomGit/arc-xr/issues/10).
@@ -33,3 +33,12 @@ Windows Python 3.13: użytkownik przekazał wynik 4/4 testów generatora i 7/7 t
     python run_vlm.py score generated_perspective perspective-pilot.jsonl
 
 Model kamery otworkowej: 640 × 480 px, ogniskowa 440 px, osie x w prawo, y w górę, głębokość dodatnia od kamery; wysokość podłogi względem kamery −0,65 m. Sześciany/prostopadłościany mają rozłączne kolumny projekcji; głębokość i wysokość są zróżnicowane. Dwa zadania: minimalna głębokość środka obiektu oraz maksymalna wysokość fizyczna. Geometryczne referencje są syntetyczne, nie pochodzą z fizycznej kalibracji. Brak okluzji między obiektami, tekstur i szumu sensorowego; wyniki nie świadczą o działaniu w realnym AR. Nie łączyć wyników ortograficznych i perspektywicznych w jeden estymand bez osobnego planu. Cztery nowe testy zapisano, ich wykonanie na exact SHA pozostaje NOT_RUN.
+
+## Odporność v0.4.0
+
+    python perturbations.py generated_perspective generated_noise --sigma 0.02 --fraction 0.1 --seed 42
+    python -m unittest test_perturbations -v
+    python run_vlm.py run generated_noise noise-pilot.jsonl --model qwen3-vl:8b --split development --limit 2
+    python run_vlm.py score generated_noise noise-pilot.jsonl
+
+Proponowane poziomy: sigma = 0, 0.02, 0.05 m; zasłonięcie 0, 0.10, 0.25 szerokości obrazu. Każda konfiguracja powstaje z tego samego źródłowego manifestu, z identycznym seed. Szum dotyczy x, głębokości i wysokości, nie zmienia referencji; zasłonięcie jest sztucznym pasem obrazu, nie fizyczną okluzją obiektów. Odrębne strumienie pseudolosowe dla geometrii i obrazu. Nie traktować powtórzonych scen z różnych konfiguracji jako niezależnych jednostek; analiza interakcji wymaga parowania po scenie i osobnego planu. Pięć nowych testów, wykonanie na exact SHA NOT_RUN. Nie uruchomiono inferencji.
