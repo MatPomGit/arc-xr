@@ -1,0 +1,33 @@
+\section{Prospective Statistical Analysis Plan}
+
+\subsection{Distinct inferential stages}
+The matched-context crossover and the longitudinal transfer trial answer different questions and require separate preregistrations. In the crossover, S, E, and A denote stationary, embodied non-AR, and embodied AR interaction. The principal mechanistic contrasts are E--S and A--E; A--S describes the combined intervention. In the transfer trial, the comparison is randomized assignment to varied-context versus fixed-context practice, with an independent outcome collected outside the training interface. Neither experiment is presented as a completed clinical efficacy trial.
+
+\subsection{Outcome hierarchy}
+For the crossover, the prespecified cognitive-control endpoint should be an interpretable task-specific accuracy measure, accompanied by response-time and movement summaries. Non-inferiority of cognitive performance must be established before an increase in movement exposure is considered an acceptable implementation gain. A distinct recovery-time analysis evaluates the monitoring-anchored event definition from the core protocol. For the transfer trial, one independently assessed post-training outcome is primary; retention and trained-task outcomes are secondary. The final choice of task family, margin, and useful transfer difference must precede outcome inspection.
+
+\subsection{Crossover estimation}
+Let \(Y_{ibc}\) denote a valid block-level outcome for child \(i\), block \(b\), and context \(c\). A candidate mixed model is
+\[
+Y_{ibc}=\beta_0+\beta_E I(c=E)+\beta_A I(c=A)
++\gamma^\top X_{ib}+u_i+\varepsilon_{ibc},
+\]
+where \(X_{ib}\) contains prespecified order, session, and challenge variables, and \(u_i\) captures between-child heterogeneity. With S as reference, the E--S contrast is \(\beta_E\) and the A--E contrast is \(\beta_A-\beta_E\). For binary trial accuracy, a suitable generalized mixed model replaces the Gaussian response model; its estimand scale and marginalization procedure must be specified in advance. Repeated blocks do not constitute independent children.
+
+\subsection{Non-inferiority decisions}
+Let \(D_{ES}\) and \(D_{AE}\) denote cognitive-performance differences oriented so that larger values are favorable. For a justified positive margin \(\delta_{NI}\), the relevant comparison meets non-inferiority only when the lower bound of its prespecified confidence interval exceeds \(-\delta_{NI}\). A nonsignificant superiority test is not evidence of non-inferiority. The margin, confidence level, analysis population, and handling of invalid trials must be fixed prospectively. A hierarchy or multiplicity correction is required if both contrasts are confirmatory.
+
+\subsection{Recovery events and competing burdens}
+Recovery time is measured from the common monitoring anchor and is right-censored at the prespecified horizon if qualifying recovery has not occurred. Pre-monitoring transition time and total elapsed time are separate outcomes. Child-requested stopping and safety overrides are intercurrent events rather than ordinary noninformative censoring. The analysis plan must define a composite or policy strategy for these events before data inspection. Differences in recovery must be interpreted jointly with cognitive accuracy, challenge equivalence, and adverse-event frequency.
+
+\subsection{Transfer-trial estimation}
+For the longitudinal randomized comparison, the primary estimand is the difference in mean independent post-training transfer score under assignment to varied-context versus fixed-context training. A baseline-adjusted model with randomized arm as predictor is preferred to selecting the larger of several change-score contrasts. Randomization strata and prespecified baseline variables may be included; training adherence and movement exposure are postrandomization variables and do not enter the primary adjustment set. A retention analysis examines persistence, not a second uncorrected primary endpoint.
+
+\subsection{Missing data and robustness}
+Report screened, eligible, randomized, exposed, assessed, and analyzed participant counts separately. Technical AR failures, unavailable telemetry, child-requested stops, and missing independent assessments require distinct reason codes. A complete-case analysis may select unusually capable devices or more tolerant children. Sensitivity analyses will compare assignment-based and technically valid summaries, investigate differential missingness by arm and device capability, and evaluate plausible missing-not-at-random departures for transfer outcomes. Missing cognitive outcomes must not be recoded as correct or incorrect without an explicit estimand rationale.
+
+\subsection{Precision and multiplicity}
+Sample-size planning will use pilot estimates of within-child correlation, between-child variability, feasible block count, tracking loss, and anticipated attrition. No numerical power claim or target sample size is asserted without these inputs. Confirmatory families of contrasts and their error-control procedure must be frozen before data access. Secondary analyses of novelty, age, movement exposure, or device class are descriptive unless separately powered and preregistered.
+
+\subsection{Decision framework}
+Progression to the longitudinal study requires adequate task equivalence, tolerability, technical coverage, and cognitive non-inferiority in the preceding stage. Evidence of independent transfer requires a sufficiently precise randomized-arm contrast on the external endpoint. A movement gain without preserved cognition, an AR gain that disappears relative to E, or an improvement confined to trained tasks does not support the proposed generalization mechanism. Wide uncertainty intervals remain inconclusive rather than demonstrating absence of an effect.

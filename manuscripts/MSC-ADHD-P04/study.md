@@ -36,3 +36,17 @@
 Dane o niepublicznych repozytoriach i pełnej historii pochodzenia znajdują się poza dokumentacją publiczną.
 
 Weryfikacja badania wymaga oceny praw do danych, niezależności wyniku, sposobu doboru próby, etyki i bezpieczeństwa stanowiska, o ile dotyczą tematu. Wszystkie zależności oprogramowania są **kandydaturami**, nie zatwierdzonymi wdrożeniami. Nie przedstawiono nieistniejących pomiarów ani statystyk.
+
+
+## Imported prospective protocol
+
+The complete manuscript defines stationary, embodied non-AR, and embodied AR crossover conditions, and a distinct randomized context-transfer trial. The following scientific contract snapshots complement the manuscript; their presence does not authorize participant recruitment.
+
+- [contracts/docs/byod_cross_device_benchmark_protocol.md](contracts/docs/byod_cross_device_benchmark_protocol.md)
+- [contracts/docs/multisensory_embodied_ar.md](contracts/docs/multisensory_embodied_ar.md)
+- [contracts/docs/near_transfer_and_functional_outcomes.md](contracts/docs/near_transfer_and_functional_outcomes.md)
+- [contracts/docs/outcome_measure_audit.md](contracts/docs/outcome_measure_audit.md)
+- [contracts/docs/safety_interaction_rules.md](contracts/docs/safety_interaction_rules.md)
+- [contracts/docs/sensorimotor_fusion.md](contracts/docs/sensorimotor_fusion.md)
+- [contracts/docs/statistical_reporting_policy.md](contracts/docs/statistical_reporting_policy.md)
+- [contracts/docs/study_protocol.md](contracts/docs/study_protocol.md)
