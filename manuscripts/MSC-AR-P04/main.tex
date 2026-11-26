@@ -22,7 +22,7 @@
 
 \author{Mateusz Pomianek}
 
-\date{Wersja 0.3.0, 21 listopada 2026}
+\date{Wersja 0.4.0, 26 listopada 2026}
 
 \begin{document}
 
@@ -83,6 +83,49 @@ Ten sam model VLM zostanie oceniony na jednakowych scenach w wariancie obrazowym
 \subsection{Wynik główny i kryteria jakości}
 
 Odsetek prawidłowo wskazanych obiektów na niezależnym zbiorze scen. Pomiar powinien zachowywać jawne jednostki, znaczniki czasu i reguły oceny poprawności. Przy modelach predykcyjnych stosować rozłączne partycje oceny; przy eksperymentach interwencyjnych oddzielić skuteczność predykcji od przyczynowego wpływu interfejsu.
+
+
+\subsection{Benchmark syntetyczny i metody referencyjne}
+W prototypie technicznym zastosowano kamerę otworkową o rozdzielczości
+$640\times480$ pikseli i ogniskowej $f_x=f_y=440$ pikseli.
+Dla punktu $(X,Y,Z)$, gdzie $Z>0$, współrzędne obrazu wynoszą
+\[
+ u=c_x+f_x X/Z,\qquad v=c_y-f_y Y/Z.
+\]
+Sceny zawierają trzy oznaczone prostopadłościany o zróżnicowanej wysokości
+i głębokości. Generator zapisuje obraz RGB, geometrię oraz oddzielne
+referencje odpowiedzi. W wariancie podstawowym przewidziano 30 scen,
+z których 10 służy rozwojowi, a 20 pozostaje odłożonych do późniejszej oceny.
+Porównanie główne obejmuje ten sam VLM z obrazem RGB oraz z obrazem
+i jawną geometrią. Dodatkowy algorytm deterministyczny wybiera obiekt
+o najmniejszej głębokości lub największej wysokości, korzystając z identyfikatora
+szablonu instrukcji. Nie stanowi zatem równoważnego testu rozumienia języka.
+Jego czas obliczeń nie jest bezpośrednio porównywalny z pełnym czasem
+żądania do serwera VLM.
+
+\subsection{Eksploracyjna analiza odporności}
+Proponowana macierz obejmuje odchylenia standardowe szumu współrzędnych
+$0$, $0{,}02$ i $0{,}05$ m oraz zasłonięcie $0$, $10$ i $25$ procent
+szerokości obrazu pionowym pasem. Zakłócenia nie zmieniają referencji
+odpowiedzi. Jest to uproszczona maska obrazu, nie model fizycznej okluzji.
+Dla sceny $i$ z $m_i$ instrukcjami definiuje się
+\[
+ d_i(g,o)=\frac{1}{m_i}\sum_{j=1}^{m_i}
+ (C_{ij}^{3D}(g,o)-C_{ij}^{RGB}(g,o)),
+\]
+gdzie $C$ jest wskaźnikiem poprawności. Estymator przewagi geometrii
+$\widehat\Delta_{g,o}=n^{-1}\sum_{i=1}^{n}d_i(g,o)$ nadaje scenom jednakowe wagi.
+Eksploracyjny kontrast interakcji wynosi
+\[
+ \widehat I_{g,o}=\widehat\Delta_{g,o}-\widehat\Delta_{g,0}
+ -\widehat\Delta_{0,o}+\widehat\Delta_{0,0}.
+\]
+Bootstrap percentylowy wykorzystuje 2000 replikacji całych scen, zachowując
+parowanie pomiędzy konfiguracjami. Przedziały są punktowe, bez korekty
+wielokrotnych porównań. Przy dwóch scenach pilotażowych służą wyłącznie
+sprawdzeniu implementacji. Odmowa lub niepoprawny format odpowiedzi są
+liczone jako niepoprawne wskazanie; błąd wykonania blokuje kompletną
+analizę macierzy. Pilotaż rozwojowy nie rozstrzyga H1--H3.
 
 \section{Plan analizy}
 
