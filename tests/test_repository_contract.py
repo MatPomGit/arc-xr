@@ -31,7 +31,7 @@ class RepositoryContractTests(unittest.TestCase):
     def fixture(self, tmp: str) -> Path:
         dest = Path(tmp) / "xr"
         shutil.copytree(ROOT, dest, ignore=shutil.ignore_patterns(
-            ".git", ".venv", "__pycache__", "site"))
+            ".git", ".venv", "__pycache__", "build"))
         return dest
 
     def test_research_contract_passes(self):
@@ -46,9 +46,9 @@ class RepositoryContractTests(unittest.TestCase):
             self.assertTrue((ROOT / f"manuscripts/MSC-AR-P{n:02}/protocol/README.md").is_file())
 
     def test_only_one_canonical_article_registry(self):
-        self.assertTrue((ROOT / "portfolio/papers.json").is_file())
-        self.assertFalse((ROOT / "portfolio/manuscript_register.md").exists())
-        self.assertFalse((ROOT / "portfolio/publication_register.md").exists())
+        self.assertTrue((ROOT / "migration/provenance/papers-v2.json").is_file())
+        self.assertFalse((ROOT / "migration/provenance/manuscript_register.md").exists())
+        self.assertFalse((ROOT / "migration/provenance/publication_register.md").exists())
         self.assertFalse((ROOT / "manuscripts/source_manifest.json").exists())
         self.assertTrue((ROOT / "migration/provenance/source-manifest-v1.json").is_file())
         self.assertFalse((ROOT / "CONTRIBUTING.md").exists())

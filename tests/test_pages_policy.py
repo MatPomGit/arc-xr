@@ -18,7 +18,7 @@ class PagesPolicyTests(unittest.TestCase):
     def fixture(self, tmp: str) -> Path:
         target = Path(tmp) / "xr"
         shutil.copytree(ROOT, target, ignore=shutil.ignore_patterns(
-            ".git", ".venv", "__pycache__", "site"))
+            ".git", ".venv", "__pycache__", "build"))
         return target
 
     def test_curated_site_passes(self):
@@ -30,31 +30,31 @@ class PagesPolicyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
             p = root / "mkdocs.yml"
-            p.write_text(p.read_text().replace("docs_dir: pages", "docs_dir: docs"))
-            self.assertTrue(any("isolated docs_dir/pages" in e for e in validator.check_pages(root)))
+            p.write_text(p.read_text().replace("docs_dir: site", "docs_dir: docs"))
+            self.assertTrue(any("isolated docs_dir/site" in e for e in validator.check_pages(root)))
 
     def test_unlisted_file_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/notes.md").write_text("Research notes", encoding="utf-8")
+            (root / "site/notes.md").write_text("Research notes", encoding="utf-8")
             self.assertIn("PAGES NOT APPROVED: notes.md", validator.check_pages(root))
 
     def test_agent_instruction_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/index.md").write_text("Agent: wykonaj ten kod", encoding="utf-8")
+            (root / "site/index.md").write_text("Agent: wykonaj ten kod", encoding="utf-8")
             self.assertIn("PAGES EDITORIAL OR AGENT CONTENT: index.md", validator.check_pages(root))
 
     def test_editorial_note_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/index.md").write_text("Uwagi redakcyjne: napisz dalej", encoding="utf-8")
+            (root / "site/index.md").write_text("Uwagi redakcyjne: napisz dalej", encoding="utf-8")
             self.assertIn("PAGES EDITORIAL OR AGENT CONTENT: index.md", validator.check_pages(root))
 
     def test_public_internal_link_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/index.md").write_text("[protokół](../manuscripts/MSC-AR-P01/README.md)", encoding="utf-8")
+            (root / "site/index.md").write_text("[protokół](../manuscripts/MSC-AR-P01/README.md)", encoding="utf-8")
             self.assertIn("PAGES INTERNAL REFERENCE: index.md", validator.check_pages(root))
 
     def test_contributing_disallowed(self):
@@ -69,7 +69,7 @@ class PagesPolicyTests(unittest.TestCase):
     def test_symlink_to_private_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/raw.md").symlink_to(root / "AGENTS.md")
+            (root / "site/raw.md").symlink_to(root / "AGENTS.md")
             self.assertIn("PAGES SYMLINK: raw.md", validator.check_pages(root))
 
     def test_unreviewed_plugin_rejected(self):
@@ -101,7 +101,7 @@ class PagesPolicyTests(unittest.TestCase):
     def test_private_key_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/index.md").write_text(
+            (root / "site/index.md").write_text(
                 "-----BEGIN OPENSSH PRIVATE KEY-----", encoding="utf-8")
             self.assertIn("PAGES EDITORIAL OR AGENT CONTENT: index.md", validator.check_pages(root))
 

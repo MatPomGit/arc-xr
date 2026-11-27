@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "source_dir": "pages",
-  "output_dir": "site",
+  "source_dir": "site",
+  "output_dir": "build/site",
   "mkdocs_config": "mkdocs.yml",
   "public_files": [
     "index.md",

@@ -13,7 +13,7 @@ LOGO_EXTENSIONS = (".png", ".webp", ".jpg", ".jpeg")
 
 def approved_logo(root: Path, policy: dict, stem: str) -> str | None:
     """Find a local logo only when its bytes have been approved for public Pages."""
-    directory = root / "pages"
+    directory = root / "site"
     candidates = [stem + ext for ext in LOGO_EXTENSIONS
                   if (directory / (stem + ext)).exists()
                   or (directory / (stem + ext)).is_symlink()]

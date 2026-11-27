@@ -44,7 +44,7 @@ REQUIRED = (
     "docs/adr/0001-programme-boundaries.md",
     "docs/adr/0002-research-and-device-safety.md",
     "docs/adr/0003-public-pages-boundary.md",
-    "pages/index.md", "mkdocs.yml",
+    "site/index.md", "mkdocs.yml",
     ".github/workflows/quality.yml",
     "tests/test_repository_contract.py", "tests/test_documentation_policy.py",
     "tests/test_pages_policy.py",

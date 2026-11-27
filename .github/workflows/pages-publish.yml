@@ -52,13 +52,13 @@ jobs:
           python3 -m venv "$RUNNER_TEMP/arc-xr-pages"
           "$RUNNER_TEMP/arc-xr-pages/bin/python" -m pip install --disable-pip-version-check mkdocs==1.6.1
           "$RUNNER_TEMP/arc-xr-pages/bin/python" -m mkdocs build --strict --clean
-          python3 -B scripts/verify_site_output.py site
+          python3 -B scripts/verify_site_output.py build/site
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Upload only validated HTML
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: ./site
+          path: ./build/site
       - name: Deploy public site
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

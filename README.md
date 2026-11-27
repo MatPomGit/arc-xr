@@ -15,13 +15,13 @@ ARC XR jest programem badawczym poświęconym adaptacyjnym interfejsom rzeczywis
 
 ## Portfolio naukowe
 
-[Katalog 27 tematów badawczych](pages/articles.md) zawiera krótkie omówienia proponowanych manuskryptów. Szczegółowa dokumentacja planowanych prac znajduje się w [`manuscripts/`](manuscripts/README.md). Pierwsze sześć prac ma rozbudowane plany badawcze. Wpis w katalogu nie oznacza uzyskania wyników ani potwierdzenia hipotez.
+[Katalog 27 tematów badawczych](site/articles.md) zawiera krótkie omówienia proponowanych manuskryptów. Szczegółowa dokumentacja planowanych prac znajduje się w [`manuscripts/`](manuscripts/README.md). Pierwsze sześć prac ma rozbudowane plany badawcze. Wpis w katalogu nie oznacza uzyskania wyników ani potwierdzenia hipotez.
 
-[Kanoniczny rejestr artykułów](portfolio/papers.json) opisuje identyfikatory MSC i relacje własności. Źródłowe manuskrypty, plany analiz i dokumentacja eksperymentów są powiązane z odpowiednimi pozycjami portfolio.
+[Kanoniczny rejestr artykułów](migration/provenance/papers-v2.json) opisuje identyfikatory MSC i relacje własności. Źródłowe manuskrypty, plany analiz i dokumentacja eksperymentów są powiązane z odpowiednimi pozycjami portfolio.
 
 ## Publiczna witryna
 
-[Witryna programu](pages/index.md) przedstawia zakres badań, metody i katalog tematów. Jej pliki źródłowe znajdują się w odrębnym katalogu `pages/`. W nagłówku może być wykorzystywane logo ARC XR, gdy zatwierdzona grafika istnieje. Odrębne projekty naukowe mogą mieć własną identyfikację wizualną na swoich stronach.
+[Witryna programu](site/index.md) przedstawia zakres badań, metody i katalog tematów. Jej pliki źródłowe znajdują się w odrębnym katalogu `site/`. W nagłówku może być wykorzystywane logo ARC XR, gdy zatwierdzona grafika istnieje. Odrębne projekty naukowe mogą mieć własną identyfikację wizualną na swoich stronach.
 
 ## Podejście metodologiczne
 

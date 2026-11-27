@@ -51,6 +51,9 @@ jobs:
       - name: Validate canonical ARC v2 registry and pinned TeX SHA
         run: |
           "${RUNNER_TEMP}/arc-v2/bin/python" -B scripts/validate_arc_v2_registry.py
+      - name: Validate active v3 metadata
+        run: |
+          "${RUNNER_TEMP}/arc-v2/bin/python" -B scripts/validate_v3_metadata.py
       - name: Run all offline regression tests
         run: |
           "${RUNNER_TEMP}/arc-v2/bin/python" -m unittest discover -s tests -v
@@ -61,6 +64,6 @@ jobs:
           python3 -m venv "${RUNNER_TEMP}/arc-xr-mkdocs"
           "${RUNNER_TEMP}/arc-xr-mkdocs/bin/python" -m pip install --disable-pip-version-check mkdocs==1.6.1
           "${RUNNER_TEMP}/arc-xr-mkdocs/bin/python" -m mkdocs build --strict --clean
-          python3 -B scripts/verify_site_output.py site
+          python3 -B scripts/verify_site_output.py build/site
 
 # No Pages deployment, publishing credentials, private data or privileged runner.

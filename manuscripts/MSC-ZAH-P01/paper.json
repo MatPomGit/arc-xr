@@ -1,0 +1,31 @@
+{
+  "id": "MSC-ZAH-P01",
+  "title": "Wierna rekonstrukcja naturalnych zachowań społecznych na awatarach o różnym stopniu realizmu",
+  "area": "perception",
+  "research_state": "deferred",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-ZAH-P01/main.tex",
+    "format": "latex"
+  },
+  "study_plan": "manuscripts/MSC-ZAH-P01/study.yaml",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

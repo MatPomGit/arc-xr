@@ -23,6 +23,6 @@ Notatki o aparaturze i pomysłach badawczych mają wyjątki, ponieważ są **mat
 
 ## Aktualizacja
 
-Przy zmianie interfejsów aplikacji i bibliotek aktualizuj architekturę oraz kontrakt danych; przy zmianie aparatury aktualizuj granice pomiaru i dowody, a przy ryzyku bezpieczeństwa model zagrożeń oraz ADR. Przy zmianie planu badań aktualizuj właściwy protokół i `PROJECT_STATE.yaml`, nie tylko opis. Publiczne opisy mają pozostawać w odrębnym `pages/`.
+Przy zmianie interfejsów aplikacji i bibliotek aktualizuj architekturę oraz kontrakt danych; przy zmianie aparatury aktualizuj granice pomiaru i dowody, a przy ryzyku bezpieczeństwa model zagrożeń oraz ADR. Przy zmianie planu badań aktualizuj właściwy protokół i `PROJECT_STATE.yaml`, nie tylko opis. Publiczne opisy mają pozostawać w odrębnym `site/`.
 
 Skan tekstu i status `PASS` nie dowodzą naukowej skuteczności ani poufności rzeczywiście opublikowanej strony.

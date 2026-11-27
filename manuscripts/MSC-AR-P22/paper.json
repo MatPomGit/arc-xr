@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P22",
+  "title": "Neuroadaptive Social XR z odrębną personalizacją uczestników współpracy",
+  "area": "collaboration",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P22/main.tex",
+    "format": "latex",
+    "blob_sha": "32ee50d43439514503544c76b88cddd51ebe032b"
+  },
+  "study_plan": "manuscripts/MSC-AR-P22/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

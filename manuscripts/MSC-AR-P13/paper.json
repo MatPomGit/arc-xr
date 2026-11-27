@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P13",
+  "title": "Generatywna Neuroadaptive Art Therapy w środowisku XR",
+  "area": "affect",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P13/main.tex",
+    "format": "latex",
+    "blob_sha": "229f16241067ebf0d4b31d3996ad7cf822158c0f"
+  },
+  "study_plan": "manuscripts/MSC-AR-P13/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

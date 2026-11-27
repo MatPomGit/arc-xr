@@ -26,4 +26,4 @@ Każdy wynik wymaga powiązania z `manuscript_id`, identyfikatorem sesji bez dan
 
 [Komponenty](docs/architecture/components.md), [granice pomiaru](docs/architecture/measurement-boundaries.md), [przepływy i dowody](docs/architecture/data-flow.md), [ADR](docs/adr/README.md), [model zagrożeń](docs/security/threat-model.md), [runbook](docs/operations/runbook.md).
 
-`docs/` jest dokumentacją roboczą. Publiczna witryna ma osobne `pages/`, jawne zasoby i **nie publikuje** instrukcji agentowych ani dokumentów programowych z repo. Zobacz [politykę Pages](docs/pages.md).
+`docs/` jest dokumentacją roboczą. Publiczna witryna ma osobne `site/`, jawne zasoby i **nie publikuje** instrukcji agentowych ani dokumentów programowych z repo. Zobacz [politykę Pages](docs/pages.md).

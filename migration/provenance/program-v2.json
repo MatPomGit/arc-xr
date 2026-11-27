@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "template_version": "2.0.0",
+  "type": "arc-program",
+  "programme": "arc-xr",
+  "title": "ARC-XR — inteligentna i adaptacyjna rzeczywistość rozszerzona",
+  "owner": "Mateusz Pomianek",
+  "scope": "Adaptacyjne systemy AR/XR, interakcja człowiek–agent, percepcja przestrzenna, pomiary multimodalne i weryfikacja procedur manualnych.",
+  "default_branch": "main",
+  "license_spdx": "Apache-2.0",
+  "pages_status": "not_configured",
+  "pages_url": null,
+  "public_catalog_policy": "explicit_opt_in",
+  "scientific_state": "planned",
+  "owner_of_raw_data": false,
+  "repository_visibility": "public",
+  "repository_full_name": "MatPomGit/arc-xr",
+  "manuscript_root": "manuscripts"
+}

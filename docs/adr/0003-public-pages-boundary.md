@@ -9,7 +9,7 @@ ARC-XR zawiera AGENTS, plany, protokoły, notatki techniczne, historyczne szkice
 
 ## Propozycja
 
-Publiczne GitHub Pages może powstawać wyłącznie z `pages/`, po jawnej akceptacji każdego zasobu w `config/pages-policy.json`, walidacji strukturalnej i osobnej decyzji właściciela. `docs/`, `manuscripts/`, `.github/` i inne pliki robocze nie stają się częścią strony. Nie dodawać workflow automatycznego publikowania na merge.
+Publiczne GitHub Pages może powstawać wyłącznie z `site/`, po jawnej akceptacji każdego zasobu w `config/pages-policy.json`, walidacji strukturalnej i osobnej decyzji właściciela. `docs/`, `manuscripts/`, `.github/` i inne pliki robocze nie stają się częścią strony. Nie dodawać workflow automatycznego publikowania na merge.
 
 ## Alternatywy i konsekwencje
 

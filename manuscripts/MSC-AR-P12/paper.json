@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P12",
+  "title": "Emocjonalne lustro XR wizualizujące oszacowany stan afektywny",
+  "area": "affect",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P12/main.tex",
+    "format": "latex",
+    "blob_sha": "8c8ab210c03755abd7c101e2fe7ce5a8cdae56aa"
+  },
+  "study_plan": "manuscripts/MSC-AR-P12/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

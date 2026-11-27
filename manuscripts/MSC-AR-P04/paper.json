@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P04",
+  "title": "Grounding przestrzenny obiektów w instrukcjach AR na podstawie VLM",
+  "area": "perception",
+  "research_state": "planned",
+  "publication_stage": "draft",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P04/main.tex",
+    "format": "latex",
+    "blob_sha": "2df04008d974139cfcdecd6ccf39bc95b806903c"
+  },
+  "study_plan": "manuscripts/MSC-AR-P04/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}
