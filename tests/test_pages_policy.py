@@ -96,7 +96,7 @@ class PagesPolicyTests(unittest.TestCase):
         self.assertNotIn("\n  pull_request:", workflow)
         self.assertIn("inputs.publication_authorized == true", workflow)
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
-        self.assertIn("scripts/verify_site_output.py site", workflow)
+        self.assertIn("scripts/verify_site_output.py build/site", workflow)
 
     def test_private_key_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:

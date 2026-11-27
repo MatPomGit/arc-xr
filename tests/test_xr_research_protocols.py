@@ -89,7 +89,7 @@ class XRResearchProtocolTest(unittest.TestCase):
         self.assertEqual(set(rows),{p["id"] for p in PAPERS})
 
     def test_public_pages_not_contaminated(self):
-        self.assertTrue((ROOT/"pages"/"index.md").exists())
+        self.assertTrue((ROOT/"site"/"index.md").exists())
         self.assertFalse((ROOT/".github"/"workflows"/"publish-pages.yml").exists())
         self.assertFalse((ROOT/".github"/"workflows"/"deploy-pages.yml").exists())
 
