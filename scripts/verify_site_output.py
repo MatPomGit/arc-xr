@@ -26,7 +26,7 @@ def validate(site: Path) -> list[str]:
     return errors
 
 if __name__ == "__main__":
-    root = Path(sys.argv[1] if len(sys.argv) > 1 else "site")
+    root = Path(sys.argv[1] if len(sys.argv) > 1 else "build/site")
     problems = validate(root)
     for issue in problems:
         print("FAIL:", issue)

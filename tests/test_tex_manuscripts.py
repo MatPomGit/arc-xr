@@ -89,7 +89,7 @@ class TeXManuscriptTests(unittest.TestCase):
             self.assertTrue((ROOT / "manuscripts" / directory / "protocol/README.md").is_file())
         from json import loads
         policy = loads((ROOT / "config/pages-policy.json").read_text(encoding="utf-8"))
-        self.assertEqual(policy["source_dir"], "pages")
+        self.assertEqual(policy["source_dir"], "site")
         self.assertNotIn("manuscripts", policy["public_files"])
 
 if __name__ == "__main__":

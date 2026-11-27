@@ -18,7 +18,7 @@ class DocumentationPolicyTests(unittest.TestCase):
     def fixture(self, tmp: str) -> Path:
         dest = Path(tmp) / "xr"
         shutil.copytree(ROOT, dest, ignore=shutil.ignore_patterns(
-            ".git", ".venv", "__pycache__", "site"))
+            ".git", ".venv", "__pycache__", "build"))
         return dest
 
     def test_scaffold_budgets_pass(self):
@@ -99,8 +99,8 @@ class DocumentationPolicyTests(unittest.TestCase):
     def test_public_page_over_budget_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.fixture(tmp)
-            (root / "pages/extra.md").write_text("x" * 6001, encoding="utf-8")
-            self.assertTrue(any("DOC LENGTH EXCEEDED: pages/extra.md" in e
+            (root / "site/extra.md").write_text("x" * 6001, encoding="utf-8")
+            self.assertTrue(any("DOC LENGTH EXCEEDED: site/extra.md" in e
                                 for e in validator.check_documentation(root)))
 
 

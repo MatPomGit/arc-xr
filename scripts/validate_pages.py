@@ -81,8 +81,8 @@ def parse_mkdocs(text: str) -> tuple[dict[str, str], list[str], list[str]]:
                 theme[item.group(1)] = item.group(2)
                 continue
         errors.append("PAGES CONFIG: unreviewed YAML content")
-    if keys.get("docs_dir") != "pages" or keys.get("site_dir") != "site":
-        errors.append("PAGES CONFIG: isolated docs_dir/pages and site_dir/site required")
+    if keys.get("docs_dir") != "site" or keys.get("site_dir") != "build/site":
+        errors.append("PAGES CONFIG: isolated docs_dir/site and site_dir/build/site required")
     if not keys.get("site_name") or "nav" not in keys or not navigation:
         errors.append("PAGES CONFIG: site name or navigation missing")
     if keys.get("theme") != "" or {k:v for k,v in theme.items() if k != "logo"} != {
@@ -101,7 +101,7 @@ def check_pages(root: Path = ROOT) -> list[str]:
     if not isinstance(data, dict) or type(data.get("schema_version")) is not int or data["schema_version"] != 1:
         return ["PAGES POLICY: unsupported schema_version"]
     if (data.get("source_dir"), data.get("output_dir"),
-            data.get("mkdocs_config")) != ("pages", "site", "mkdocs.yml"):
+            data.get("mkdocs_config")) != ("site", "build/site", "mkdocs.yml"):
         errors.append("PAGES POLICY: source, output and MkDocs paths must remain isolated")
     allowed = data.get("public_files")
     if not isinstance(allowed, list) or not allowed or any(not safe_relative(x) for x in allowed):
@@ -124,14 +124,14 @@ def check_pages(root: Path = ROOT) -> list[str]:
     errors.extend(config_errors)
     logo_candidates = [
         "assets/brand/logo" + ext for ext in (".png", ".webp", ".jpg", ".jpeg")
-        if (root / "pages" / ("assets/brand/logo" + ext)).exists()
-        or (root / "pages" / ("assets/brand/logo" + ext)).is_symlink()
+        if (root / "site" / ("assets/brand/logo" + ext)).exists()
+        or (root / "site" / ("assets/brand/logo" + ext)).is_symlink()
     ]
     if len(logo_candidates) > 1:
         errors.append("PAGES LOGO: multiple programme logo formats")
     expected_logo = logo_candidates[0] if len(logo_candidates) == 1 else None
     if expected_logo:
-        logo_file = root / "pages" / expected_logo
+        logo_file = root / "site" / expected_logo
         if (logo_file.is_symlink() or not logo_file.is_file() or
                 expected_logo not in allowed or
                 hashlib.sha256(logo_file.read_bytes()).hexdigest() !=
@@ -144,7 +144,7 @@ def check_pages(root: Path = ROOT) -> list[str]:
     if not nav or "index.md" not in nav or any(x not in allowed for x in nav):
         errors.append("PAGES CONFIG: navigation contains unapproved source")
 
-    folder = root / "pages"
+    folder = root / "site"
     if not folder.is_dir() or folder.is_symlink():
         return sorted(set(errors + ["PAGES SOURCE: missing or unsafe directory"]))
     for file in sorted(folder.rglob("*")):

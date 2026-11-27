@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P06",
+  "title": "Współdzielenie uwagi i komunikacja człowiek-agent w AR",
+  "area": "collaboration",
+  "research_state": "planned",
+  "publication_stage": "draft",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P06/main.tex",
+    "format": "latex",
+    "blob_sha": "07d2018e413d4c75cfaa48c93594f97a26276411"
+  },
+  "study_plan": "manuscripts/MSC-AR-P06/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "MSC-ADHD-P04",
+  "title": "Transfer regulacji do ucieleśnionej interakcji i AR",
+  "area": "affect",
+  "research_state": "active",
+  "publication_stage": "draft",
+  "relation": "related",
+  "owner": {
+    "mode": "external",
+    "repository": null,
+    "project_id": null,
+    "redacted": true
+  },
+  "manuscript": null,
+  "study_plan": null,
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

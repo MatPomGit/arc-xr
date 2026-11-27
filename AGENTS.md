@@ -44,7 +44,7 @@ Pisz poprawną polszczyzną, pełnymi zdaniami i zwięźle. Zachowuj anglojęzyc
 
 Stosuj szczegółową [procedurę](.github/AGENT_WORKFLOW.md). `APPROVED` od niezależnego recenzenta nie jest wymagane; własnego przeglądu nie przedstawiaj jako niezależnego.
 
-**Dostępność materiałów:** `docs/` i `manuscripts/` są dokumentacją projektu, a `pages/` jedynym źródłem publicznej witryny. Żadnych instrukcji dla agentów, treści edytorskich, porad o współtworzeniu repozytorium, prywatnych danych ani surowych pomiarów w Pages. Zobacz [politykę](docs/pages.md). Nie twórz `CONTRIBUTING.md`.
+**Dostępność materiałów:** `docs/` i `manuscripts/` są dokumentacją projektu, a `site/` jedynym źródłem publicznej witryny. Żadnych instrukcji dla agentów, treści edytorskich, porad o współtworzeniu repozytorium, prywatnych danych ani surowych pomiarów w Pages. Zobacz [politykę](docs/pages.md). Nie twórz `CONTRIBUTING.md`.
 
 
 ## GitHub Issues: nowy kontrakt

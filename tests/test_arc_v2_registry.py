@@ -16,7 +16,7 @@ class ArcV2RegistryTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory()
         self.root=Path(self.temp.name)/"arc"
-        shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns(".git","site","__pycache__"))
+        shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns(".git","build","__pycache__"))
     def tearDown(self):
         self.temp.cleanup()
     def load(self,name):
@@ -24,7 +24,7 @@ class ArcV2RegistryTests(unittest.TestCase):
     def save(self,name,data):
         (self.root/name).write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
     def papers(self):
-        return self.load("portfolio/papers.json")
+        return self.load("migration/provenance/papers-v2.json")
     def verify_bad(self,token):
         errors=audit(self.root)
         self.assertTrue(any(token in x for x in errors),errors)
@@ -53,40 +53,40 @@ class ArcV2RegistryTests(unittest.TestCase):
         reg=self.papers()
         row=next(p for p in reg["papers"] if p["id"]=="MSC-AR-P01")
         row["owner"]["repository"]="Other/arc-xr"
-        self.save("portfolio/papers.json",reg)
+        self.save("migration/provenance/papers-v2.json",reg)
         self.verify_bad("local ownership/provenance drift")
 
     def test_redacted_external_reference_cannot_become_primary(self):
         reg=self.papers()
         row=next(p for p in reg["papers"] if p["id"]=="MSC-ADHD-P04")
         row["relation"]="primary"
-        self.save("portfolio/papers.json",reg)
+        self.save("migration/provenance/papers-v2.json",reg)
         self.verify_bad("redacted external")
 
     def test_redacted_external_reference_cannot_approve_public_listing(self):
         reg=self.papers()
         row=next(p for p in reg["papers"] if p["id"]=="MSC-ADHD-P04")
         row["public_listing"]=True
-        self.save("portfolio/papers.json",reg)
+        self.save("migration/provenance/papers-v2.json",reg)
         self.verify_bad("redacted external")
 
     def test_status_promotion_without_evidence_rejected(self):
         reg=self.papers()
         row=next(p for p in reg["papers"] if p["id"]=="MSC-AR-P01")
         row["publication_stage"]="published"
-        self.save("portfolio/papers.json",reg)
+        self.save("migration/provenance/papers-v2.json",reg)
         self.verify_bad("status evidence")
 
     def test_area_changed_from_pinned_manifest_rejected(self):
         reg=self.papers()
         reg["papers"][0]["area"]="unrelated-area"
-        self.save("portfolio/papers.json",reg)
+        self.save("migration/provenance/papers-v2.json",reg)
         self.verify_bad("Unknown paper research area")
 
     def test_duplicate_msc_rejected(self):
         reg=self.papers()
         reg["papers"].append(dict(reg["papers"][0]))
-        self.save("portfolio/papers.json",reg)
+        self.save("migration/provenance/papers-v2.json",reg)
         self.verify_bad("duplicate MSC")
 
     def test_historic_six_core_research_state_preserved(self):
@@ -96,8 +96,8 @@ class ArcV2RegistryTests(unittest.TestCase):
         self.verify_bad("legacy six-paper plan")
 
     def test_no_duplicate_publication_registry_files(self):
-        self.assertFalse((self.root/"portfolio/manuscript_register.md").exists())
-        self.assertFalse((self.root/"portfolio/publication_register.md").exists())
+        self.assertFalse((self.root/"migration/provenance/manuscript_register.md").exists())
+        self.assertFalse((self.root/"migration/provenance/publication_register.md").exists())
 
 
 if __name__=="__main__":

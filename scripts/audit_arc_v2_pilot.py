@@ -39,7 +39,7 @@ def audit(root: Path = ROOT) -> list[str]:
         issues.append("PILOT: 27 unique sources expected")
     public={}
     for area in AREAS:
-        page=root/"pages"/(area+".md")
+        page=root/"site"/(area+".md")
         if not page.is_file() or page.is_symlink():
             issues.append("PILOT: missing category: "+area)
             continue
@@ -111,7 +111,7 @@ def audit(root: Path = ROOT) -> list[str]:
     # Migration map covers 27 historical files. Newly registered local concept
     # manuscripts may coexist, but unknown extra LaTeX sources remain forbidden.
     try:
-        registry=json.loads((root/"portfolio/papers.json").read_text())["papers"]
+        registry=json.loads((root/"migration/provenance/papers-v2.json").read_text())["papers"]
     except (OSError,ValueError,KeyError,TypeError):
         registry=[]
         issues.append("PILOT: unreadable local manuscript registry")

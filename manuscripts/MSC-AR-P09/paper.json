@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P09",
+  "title": "Wykrywanie błądzenia myślami i odzyskiwanie uwagi z EEG i okulografii",
+  "area": "adaptation",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P09/main.tex",
+    "format": "latex",
+    "blob_sha": "eba9224c78d35b12797e1a5287ddf6b273e7d4c5"
+  },
+  "study_plan": "manuscripts/MSC-AR-P09/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

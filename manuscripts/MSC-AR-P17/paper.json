@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P17",
+  "title": "Kalibracja niepewności rozpoznania stanu użytkownika a selektywna abstencja adaptatora XR",
+  "area": "adaptation",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P17/main.tex",
+    "format": "latex",
+    "blob_sha": "891503c350e9e80f05ce7aa9d21d71e6e2921972"
+  },
+  "study_plan": "manuscripts/MSC-AR-P17/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

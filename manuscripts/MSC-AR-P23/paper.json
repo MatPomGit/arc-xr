@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P23",
+  "title": "Adaptacja poziomu wyzwania XR a dynamika subiektywnego doświadczenia flow",
+  "area": "adaptation",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P23/main.tex",
+    "format": "latex",
+    "blob_sha": "3b51022ed4316cf46be44904d921da74141800d0"
+  },
+  "study_plan": "manuscripts/MSC-AR-P23/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

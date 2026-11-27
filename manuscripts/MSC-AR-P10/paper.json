@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P10",
+  "title": "Adaptacyjne uczenie w VR i odroczona retencja pamięciowa",
+  "area": "adaptation",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P10/main.tex",
+    "format": "latex",
+    "blob_sha": "e42a16e690bcc1e136e1e886754dfe20da5e88ea"
+  },
+  "study_plan": "manuscripts/MSC-AR-P10/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

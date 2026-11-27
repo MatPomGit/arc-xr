@@ -9,10 +9,10 @@ from validate_repository import state_ids
 from audit_arc_v2_pilot import audit as audit_sources
 
 ROOT=Path(__file__).resolve().parents[1]
-MAP={"program.json":"schemas/program.v2.schema.json",
-     "portfolio/projects.json":"schemas/projects.v2.schema.json",
-     "portfolio/papers.json":"schemas/papers.v2.schema.json",
-     "portfolio/dependencies.json":"schemas/dependencies.v2.schema.json"}
+MAP={"migration/provenance/program-v2.json":"schemas/program.v2.schema.json",
+     "migration/provenance/projects-v2.json":"schemas/projects.v2.schema.json",
+     "migration/provenance/papers-v2.json":"schemas/papers.v2.schema.json",
+     "migration/provenance/dependencies-v2.json":"schemas/dependencies.v2.schema.json"}
 
 def read(root,rel):
     path=root/rel
@@ -28,8 +28,8 @@ def audit(root:Path=ROOT)->list[str]:
     errors=[]
     try:
         values={name:read(root,name) for name in
-                ("program.json","portfolio/projects.json","portfolio/papers.json",
-                 "portfolio/dependencies.json","areas/index.json",
+                ("migration/provenance/program-v2.json","migration/provenance/projects-v2.json","migration/provenance/papers-v2.json",
+                 "migration/provenance/dependencies-v2.json","config/research-lines.json",
                  "migration/arc-v2-pilot-map.json","migration/provenance/source-manifest-v1.json")}
         for rel,schema_rel in MAP.items():
             schema=read(root,schema_rel)
@@ -38,11 +38,11 @@ def audit(root:Path=ROOT)->list[str]:
                 errors.append("ARC_V2_SCHEMA "+rel+": "+issue.message)
     except (OSError,ValueError,KeyError,TypeError) as exc:
         return ["ARC_V2_METADATA "+type(exc).__name__+": "+str(exc)]
-    meta=values["program.json"]
-    registry=values["portfolio/papers.json"]
-    projects=values["portfolio/projects.json"]
-    deps=values["portfolio/dependencies.json"]
-    areas=values["areas/index.json"]
+    meta=values["migration/provenance/program-v2.json"]
+    registry=values["migration/provenance/papers-v2.json"]
+    projects=values["migration/provenance/projects-v2.json"]
+    deps=values["migration/provenance/dependencies-v2.json"]
+    areas=values["config/research-lines.json"]
     if not all(isinstance(obj,dict) for obj in (meta,registry,projects,deps,areas)):
         return ["ARC_V2_METADATA: required JSON objects"]
     if meta.get("repository_full_name")!="MatPomGit/arc-xr" or meta.get("programme")!="arc-xr":

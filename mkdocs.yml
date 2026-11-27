@@ -1,7 +1,7 @@
 # Public site. Internal documentation is never a Pages source.
 site_name: ARC-XR
-docs_dir: pages
-site_dir: site
+docs_dir: site
+site_dir: build/site
 theme:
   name: mkdocs
   highlightjs: false

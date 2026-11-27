@@ -16,7 +16,7 @@ class PilotTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory()
         self.root=Path(self.temp.name)/"arc"
-        shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns(".git","site","__pycache__"))
+        shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns(".git","build","__pycache__"))
     def tearDown(self):
         self.temp.cleanup()
     def load(self,name):

@@ -1,0 +1,32 @@
+{
+  "id": "MSC-AR-P11",
+  "title": "Metapoznanie w XR: informacja zwrotna o szacowanym obciążeniu",
+  "area": "adaptation",
+  "research_state": "planned",
+  "publication_stage": "concept",
+  "relation": "primary",
+  "owner": {
+    "mode": "local",
+    "repository": "MatPomGit/arc-xr",
+    "project_id": null
+  },
+  "manuscript": {
+    "path": "manuscripts/MSC-AR-P11/main.tex",
+    "format": "latex",
+    "blob_sha": "b49cc76a90ac1b4aaddb5fd2af78a8b071e3b244"
+  },
+  "study_plan": "manuscripts/MSC-AR-P11/study.md",
+  "public_listing": false,
+  "public_summary": null,
+  "doi": null,
+  "preprint_url": null,
+  "preregistration_url": null,
+  "publication_url": null,
+  "stage_evidence": null,
+  "schema_version": 3,
+  "dependencies": {
+    "tools": [],
+    "equipment": [],
+    "datasets": []
+  }
+}

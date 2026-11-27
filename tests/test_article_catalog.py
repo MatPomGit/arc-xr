@@ -18,7 +18,7 @@ class ArticlesCatalogTests(unittest.TestCase):
         manuscript_total = 0
         concept_total = 0
         for category, (count, manuscript_count) in CATEGORIES.items():
-            page = (ROOT / "pages" / (category + ".md")).read_text(encoding="utf-8")
+            page = (ROOT / "site" / (category + ".md")).read_text(encoding="utf-8")
             self.assertIn("## Planowane manuskrypty", page)
             self.assertIn("## Koncepcje badawcze", page)
             items = re.findall(
@@ -40,8 +40,8 @@ class ArticlesCatalogTests(unittest.TestCase):
         self.assertEqual((manuscript_total, concept_total), (7, 20))
 
     def test_catalog_navigation(self):
-        index = (ROOT / "pages/articles.md").read_text(encoding="utf-8")
-        home = (ROOT / "pages/index.md").read_text(encoding="utf-8")
+        index = (ROOT / "site/articles.md").read_text(encoding="utf-8")
+        home = (ROOT / "site/index.md").read_text(encoding="utf-8")
         self.assertIn("27 tematów", index)
         self.assertIn("articles.md", home)
         for category in CATEGORIES:
